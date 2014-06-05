@@ -1,0 +1,121 @@
+{
+  "title": "Not Wanted: Sex Offenders",
+  "description":"In each state, sex offenders are banned from a wide variety of occupations for offenses as innocuous, in some states, as public urination or streaking. With this quiz, explore some of the strangest vocational penalties.",
+  "title_slide":"true",
+  "fb_description": "",
+  "thumbnail": "",
+  "teaser":"Test teaser",
+  "blocked_choices":"true",
+  "questions": [
+    {
+      "content": "In Illinois, sex offenders cannot have which of these jobs?",
+      "choices": [
+        {
+          "content": "Pizza chef",
+          "validity": "true"
+        },
+        {
+          "content": "Comic book store employee",
+          "validity": "false"
+        },
+        {
+          "content":"Carnival worker",
+          "validty":"true"
+        },
+        {
+          "content":"Dog Walker",
+          "validity":"false"
+        }
+      ],
+      "feedback":"Other forbidden careers include ice cream truck driver, locksmith, and live-scan technician."
+    },
+    {
+      "content":"In Wisconsin, sex offenders are prohibited from doing which of these things?",
+      "choices":[
+        {
+          "content":"Transport hazardous waste",
+          "validity":"true"
+        },
+        {
+          "content":"Own a race horse",
+          "validity":"false"
+        },
+        {
+          "content":"Cut down large trees",
+          "validity":"false"
+        },
+        {
+          "content":"Lead a canoe expedition",
+          "validity":"false"
+        }
+      ],
+      "feedback":"Sex offenders are also forbidden from working as behavior analysts, midwives, motorcycle instructors, and \"alternative massage\" practitioners."
+    },
+    {
+      "content": "In Alaska, sex offenders cannot have which of these jobs?",
+      "choices": [
+        {
+          "content": "Crab fisherman",
+          "validity": "false"
+        },
+        {
+          "content": "Sport fishing guide",
+          "validity": "true"
+        },
+        {
+          "content":"Moose hunting guide",
+          "validty":"false"
+        },
+        {
+          "content":"Lumberjack",
+          "validity":"false"
+        }
+      ],
+      "feedback":"And this ban on sport fishing guides only applies to the Kenai River."
+    },
+    {
+      "content": "In Pennsylvania, sex offenders cannot have which of these jobs?",
+      "choices": [
+        {
+          "content": "Taxi dispatcher",
+          "validity": "true"
+        },
+        {
+          "content": "Funeral limo driver",
+          "validity": "true"
+        },
+        {
+          "content":"Athletic agent",
+          "validity":"true"
+        },
+        {
+          "content":"Wrestling promoter",
+          "validity":"true"
+        }
+      ],
+      "feedback":"This one's a freebie&#8212;offenders are prohibited from all of these jobs. The taxi dispatcher ban, however, only applies to Philadelphia."
+    },
+    {
+      "content":"California may not authorize sex offenders to receive which of the following?",
+      "choices":[
+        {
+          "content":"Hair plugs",
+          "validity":"false"
+        },
+        {
+          "content":"Plastic surgery",
+          "validity":"false"
+        },
+        {
+          "content":"Erectile dysfunction treatment",
+          "validity":"true"
+        },
+        {
+          "content":"LASIK eye surgery",
+          "validity":"false"
+        }
+      ],
+      "feedback":"California sex offenders are also banned from driving wheelchair vans, litter vans, and tow trucks."
+    }
+  ]
+}

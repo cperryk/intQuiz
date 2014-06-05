@@ -1,0 +1,28 @@
+define(function(){
+  return {
+    getAverage:function(slug,callback){
+      $.ajax({
+        dataType:'jsonp',
+        data:{interactiveID:slug},
+        url:'http://slate-interactive3-prod.elasticbeanstalk.com/scores/getScores.php',
+        success:function(data){
+          if(callback){
+            callback(data.average);
+          }
+        }
+      });
+    },
+    sendScore:function(slug,score,callback){
+      $.ajax({
+        dataType:'jsonp',
+        data:{score:score,interactiveID:slug},
+        url:'http://slate-interactive3-prod.elasticbeanstalk.com/scores/addScore.php',
+        success:function(){
+          if(callback){
+            callback(true);
+          }
+        }
+      });
+    }
+  };
+});

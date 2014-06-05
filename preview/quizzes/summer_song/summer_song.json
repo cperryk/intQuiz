@@ -1,0 +1,557 @@
+{
+  "title": "What's Your Summer Jam?",
+  "description": "Let us know what songs you loved in summers past, and we'll let you know which song you'll love this summer.",
+  "title_slide": "false",
+  "blocked_choices": "true",
+  "auto_advance":"true",
+  "matcher": {
+    "results": {
+      "a": {
+        "content": "Iggy Azalea feat. Charli XCX, &#8220;Fancy&#8221;",
+        "descriptor":"The <a href=\"http://www.slate.com/blogs/browbeat/2014/06/04/iggy_azalea_fancy_is_no_1_how_did_this_australian_become_such_a_popular.html\">current No. 1 song on the Hot 100</a>&#8212;fast-rising female, white, Australian rapper getting a major assist from the hook-purveyor from last year's Icona Pop jam \"I Love It.\"",
+        "youtube": "O-zpOMYRi0w",
+        "share_text": "My summer jam is \"Fancy\" by Iggy Azalea!"
+      },
+      "b": {
+        "content": "Jason Derulo feat. Snoop Dogg, &#8220;Wiggle&#8221;",
+        "descriptor":"Latest minimalist trap-pop jam from remarkably resilient pop&amp;B star (a hitmaker <a href=\"http://www.idolator.com/5279562/which-song-has-the-best-chance-to-end-the-black-eyed-peas-reign-of-hot-100-terror\">since 2009</a>) coming off winter hit <a href=\"https://www.youtube.com/watch?v=RbtPXFlZlHg\">\"Talk Dirty\"</a>; backed by <a href=\"https://www.youtube.com/watch?v=F57P9C4SAW4\">prior summer-song-supporter</a> Snoop.",
+        "youtube": "hiP14ED28CA",
+        "share_text": "My summer jam is \"Wiggle\" by Jason Derulo!"
+      },
+      "c": {
+        "content": "Ariana Grande feat. Iggy Azalea, &#8220;Problem&#8221;",
+        "descriptor":"Horn-inflected urban-pop jam belted by rising starlet behind 2013's <a href=\"https://www.youtube.com/watch?v=_sV0S8qWSy0\">\"The Way,\"</a> backed by the omnipresent rapper&#8212;currently a Hot 100 No. 2, awaiting its turn on top once \"Fancy\" departs.",
+        "youtube": "SoJ8s90NLc4",
+        "share_text": "My summer jam is \"Problem\" by Ariana Grande!"
+      },
+      "d": {
+        "content": "Calvin Harris, &#8220;Summer&#8221;",
+        "descriptor":"Latest hit by formerly invisible Scottish DJ/producer to feature his vocals&#8212;he manned the boards behind Rihanna on<a href=\"http://www.youtube.com/watch?v=tg00YEETFzg\">\"We Found Love\"</a> and Florence Welch on \"<a href=\"http://www.youtube.com/watch?v=17ozSeGw-fY\">Sweet Nothing</a>\" but sung his own <a href=\"https://www.youtube.com/watch?v=dGghkjpNCQ8\">\"Feel So Close</a>\" in 2012.",
+        "youtube": "ebXbLfLACGM",
+        "share_text": "My summer jam is \"Summer\" by Calvin Harris!"
+      },
+      "e": {
+        "content": "Miranda Lambert feat. Carrie Underwood, &#8220;Somethin’ Bad&#8221;",
+        "descriptor":"Country's answer to <a href=\"http://www.youtube.com/watch?v=QsY066wa08E\">\"No More Tears\"</a> or <a href=\"http://www.youtube.com/watch?v=EVBsypHzF3U\">\"Telephone\"</a>&#8212;a summit by a pair of reigning queens teaming for the first time, on a rocking song closer to <a href=\"http://www.youtube.com/watch?v=Uqw3HflDDTs\">Mutt Lange</a> than Ole Opry.",
+        "youtube": "9RfT2KqPCoI",
+        "share_text": "My summer jam is \"Somethin' Bad\" by Miranda Lambert!"
+      },
+      "f": {
+        "content": "Michael Jackson, &#8220;Love Never Felt So Good&#8221;",
+        "descriptor":"Reanimated 1983 song, penned by Paul Anka and sung by Jackson during the <em>Thriller</em> era, lovingly rebuilt by producer Timbaland for <a href=\"http://www.billboard.com/biz/articles/news/record-labels/6077618/michael-jacksons-back-how-la-reid-planned-his-xscape-cover\"> the <em>Xscape</em> project</a>; one version features vocals by Justin Timberlake.",
+        "youtube": "oG08ukJPtR8",
+        "share_text": "My summer jam is \"Love Never Felt So Good\" by Michael Jackson!"
+      },
+      "g": {
+        "content": "Kongos, &#8220;Come with Me Now&#8221;",
+        "descriptor":"Odd, three-year-old, lurching accordion-inflected rock song by a South African band that just crossed to U.S. radio this year&#8212;topped <em>Billboard</em>'s Alternative chart in the spring, now getting picked up by top 40 radio.",
+        "youtube": "Gz2GVlQkn4Q",
+        "share_text": "My summer jam is \"Come with Me Now\" by Kongos!"
+      },
+      "h": {
+        "content": "Nicki Minaj, &#8220;Pills n Potions&#8221;",
+        "descriptor":"New single from rapper/<em>Idol</em> judge/pop-culture phenom with a strong <a href=\"http://www.youtube.com/watch?v=4JipHEz53sU\">summer-hit</a> <a href=\"http://www.youtube.com/watch?v=SeIJmciN8mo\">track record</a>; its tempo, framed by a mantra-like \"I still love\" refrain, is ballad-like, offset by more aggressive rap verses.",
+        "youtube": "_krlUcsyUV8",
+        "share_text": "My summer jam is \"Pill n Potions\" by Nicki Minaj!"
+      },
+      "i": {
+        "content": "Nico & Vinz, &#8220;Am I Wrong&#8221;",
+        "descriptor":"A very left-field hit already in <em>Billboard</em>'s Top 10&#8212;a shimmering midtempo pop tune with African flavors, performed by Norwegian duo formerly known as Envy; has the airiness/unorthodox catchiness of <a href=\"http://www.youtube.com/watch?v=8UVNT4wvIGY\">Gotye</a>.",
+        "youtube": "bg1sT4ILG0w",
+        "share_text": "My summer jam is \"Am I Wrong\" by Nico & Vinz!"
+      },
+      "j": {
+        "content": "Paramore, &#8220;Ain't It Fun&#8221;",
+        "descriptor":"Biggest hit to date for the <a href=\"http://www.youtube.com/watch?v=aCyGvGEtOwc\">once emo-punk</a> but now more poppy trio led by <a href=\"http://www.youtube.com/watch?v=i-gyZ35074k\">in-demand singer</a> Hayley Williams; song is still bumping around the threshold of <em>Billboard</em>'s Top 10 and rising at top 40 radio as summer starts.",
+        "youtube": "EFEmTsfFL5A",
+        "share_text": "My summer jam is \"Ain't It Fun\" by Paramore!"
+      },
+      "k": {
+        "content": "Katy Perry, &#8220;Birthday&#8221;",
+        "descriptor":"Frothy tune from the megastar who's brought us several <a href=\"http://www.youtube.com/watch?v=rYbkhM_lATU\">hot-weather</a> dominators but hasn't had a big one since 2011's <a href=\"http://www.youtube.com/watch?v=KlyXNRrsk4A\">\"Last Friday Night\"</a>; given its title, Perry appears to want some of that sweet, sweet <a href=\"http://www.npr.org/blogs/money/2013/06/17/192676099/this-one-page-could-end-the-copyright-war-over-happy-birthday\">publishing-perennial dollar</a>.",
+        "youtube": "CEUg7OplvIQ",
+        "share_text": "My summer jam is \"Birthday\" by Katy Perry!"
+      },
+      "l": {
+        "content": "Robyn & Röyksopp, &#8220;Do It Again&#8221;",
+        "descriptor":"A thumping, buzzing electro-club song, and the title track from an imminent album by the Swedish <a href=\"http://www.youtube.com/watch?v=_PDNRTCuPyQ\">goddess of indie-pop</a> teaming with the Norwegian ambient duo who've been together <a href=\"http://www.youtube.com/watch?v=FljkA5S1pSU\">since EDM was \"electronica.\"</a>",
+        "youtube": "HIG7PVa8SS8",
+        "share_text": "My summer jam is \"Do It Again\" by Robyn & Röyksopp!"
+      },
+      "m": {
+        "content": "Ed Sheeran, &#8220;Sing&#8221;",
+        "descriptor":"Not <a href=\"http://www.youtube.com/watch?v=FQ3slUz7Jo8\">Timberlake</a>, but a remarkable facsimile&#8212;a Pharrell-produced acoustic guitar-plus-dance beats-plus-falsetto jam, from U.K. singer-songwriter leaping from his prior <a href=\"http://www.youtube.com/watch?v=UAWcs5H-qgQ\">delicate ballads</a> to the top 40 brass ring.",
+        "youtube": "tlYcUqEPN58",
+        "share_text": "My summer jam is \"Sing\" by Ed Sheeran!"
+      },
+      "n": {
+        "content": "Sam Smith, &#8220;Stay with Me&#8221;",
+        "descriptor":"Potent piano ballad and breakthrough solo hit from an operatic-voiced Brit (\"<a href=\"http://www.slate.com/blogs/browbeat/2014/03/29/sam_smith_snl_s_next_musical_guest_everything_you_need_to_know_about_the.html\">the male Adele</a>\") introduced to U.S. audiences via <em>SNL</em> and his guest vocals on two prior <a href=\"https://www.youtube.com/watch?v=3O1_3zBUKM8\">dance-pop</a> hits&#8212;one, <a href=\"http://www.youtube.com/watch?v=93ASUImTedo\">\"Latch,\"</a> is also rising at pop radio.",
+        "youtube": "pB-5XG-DbAA",
+        "share_text":"My summer jam is \"Stay With Me\" by Sam Smith!"
+      },
+      "o": {
+        "content": "DJ Snake & Lil Jon, &#8220;Turn Down for What&#8221;",
+        "descriptor":"Trap-dance smash and unlikely comeback hit from mid-'00s <a href=\"http://www.youtube.com/watch?v=IYH7_GzP4Tg\">crunk godfather</a>/Dave Chappelle <a href=\"http://www.youtube.com/watch?v=PoWEESRrNK8\">parody subject</a>, cannily teaming with a French electro DJ to score his first Top 10 hit in five years.",
+        "youtube": "HMUDVMiITOU",
+        "share_text":"My summer jam is \"Turn Down For What\" by DJ Snake & Lil Jon!"
+      },
+      "p": {
+        "content": "tUnE-yArDs, &#8220;Water Fountain&#8221;",
+        "descriptor":"Catchy, &#252;ber-indie first single from the <a href=\"http://www.slate.com/articles/arts/music_box/2014/05/tune_yards_album_nicki_nack_reviewed.html\">new album</a> by Merrill Garbus, a celebrated worldbeat-by-way-of-Connecticut artist who topped <a href=\"http://www.villagevoice.com/pazznjop/albums/2011/\">2011's Pazz &amp; Jop critics' poll</a> and is unlikely to appear on top 40 radio anytime soon.",
+        "youtube": "jbiFcPhccu8",
+        "share_text":"My summer jam is \"Water Fountain\" by tUnE-yArDs!"
+      },
+      "q": {
+        "content": "Usher, &#8220;Good Kisser&#8221;",
+        "descriptor":"Sweaty, syncopated, boudoir-ready, and <a href=\"http://www.thesinglesjukebox.com/?p=11306\">acclaimed</a> single by the now-veteran (<a href=\"http://www.youtube.com/watch?v=mtv3iZ_wRis\">20 years!</a>) R&amp;B crooner with the killer falsetto; slow to catch on at pop radio but now rising into the R&amp;B radio Top 10&#8212;they know what's up.",
+        "youtube": "1lQtoRFaLsA",
+        "share_text":"My summer jam is \"Good Kisser\" by Usher!"
+      }
+    },
+    "end_text": "Your summer jam is",
+    "share_text": "My summer jam is %s"
+  },
+  "questions": [
+    {
+      "content": "Which <strong>Summer 2013</strong> jam do you like best?",
+      "choices": [
+        {
+          "content": "Daft Punk feat. Pharrell Williams, &#8220;Get Lucky&#8221;",
+          "sound":"a",
+          "results": {
+            "i": "4",
+            "f": "4",
+            "q": "2"
+          }
+        },
+        {
+          "content": "Imagine Dragons, &#8220;Radioactive&#8221;",
+          "sound":"radioactive",
+          "results": {
+            "g": "5",
+            "e": "4",
+            "d": "1"
+          }
+        },
+        {
+          "content": "Icona Pop feat. Charli XCX, &#8220;I Love It&#8221;",
+          "sound":"c",
+          "results": {
+            "a": "5",
+            "c": "4",
+            "j": "1"
+          }
+        },
+        {
+          "content": "Robin Thicke feat. T.I. and Pharrell, &#8220;Blurred Lines&#8221;",
+          "sound":"d",
+          "results": {
+            "b": "4",
+            "k": "3",
+            "h": "3"
+          }
+        },
+        {
+          "content":"I don't know or like any or these songs."
+        }
+      ]
+    },
+    {
+      "content": "Which <strong>Summer 2012</strong> jam do you like best?",
+      "choices": [
+        {
+          "content": "Carly Rae Jepsen, &#8220;Call Me Maybe&#8221;",
+          "sound":"e",
+          "results": {
+            "c": "4",
+            "k": "3",
+            "j": "3"
+          }
+        },
+        {
+          "content": "Gotye feat. Kimbra, &#8220;Somebody That I Used to Know&#8221;",
+          "sound":"f",
+          "results": {
+            "i": "6",
+            "g": "3",
+            "q": "1"
+          }
+        },
+        {
+          "content": "fun., &#8220;Some Nights&#8221;",
+          "sound":"g",
+          "results": {
+            "m": "4",
+            "p": "3",
+            "e": "3"
+          }
+        },
+        {
+          "content": "Ellie Goulding, &#8220;Lights&#8221;",
+          "sound":"h",
+          "results": {
+            "l": "4",
+            "d": "4",
+            "o": "2"
+          }
+        },
+        {
+          "content":"I don't know or like any or these songs."
+        }
+      ]
+    },
+    {
+      "content": "Which <strong>Summer 2011</strong> jam do you like best?",
+      "choices": [
+        {
+          "content": "Adele, &#8220;Rolling in the Deep&#8221;",
+          "sound":"i",
+          "results": {
+            "n": "4",
+            "c": "3",
+            "q": "3"
+          }
+        },
+        {
+          "content": "Nicki Minaj, &#8220;Super Bass&#8221;",
+          "sound":"j",
+          "results": {
+            "h": "4",
+            "o": "3",
+            "k": "3"
+          }
+        },
+        {
+          "content": "LMFAO feat. Lauren Bennett and GoonRock, &#8220;Party Rock Anthem&#8221;",
+          "sound":"k",
+          "results": {
+            "b": "5",
+            "o": "3",
+            "d": "2"
+          }
+        },
+        {
+          "content": "Foster the People, &#8220;Pumped Up Kicks&#8221;",
+          "sound":"l",
+          "results": {
+            "i": "4",
+            "l": "3",
+            "p": "3"
+          }
+        },
+        {
+          "content":"I don't know or like any or these songs."
+        }
+      ]
+    },
+    {
+      "content": "Which <strong>Summer 2010</strong> jam do you like best?",
+      "choices": [
+        {
+          "content": "Katy Perry feat. Snoop Dogg, &#8220;California Gurls&#8221;",
+          "sound":"california_gurls",
+          "results": {
+            "a": "4",
+            "k": "4",
+            "j": "3"
+          }
+        },
+        {
+          "content": "Eminem feat. Rihanna, &#8220;Love the Way You Lie&#8221;",
+          "sound":"love_the_way_you_lie",
+          "results": {
+            "h": "4",
+            "n": "3",
+            "d": "3"
+          }
+        },
+        {
+          "content": "Taio Cruz, &#8220;Dynamite&#8221;",
+          "sound":"dynamite",
+          "results": {
+            "m": "5",
+            "b": "4",
+            "f": "1"
+          }
+        },
+        {
+          "content": "Robyn, &#8220;Dancing on My Own&#8221;",
+          "sound":"dancing_on_my_own",
+          "results": {
+            "l": "6",
+            "p": "2",
+            "i": "2"
+          }
+        },
+        {
+          "content":"I don't know or like any or these songs."
+        }
+      ]
+    },
+    {
+      "content": "Which <strong>Summer 2009</strong> jam do you like best?",
+      "choices": [
+        {
+          "content": "The Black Eyed Peas, &#8220;I Gotta Feeling&#8221;",
+          "sound":"i_gotta_feeling",
+          "results": {
+            "k": "5",
+            "c": "3",
+            "f": "3"
+          }
+        },
+        {
+          "content": "Lady Gaga, &#8220;Poker Face&#8221;",
+          "sound":"poker_face",
+          "results": {
+            "a": "4",
+            "l": "3",
+            "d": "3"
+          }
+        },
+        {
+          "content": "Drake, &#8220;Best I Ever Had&#8221;",
+          "sound":"best_i_ever_had",
+          "results": {
+            "o": "4",
+            "h": "4",
+            "m": "2"
+          }
+        },
+        {
+          "content": "Kings of Leon, &#8220;Use Somebody&#8221;",
+          "sound":"use_somebody",
+          "results": {
+            "e": "4",
+            "g": "4",
+            "j": "2"
+          }
+        },
+        {
+          "content":"I don't know or like any or these songs."
+        }
+      ]
+    },
+    {
+      "content": "Which <strong>Summer 2004</strong> jam do you like best?",
+      "choices": [
+        {
+          "content": "Usher, &#8220;Confessions, Part II&#8221;",
+          "sound":"confessions",
+          "results": {
+            "q": "6",
+            "h": "3",
+            "m": "3"
+          }
+        },
+        {
+          "content": "Modest Mouse, &#8220;Float On&#8221;",
+          "sound":"float_on",
+          "results": {
+            "j": "4",
+            "g": "4",
+            "e": "2"
+          }
+        },
+        {
+          "content": "Juvenile feat. Soulja Slim, &#8220;Slow Motion&#8221;",
+          "sound":"slow_motion",
+          "results": {
+            "b": "5",
+            "o": "4",
+            "a": "1"
+          }
+        },
+        {
+          "content": "Nina Sky feat. Jabba, &#8220;Move Ya Body&#8221;",
+          "sound":"move_ya_body",
+          "results": {
+            "o": "5",
+            "c": "4",
+            "p": "1"
+          }
+        },
+        {
+          "content":"I don't know or like any or these songs."
+        }
+      ]
+    },
+    {
+      "content": "Which <strong>Summer 1999</strong> jam do you like best?",
+      "choices": [
+        {
+          "content": "Backstreet Boys, &#8220;I Want It That Way&#8221;",
+          "sound":"i_want_it_that_way",
+          "results": {
+            "m": "4",
+            "a": "3",
+            "k": "3"
+          }
+        },
+        {
+          "content": "Lit, &#8220;My Own Worst Enemy&#8221;",
+          "sound":"my_own_worst_enemy",
+          "results": {
+            "j": "5",
+            "e": "3",
+            "g": "2"
+          }
+        },
+        {
+          "content": "Christina Aguilera, &#8220;Genie in a Bottle&#8221;",
+          "sound":"genie_in_a_bottle",
+          "results": {
+            "i": "4",
+            "d": "4",
+            "c": "2"
+          }
+        },
+        {
+          "content": "Destiny’s Child, &#8220;Bills, Bills, Bills&#8221;",
+          "sound":"bills_bills_bills",
+          "results": {
+            "b": "4",
+            "f": "3",
+            "q": "3"
+          }
+        },
+        {
+          "content":"I don't know or like any or these songs."
+        }
+      ]
+    },
+    {
+      "content": "Which <strong>Summer 1994</strong> jam do you like best?",
+      "choices": [
+        {
+          "content": "Ace of Base, &#8220;Don’t Turn Around&#8221;",
+          "sound":"dont_turn_around",
+          "results": {
+            "d": "5",
+            "l": "3",
+            "a": "3"
+          }
+        },
+        {
+          "content": "All-4-One, &#8220;I Swear&#8221;",
+          "sound":"i_swear",
+          "results": {
+            "n": "5",
+            "q": "3",
+            "k": "2"
+          }
+        },
+        {
+          "content": "Lisa Loeb and Nine Stories, &#8220;Stay (I Missed You)&#8221;",
+          "sound":"stay",
+          "results": {
+            "g": "4",
+            "i": "4",
+            "c": "2"
+          }
+        },
+        {
+          "content": "The Offspring, &#8220;Come Out and Play (Keep ’em Separated)&#8221;",
+          "sound":"come_out_and_play",
+          "results": {
+            "j": "5",
+            "o": "4",
+            "p": "1"
+          }
+        },
+        {
+          "content":"I don't know or like any or these songs."
+        }
+      ]
+    },
+    {
+      "content": "Which <strong>Summer 1989</strong> jam do you like best?",
+      "choices": [
+        {
+          "content": "Richard Marx, &#8220;Right Here Waiting&#8221;",
+          "sound":"right_here_waiting",
+          "results": {
+            "f": "5",
+            "n": "4",
+            "h": "3"
+          }
+        },
+        {
+          "content": "Love and Rockets, &#8220;So Alive&#8221;",
+          "sound":"so_alive",
+          "results": {
+            "p": "6",
+            "l": "3",
+            "q": "1"
+          }
+        },
+        {
+          "content": "Neneh Cherry, &#8220;Buffalo Stance&#8221;",
+          "sound":"buffalo_stance",
+          "results": {
+            "a": "4",
+            "o": "4",
+            "b": "2"
+          }
+        },
+        {
+          "content": "Fine Young Cannibals, &#8220;Good Thing&#8221;",
+          "sound":"good_thing",
+          "results": {
+            "i": "6",
+            "m": "3",
+            "g": "1"
+          }
+        },
+        {
+          "content":"I don't know or like any or these songs."
+        }
+      ]
+    },
+    {
+      "content": "Which <strong>Summer 1984</strong> jam do you like best?",
+      "choices": [
+        {
+          "content": "Prince, &#8220;When Doves Cry&#8221;",
+          "sound":"when_doves_cry",
+          "results": {
+            "i": "5",
+            "q": "4",
+            "p": "3"
+          }
+        },
+        {
+          "content": "Bruce Springsteen and the E Street Band, &#8220;Dancing in the Dark&#8221;",
+          "sound":"dancing_in_the_dark",
+          "results": {
+            "e": "4",
+            "j": "4",
+            "k": "2"
+          }
+        },
+        {
+          "content": "Tina Turner, &#8220;What’s Love Got to Do with It&#8221;",
+          "sound":"whats_love",
+          "results": {
+            "n": "5",
+            "f": "4",
+            "c": "1"
+          }
+        },
+        {
+          "content": "Newcleus, &#8220;Jam on It&#8221;",
+          "sound":"jam_on_it",
+          "results": {
+            "a": "5",
+            "b": "4",
+            "o": "1"
+          }
+        },
+        {
+          "content":"I don't know or like any or these songs."
+        }
+      ]
+    }
+  ]
+}

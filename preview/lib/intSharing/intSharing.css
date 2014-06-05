@@ -1,0 +1,39 @@
+.intSharing_btn_share {
+  padding: 5px;
+  border: 1px solid #c7c7c7;
+  display: inline-block;
+  margin-right: 10px;
+  height: 25px;
+  cursor: pointer;
+  line-height: 25px; }
+  .intSharing_btn_share:hover {
+    position: relative;
+    top: 1px; }
+  .intSharing_btn_share:active {
+    position: relative;
+    top: 2px; }
+  .intSharing_btn_share:last-child {
+    margin-right: 0px; }
+  .intSharing_btn_share .share_icon {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 3px; }
+    .intSharing_btn_share .share_icon :hover {
+      position: relative;
+      top: 1px; }
+    .intSharing_btn_share .share_icon :active {
+      position: relative;
+      top: 2px; }
+  .intSharing_btn_share .share_label {
+    display: inline-block; }
+
+.intSharing_fb_share .share_icon {
+  background: url(graphics/fb_icon.png); }
+
+.intSharing_tw_share .share_icon {
+  background: url(graphics/twitter_icon.png); }
+
+.intSharing_email_share .share_icon {
+  background: url(graphics/email.jpg); }

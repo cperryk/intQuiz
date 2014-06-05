@@ -1,0 +1,37 @@
+{
+  "title": "Drug or Programming Language?",
+  "description":"For each word or phrase, guess whether it represents a drug or a programming language.",
+  "title_slide":"true",
+  "fb_description": "",
+  "thumbnail": "",
+    "questions": [
+        {
+            "content": "Molly",
+            "choices": [
+                {
+                    "content": "Drug",
+                    "validity": "true"
+                },
+                {
+                    "content": "Programming language",
+                    "validity": "false"
+                }
+            ],
+            "feedback":"Molly is a form of Ectasy."
+        },
+        {
+            "content": "PHP",
+            "choices": [
+                {
+                    "content": "Drug",
+                    "validity": "false"
+                },
+                {
+                    "content": "Programming language",
+                    "validity": "true"
+                }
+            ],
+            "feedback":"PHP is a programming language."
+        }
+    ]
+}

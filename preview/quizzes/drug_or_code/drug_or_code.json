@@ -1,0 +1,306 @@
+{
+  "title": "Drug or Programming Language?",
+  "description": "It's not surprising that the FBI can't find programmers <a target=\"_blank\" href=\"http://www.slate.com/blogs/the_slatest/2014/05/20/fbi_director_says_considering_changing_drug_employment_rules.html\">who aren't baked out of their minds</a>. Do programming languages sound like drugs, or are we just high? You be the judge: For these 25 terms, guess whether each represents a drug or a programming language.",
+  "title_slide": "false",
+  "fb_description": "For each question, guess whether the word or phrase describes a drug or a programming language.",
+  "thumbnail": "",
+  "attribution": "Code icon by <a target=\"_blank\" href=\"https://www.iconfinder.com/iconsets/picol-vector#readme\">PICOL</a> / <a target=\"blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons</a>. Drug icon by iStock.",
+  "blocked_choices": "true",
+  "teaser":"Did that quiz leave you with the munchies? Try our <a href=\"http://www.slate.com/articles/life/low_concept/2014/05/fast_food_generator_forget_the_waffle_taco_use_our_fast_food_generator_to.html\">Fast Food Generator</a>.",
+  "choices":[
+    {
+      "content":"Drug",
+      "img":"drug.png",
+      "id":"drug"
+    },
+    {
+      "content": "Programming Language",
+      "img":"source_code-512.png",
+      "id":"code"
+    }
+  ],
+  "questions": [
+    {
+      "content": "Molly",
+      "correct":"drug",
+      "feedback": {
+        "img": {
+          "src": "Ecstasy_monogram.jpg",
+          "position": "top",
+          "credit": "Wikimedia Commons"
+        },
+        "content": "Molly is a <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/MDMA\">type of Ectasy</a>."
+      }
+    },
+    {
+      "content": "Alice",
+      "correct":["code","drug"],
+      "feedback": {
+        "img": {
+          "src": "alice.png",
+          "position": "top"
+        },
+        "content": "This one's a freebie. Alice is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Alice_(programming_language)\">a programming language</a> and <a href=\"http://www.urbandictionary.com/define.php?term=alice&defid=3314914\">a slang for LSD</a>."
+      }
+    },
+    {
+      "content": "PHP",
+      "correct":"code",
+      "feedback": {
+        "content": "PHP is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Php\">a popular Web programming language</a>, not to be confused with PCP, a hallucinogenic drug.",
+        "img": {
+          "src": "php.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Robo",
+      "correct":"drug",
+      "feedback": {
+        "img": {
+          "src": "710px-DXM_Doses.jpg",
+          "position": "top",
+          "credit": "Wikimedia Commons"
+        },
+        "content": "Robo is <a target=\"_blank\" href=\"http://www.urbandictionary.com/define.php?term=robo\">slang for dextromethorphan</a>, a hallucinogen that is the active ingredient of many cough suppressants, including Robitussin."
+      }
+    },
+    {
+      "content": "Bliss",
+      "correct":"code",
+      "feedback": {
+        "content": "BLISS is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/BLISS_(programming_language)\">a programming language</a>, although it's also a <a target=\"_blank\" href=\"http://tardis.wikia.com/wiki/Bliss_(drug)\">fictional drug</a> in <a href=\"http://www.amazon.com/dp/B00951A73A/?tag=slatmaga-20\"><em>Dr. Who</em></a>.",
+        "img": {
+          "src": "bliss.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Windowpane",
+      "correct":"drug",
+      "feedback": {
+        "content": "Windowpane is LSD contained in a <a target=\"_blank\" href=\"http://www.noslang.com/drugs/dictionary/p/\">small, clear, gelatin square</a>.",
+        "img": {
+          "src": "Silver_Windows.jpg",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Elixir",
+      "correct":"code",
+      "feedback": {
+        "content": "Elixir is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Elixir_(programming_language)\">a programming language</a> released in 2012.",
+        "img": {
+          "src": "elixir.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "DXM",
+      "correct":"drug",
+      "feedback": {
+        "content": "DXM is short for <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Dextromethorphan\">dextromethorphan</a>, a cough suppressant that is used recreationally as a hallucinogen.",
+        "img": {
+          "src": "Dextrometorfano.jpg",
+          "position": "top",
+          "credit": "Wikimedia Commons"
+        }
+      }
+    },
+    {
+      "content": "Little b",
+      "correct":"code",
+      "feedback": {
+        "content": "Little b is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Little_b\">a programming language</a> designed for biological research.",
+        "img": {
+          "src": "littleb.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Brainfuck",
+      "correct":"code",
+      "feedback": {
+        "content": "Brainfuck is an <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Brainfuck_(programming_language)\">\"esoteric programming language,\"</a> designed for amusement or theoretical interest, not practical use.",
+        "img": {
+          "src": "brainfuck.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "MDMA",
+      "correct":"drug",
+      "feedback": {
+        "content": "MDMA is the chemical name for <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/MDMA\">Ecstasy</a>.",
+        "img": {
+          "src": "mdma.jpg",
+          "position": "top",
+          "credit": "Wikimedia Commons"
+        }
+      }
+    },
+    {
+      "content": "Microdot",
+      "correct":"drug",
+      "feedback": {
+        "content": "Microdots are <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Lysergic_acid_diethylamide\">small tablets of LSD</a>.",
+        "img": {
+          "src": "microdots.jpg",
+          "position": "top",
+          "credit": "Flickr user St. Albert"
+        }
+      }
+    },
+    {
+      "content": "Bigwig",
+      "correct":"code",
+      "feedback": {
+        "content": "Bigwig is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Bigwig_(programming_language)\">a programming language</a> for Web applications.",
+        "img": {
+          "src": "bigwig.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Magik",
+      "correct":"code",
+      "feedback": {
+        "content": "Magik is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Magik_(programming_language)\">a programming language</a> invented in 1989.",
+        "img": {
+          "src": "magik.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Emsel",
+      "correct":"drug",
+      "feedback": {
+        "content":"Emsel is <a target=\"_blank\" href=\"http://www.noslang.com/drugs/dictionary/e/\">slang</a> for morphine.",
+        "img":{
+          "src":"morphine.png",
+          "position":"top",
+          "credit":"Courtesy of Hospira"
+        }
+      }
+    },
+    {
+      "content": "Triple C",
+      "correct":"drug",
+      "feedback": {
+        "content": "Triple C is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Coricidin#Recreational_use\">slang</a> for Coricidin Cough & Cold. When used recreationally in high does, it induces a trippy feeling.",
+        "img": {
+          "src": "coricidin.jpg",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Groovy",
+      "correct":"code",
+      "feedback": {
+        "content": "Groovy is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Groovy_(programming_language)\">a programming language</a> developed in 2003.",
+        "img": {
+          "src": "groovy.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Ruby on Rails",
+      "correct":"code",
+      "feedback": {
+        "content": "Ruby on Rails is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Ruby_on_rails\">a popular Web application framework</a> that runs on the Ruby programming language.",
+        "img": {
+          "src": "rails.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Scala",
+      "correct":"code",
+      "feedback": {
+        "content": "Scala is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Scala_(programming_language)\">a programming language</a> invented in 2003.",
+        "img": {
+          "src": "scala.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Mesc",
+      "correct":"drug",
+      "feedback": {
+        "content": "Mesc, short for \"mescaline,\" is the active ingredient in <a target=\"_blank\" href=\"http://www.getsmartaboutdrugs.com/drugs/peyote_and_mescaline.html?vOverview\">peyote</a>, a cactus that causes hallucinations.",
+        "img": {
+          "src": "mescaline.gif",
+          "credit": "Wikimedia Commons",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Adenine",
+      "correct":"code",
+      "feedback": {
+        "content": "Adenine is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Adenine_(programming_language)\">a programming language</a> named after a component of DNA.",
+        "img": {
+          "src": "adenine.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Whitespace",
+      "correct":"code",
+      "feedback": {
+        "content": "Whitespace is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Whitespace_(programming_language)\">an esoteric programming language</a> that depends entirely on \"whitespace\" characters, such as spaces and tabs.",
+        "img": {
+          "src": "whitespace.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Oxygene",
+      "correct":"code",
+      "feedback": {
+        "content": "Oxygene is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Oxygene_(programming_language)\">a programming language</a> released in 2011.",
+        "img": {
+          "src": "oxygene.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Grass",
+      "correct":["drug","code"],
+      "feedback": {
+        "content": "This one's a freebie. Grass is slang for marijuana. GRASS is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/GRASS_(programming_language)\">an old programming language</a> for 2D animations.",
+        "img": {
+          "src": "grass.png",
+          "position": "top"
+        }
+      }
+    },
+    {
+      "content": "Euphoria",
+      "correct":"code",
+      "feedback": {
+        "content": "Euphoria is <a target=\"_blank\" href=\"http://en.wikipedia.org/wiki/Euphoria_(programming_language)#History\">a programming language</a> invented in 1993.",
+        "img": {
+          "src": "euphoria.png",
+          "position": "top"
+        }
+      }
+    }
+  ]
+}

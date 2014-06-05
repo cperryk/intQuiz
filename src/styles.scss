@@ -1,0 +1,511 @@
+$base_color: #57828D;
+.int_loader{
+  width:92%;
+  margin:1em 0;
+  text-align:left;
+  padding:2%;
+  margin:2%;
+  img{
+    margin-right:0.5em;
+  }
+}
+.simple_quiz  {
+  color:rgb(40, 27, 33);
+  overflow:hidden;
+  position:relative;
+  width: 100%;
+  outline: 1px solid $base_color;
+  max-width: 588px;
+  margin: 20px auto 0px auto;
+  text-align: center;
+
+  .quiz_inner {
+    font-family:'sl-ApresRegular',verdana;
+  }
+  .question_wrapper{
+    background:url('graphics/stripe.png');
+    &:not(.answered){
+      .choice:not(.excluded){
+        cursor:pointer;
+        line-height:1.4;
+        &:hover:not(.no_highlight){
+          background-color: #fdffcf;
+          //position: relative;
+          //top: 1px;
+        }
+
+        &:active:not(.no_highlight){
+          position: relative;
+          top: 1px;
+        }
+      }
+    }
+  }
+
+  .top_bar {
+    border-bottom: 1px solid #c7c7c7;
+    padding: 0.6% 1%;
+    text-align: left;
+    color:#424242;
+    position:relative;
+    text-transform:uppercase;
+    font-size:0.8em;
+    background-color:$base_color;
+    color:white;
+    font-family:'sl-ApresRegular';
+    -moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;
+
+    .quiz_nav{
+      position: absolute;
+      float:right;
+      top: 0;
+      margin-top:1px;
+      padding:0.6% 1%;
+      right: 0;
+      white-space:nowrap;
+      vertical-align:bottom;
+
+      .arr{
+        display: inline-block;
+        cursor: pointer;
+
+        &:hover{
+          color:#fff521;
+        }
+
+        &.inactive{
+          display:none;
+        }
+      }
+
+      .location_readout{
+        display: inline-block;
+        margin: 0 5px;
+      }
+
+    }
+
+  }
+
+  .question {
+    font-size: 1.5em;
+    line-height:1.4;
+    text-align:left;
+    padding:4%;
+    background-color:white;
+    border-bottom:1px solid #c7c7c7;
+    box-shadow: 0px 3px 3px rgba(0,0,0,.05);
+    //font-family:'sl-TitlingGothFBStandCond';
+    font-family:'sl-ApresRegular';
+    strong{
+      font-family:'sl-ApresBold';
+    }
+    .question_number{
+      color:#6e6e6e;
+      font-size:0.7em;
+      padding-right:0px;
+      margin-right:0px;
+      font-family: 'sl-ApresRegular';
+      vertical-align:middle;
+      line-height:100%;
+    }
+    &.big{
+      font-size:4em;
+      line-height:100%;
+      text-align:center;
+      .question_number{
+        display:none;
+      }
+    }
+    &.with_sound{
+      .question_content{
+        display:table-cell;
+        margin:0;
+        padding:0 0 0 0.5em;
+        vertical-align:middle;
+      }
+    }
+  }
+
+  .btn_sound_wrapper{
+    display:table-cell;
+    vertical-align:top;
+  }
+
+  .btn_sound{
+    width:80px;
+    height:80px;
+    background:url('graphics/btn_playstopsound.png') no-repeat;
+    cursor:pointer;
+    box-shadow:3px 3px 3px rgba(0,0,0,0.1);
+    &:hover{
+      position:relative;
+      top:1px;
+    }
+    &:active{
+      position:relative;
+      top:2px;
+    }
+    &.playing_sound{
+      background-position:-80px 0px;
+    }
+    &.loading{
+      background:url('ajax-loader.gif') no-repeat;
+    }
+  }
+
+  .choices{
+    padding:4%;
+    width:92%;
+    .choice {
+      //background:url('graphics/stripe.png');
+      background-color:white;
+      margin: 10px 0;
+      //box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+      padding: 2%;
+      width:94%;
+      background-origin: border-box;
+      outline: 1px solid #dcdcdc;
+      text-align: left;
+      display:inline-block;
+      -moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;
+      &.excluded{
+        opacity:0.2;
+      }
+      .choice_content{
+        em{
+          font-style:normal;
+        }
+        margin:0;
+        line-height:1.4;
+      }
+      .choice_row{
+        display:table_row;
+      }
+      &:first-child{
+        margin-top:0;
+      }
+      &.with_sound{
+        .choice_content{
+          display:table-cell;
+          vertical-align:middle;
+        }
+        .btn_sound{
+          margin-right:0.5em;
+          width:50px;
+          height:50px;
+          background:url('graphics/btn_playstopsound_small.png');
+          &.playing_sound{
+            background-position:-50px 0px;
+          }
+        }
+      }
+
+      &.correct {
+        background: white url('graphics/check.png') no-repeat right 5px bottom 5px,
+          //url('graphics/stripe_green.png');
+        }
+
+        &.incorrect {
+          background: white url('graphics/ex.png') no-repeat right 5px bottom 5px,
+          //url('graphics/stripe_red.png'),
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+        &.ghost{
+          position:absolute;
+          left:9999px;
+        }
+      }
+      &.blocked{
+        display:table;
+        border-spacing:1em;
+        table-layout:fixed;
+        display:table;
+        margin-top:0;
+        margin-bottom:0;
+        padding:2%;
+        width:96%;
+        .choice_row{
+          display:table-row;
+        }
+        .choice{
+          width:42%;
+          text-align:center;
+          vertical-align:middle;
+          display:table-cell;
+        // &:nth-child(odd){
+        //   margin-right:4%;
+        // }
+        img{
+          max-height:5em;
+          margin-bottom:0.5em;
+          display:inline-block;
+          text-align:center;
+        }
+        // &:nth-last-child{
+        //   margin-bottom:0;
+        // }
+        // &:nth-last-child(2){
+        //   margin-bottom:0;
+        // }
+        // &:nth-child(2){
+        //   margin-top:0px;
+        // }
+      }
+    }
+  }
+  .choice_bottom{
+    background-color:white;
+    box-shadow: 0px -3px 3px rgba(0,0,0,.05);
+    border-top: 1px solid #c7c7c7;
+    padding:4%;
+    display:none;
+  }
+
+  .feedback {
+    margin-bottom:1em;
+    .img_wrapper{
+      display:inline-block;
+      margin:0.5em;
+      position:relative;
+      outline:1px solid #c7c7c7;
+      max-width:100%;
+      &:first-child{
+        margin-top:0;
+      }
+      img{
+        max-width:100%;
+        max-height:15em;
+      }
+      .caption{
+        padding:0.2em;
+        font-size:0.5em;
+        margin:0px;
+        text-align:right;
+        position:absolute;
+        bottom:0px;
+        right:0px;
+        font-family:'sl-ApresRegular',verdana;
+        background:rgba(255,255,255,0.5);
+      }
+    }
+    .feedback_content{
+      text-align:left;
+      margin:0;
+      line-height:150%;
+      em{
+        font-family:'sl-ApresRegular';
+        font-style:normal;
+      }
+      &:first-child{
+        margin-top:0;
+      }
+      .correct, .incorrect{
+        font-family:'sl-ApresBold';
+      }
+      .correct{
+        color:#39B54A;
+      }
+      .incorrect{
+        color:#ED1C24;
+      }
+    }
+  }
+
+  .btn_next {
+    text-align: center;
+    background-color: red;
+    margin: 0 auto 0 auto;
+    color: white;
+    cursor:  pointer;
+    width: 96px;
+    height: 19px;
+    cursor: pointer;
+    background: url('graphics/btn_next.png') center;
+    &:hover {
+      position: relative;
+      top: 1px;
+    }
+    &:active {
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  .end_wrapper {
+    padding:4%;
+    text-align:  center;
+    em{
+      font-family:'sl-ApresIt';
+      font-style:normal;
+    }
+    strong {
+      font-family: 'sl-ApresBold',verdana;
+    }
+    .completion_text {
+      font-size: 4em;
+      line-height: 100%;
+      font-family:'sl-TitlingGothFBStandCond',verdana;
+      color:#3D5B63;
+    }
+    .score_wrapper{
+      padding:1em 0;
+      border-top:1px dotted #3D5B63;
+      margin:1em 0 0 0;
+      :last-child{
+        margin-bottom:0px;
+      }
+      .quiz_result{
+        font-size:1.4em;
+      }
+    }
+    .quiz_result {
+      line-height:1.4;
+      img{
+        width:100%;
+      }
+      .matcher_end{
+        margin-bottom:0.5em;
+        font-size:1.3em;
+        font-family:'sl-ApresIt',verdana;
+      }
+      .descriptor{
+        text-align:left;
+        font-size:1em;
+      }
+      .matcher_result{
+        font-size:1.7em;
+        line-height:1.4;
+        margin:0.2em 0;
+        font-family:'sl-ApresBold',verdana;
+      }
+      iframe{
+        width:100%;
+      }
+    }
+    .average_score {
+      font-size:1.2em;
+      display: none;
+      line-height:100%;
+      margin:0.8em;
+    }
+    .share_btns {
+      margin-top: 0.8em;
+    }
+    .teaser{
+      padding-top:1em;
+      border-top:1px dotted #3D5B63;
+      text-align:left;
+    }
+  }
+
+  .title_slide{
+    padding:4%;
+    .quiz_title{
+      font-size:3.4em;
+      font-family:'sl-TitlingGothFBStandCond',verdana;
+      text-align:left;
+      line-height:125%;
+      text-align:center;
+    }
+    .quiz_desc{
+      font-size:1.2em;
+      margin-top:10px;
+      text-align:left;
+    }
+    .btn_go{
+      width:200px;
+      height:141px;
+      background:url('graphics/btn_go.png');
+      cursor:pointer;
+      &:active{
+        position:relative;
+        top:2px;
+      }
+      &:hover{
+        background-position:-200px 0px;
+        position:relative;
+        top:1px;
+      }
+      margin:15px auto 0 auto;
+    }
+  }
+}
+.int_attribution{
+  font-size:0.6em;
+  color:gray;
+  text-align:right;
+  max-width:588px;
+  margin:0.3em auto 20px auto;
+  a{
+    color:#2c2c2c;
+  }
+}
+@media screen and (max-width:580px){
+	.simple_quiz{
+    outline:none;
+    border-bottom:1px solid $base_color;
+    border-top:1px solid $base_color;
+    .quiz_inner{
+      padding-left:0;
+      padding-right:0;
+    }
+  }
+}
+
+.intSharing_btn_share{
+  padding:5px;
+  border:1px solid #c7c7c7;
+  display:inline-block;
+  margin-right:10px;
+  height:25px;
+  cursor:pointer;
+  line-height:25px;
+  &:hover{
+    position:relative;
+    top:1px;
+  }
+  &:active{
+    position:relative;
+    top:2px;
+  }
+  &:last-child{
+    margin-right:0px;
+  }
+  .share_icon{
+    width:25px;
+    height:25px;
+    display:inline-block;
+    vertical-align:top;
+    margin-right:3px;
+    :hover{
+      position:relative;
+      top:1px;
+    }
+    :active{
+      position:relative;
+      top:2px;
+    }
+  }
+  .share_label{
+    display:inline-block;
+  }
+}
+
+.intSharing_fb_share{
+  .share_icon{
+    background:url(graphics/fb_icon.png);
+  }
+}
+.intSharing_tw_share{
+  .share_icon{
+    background:url(graphics/twitter_icon.png);
+  }
+}
+.intSharing_email_share{
+  .share_icon{
+    background:url(graphics/email.jpg);
+  }
+}
