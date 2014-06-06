@@ -776,10 +776,6 @@ Choice.prototype = {
       .addClass('choice')
       .appendTo(target_container);
     this.recordValidity();
-    $('<p>')
-      .addClass('choice_content')
-      .html(this.data.content)
-      .appendTo(this.container);
     if(this.par.exclusions && this.par.exclusions.length > 0 && this.par.exclusions.indexOf(this.data.id)>-1){
       this.container.addClass('excluded');
     }
@@ -794,8 +790,18 @@ Choice.prototype = {
     if(this.data.img){
       this.printImg();
     }
+    var content_wrapper = $('<p>')
+      .addClass('choice_content')
+      .html(this.data.content);
     if(this.data.sound){
-      this.printSound();
+      var sound_content_wrapper = $('<div>')
+        .addClass('sound_content');
+      this.printSound(sound_content_wrapper);
+      content_wrapper.appendTo(sound_content_wrapper);
+      sound_content_wrapper.appendTo(this.container);
+    }
+    else{
+      content_wrapper.appendTo(this.container);
     }
     if(this.par.par.QUIZ_DATA.blocked_choices){
       this.container.addClass('blocked');
@@ -817,12 +823,12 @@ Choice.prototype = {
     var self = this;
     $('<img>')
       .attr('src',INT_PATH+'quizzes/'+this.par.par.slug+'/img/'+src)
-      .prependTo(self.container);
+      .appendTo(self.container);
   },
-  printSound:function(){
+  printSound:function(target){
     var self = this;
     this.container.addClass('with_sound');
-    var btn = this.par.par.appendSoundBtn(this.container,this.data.sound);
+    var btn = this.par.par.appendSoundBtn(target,this.data.sound);
     btn.hover(function(){
       self.container.addClass('no_highlight');
     },function(){

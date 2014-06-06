@@ -1,0 +1,98 @@
+{
+  "title": "Bribery Quiz",
+  "description":"For each bribery charge, guess who committed it: An Olympics official, a FIFA official, a congressman, or a dictator.",
+  "title_slide":"false",
+  "fb_description": "",
+  "share_name":"Bribery Quiz",
+  "thumbnail": "",
+  "blocked_choices":"true",
+  "choices":[
+    {
+      "content":"Olympics official",
+      "id":"olympics",
+      "img":"olympicrings.png"
+    },
+    {
+      "content":"FIFA official",
+      "id":"fifa",
+      "img":"fifa.png"
+    },
+    {
+      "content":"Member of Congress",
+      "id":"congress",
+      "img":"capitol.png"
+    },
+    {
+      "content":"Dictator",
+      "id":"dictator",
+      "img":"dictator.png"
+    }
+  ],
+  "questions": [
+    {
+      "content":"Was filmed by undercover investigators asking for an $800,000 bribe for a personal construction project.",
+      "correct":"fifa",
+      "feedback":"Former FIFA executive committee member Amos Adamu was <a href=\"http://www.nigeriafilms.com/news/9377/37/amos-adamu-and-the-world-cup-bribery-allegation-vi.html\">filmed soliciting a bribe</a> in exchange for his World Cup vote in a sting operation by the <em>Sunday Times</em> of London in 2010."
+    },
+    {
+      "content":"Allegedly attempted to obtain an honorary knighthood as a bribe.",
+      "correct":"fifa",
+      "feedback":"Former FIFA executive committee member Nicolás Leoz is alleged to have <a href=\"http://www.theguardian.com/football/2011/may/11/mp-nicolas-leoz-honour\">solicited a knighthood</a> in exchange for backing England’s bid to host the 2018 World Cup."
+    },
+    {
+      "content":"Accepted the free use of a yacht, a used Rolls-Royce, antique furniture, Persian rugs, jewelry, and a $2,000 contribution for his daughter's college graduation party. Also, allegedly accepted the services of prostitutes as a bribe.",
+      "correct":"congress",
+      "feedback":"Rep. Randy “Duke” Cunningham (R-Calif.) accepted <a href=\"http://www.dukecunningham.org/bibliography/plea-agreement.html\">multiple favors</a> from defense contractors prior to resigning from office and pleading guilty to bribery, fraud, and tax evasion charges in 2005."
+    },
+    {
+      "content":"Allegedly accepted the services of prostitutes, paid by credit card, as a bribe.",
+      "correct":"olympics",
+      "feedback":"Members of the Salt Lake City Olympic bid committee allegedly <a href=\"http://www.nytimes.com/1999/01/10/sports/olympics-sex-enters-the-fray-in-inquiry-in-utah.html\">charged escort services</a> for International Olympic Committee officials to their credit cards."
+    },
+    {
+      "content":"A business associate placed a single deposit of more than $3 million in a bank account set up in his daughter’s name. Daughter was 10 years old at the time.",
+      "correct":"fifa",
+      "feedback":"Former FIFA executive committee member Ricardo Teixeira had <a href=\"http://www.telegraph.co.uk/sport/football/world-cup/10775490/Daughter-of-World-Cup-official-had-2m-put-into-account.html\">more than $3 million</a> paid to his 10-year-old daughter’s bank account in 2011, allegedly by former FC Barcelona President Sandro Rosell, whose club had six months earlier agreed to a sponsorship deal with the Qatar Foundation. Michael Garcia, the joint chief investigator of FIFA’s ethics committee, is reportedly scrutinizing Teixeira’s decision to support Qatar’s World Cup bid."
+    },
+    {
+      "content":"Allegedly set up a dummy bank account as a Haitian earthquake fund and stole from said account.",
+      "correct":"fifa",
+      "feedback":"Former FIFA Vice President Jack Warner was allegedly responsible for emergency aid monies that <a href=\"http://www.theguardian.com/football/2012/feb/16/ttff-jack-warner-haiti-funds\">suspiciously went missing</a>."
+    },
+    {
+      "content":"Accepted a bribe of cosmetic surgery to smooth bags under eyes.",
+      "correct":"olympics",
+      "feedback":"An International Olympics Committee member received <a href=\"http://ajrarchive.org/article.asp?id=505\">free cosmetic surgery</a>, courtesy of Salt Lake City Olympic organizers. "
+    },
+    {
+      "content":"Accepted knee surgery as a bribe.",
+      "correct":"olympics",
+      "feedback":"An International Olympics Committee member received a <a href=\"http://sportsillustrated.cnn.com/olympics/news/1999/08/03/bribery_chronology_ap/\">new knee</a> joint, courtesy of Salt Lake Olympic organizers."
+    },
+    {
+      "content":"Attended a lavish, illicit party at Neville Chamberlain’s old house in Birmingham, England, where kimono-clad women reportedly served sushi.",
+      "correct":"olympics",
+      "feedback":"Olympic officials reportedly had <a href=\"http://www.theguardian.com/sport/1999/feb/04/olympic-bribes-nagano-bid-investigation\">quite a party</a> with the Nagano, Japan, bid committee in June 1991 prior to the IOC meeting to determine the location of the 1998 Olympics. Olympic regulations prohibited parties during IOC meetings."
+    },
+    {
+      "content":"Considered offering $1.6 billion to buy Manchester United, but decided it might “look bad.”",
+      "correct":"dictator",
+      "feedback":"In January 2009, Myanmarese dictator Than Shwe figured it was a <a href=\"http://www.theguardian.com/world/2010/dec/06/wikileaks-burma-manchester-united-takeover\">bad time</a> for a $1 billion-plus soccer team purchase, considering that the country, also known as Burma, was still struggling to recover from the damage inflicted by Cyclone Nargis only a few months before."
+    },
+    {
+      "content":"Was filmed by investigators accepting $100,000 in bribes. Kept $90,000 in marked money in his office freezer.",
+      "correct":"congress",
+      "feedback":"In 2005, federal agents found $90,000 in Rep. William Jefferson’s (D-La.) <a href=\"http://www.politico.com/news/stories/0809/25850.html\">freezer</a>."
+    },
+    {
+      "content":"Used influence of alleged Uzbek mafia boss and heroin kingpin to secure massive international contract.",
+      "correct":"olympics",
+      "feedback":"The head of the Russian Olympic bid committee <a href=\"http://abcnews.go.com/Blotter/alleged-heroin-kingpin-helped-russia-win-olympics-sochi/story?id=22295531\">publicly thanked alleged Uzbek heroin trafficker Gafur Rakhimov</a> for his assistance in winning the 2014 Winter Games for Sochi."
+    },
+    {
+      "content":"Once a youth organizer for Spain’s fascists, he liked to be called “your excellency.” He was the boss of a corrupt organization for 21 years.",
+      "correct":"olympics",
+      "feedback":"Juan Antonio Samaranch was president of the International Olympic Committee from 1980 to 2001. During his tenure, the organization faced <a href=\"http://www.thedailybeast.com/articles/2013/09/06/sex-bribes-rhythmic-gymnastics-the-ioc-s-biggest-scandals.html\">scandal after scandal</a>."
+    }
+  ]
+}
