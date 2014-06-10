@@ -5,7 +5,10 @@ require.config({
     IntQuizScore: INT_PATH+'lib/intQuizScore',
     IntSharing: INT_PATH+'lib/intSharing/intSharing',
     IntSound: INT_PATH+'lib/intSound',
-    imagesLoaded: INT_PATH+'lib/imagesLoaded.min'
+    imagesLoaded: INT_PATH+'lib/imagesLoaded.min',
+    SoundJS:INT_PATH+'lib/soundjs/soundjs-0.5.2.min',
+    SJS_FlashPlugin:INT_PATH+'lib/soundjs/FlashPlugin',
+    SJS_SwfObject:INT_PATH+'lib/soundjs/swfobject'
   }
 });
 
@@ -281,7 +284,15 @@ SimpleQuiz.prototype = {
       require(['IntSharing'],function(IntSharing){
         var share_btns_wrapper = $('<div>')
           .addClass('share_btns')
-          .appendTo(score_wrapper);
+          .appendTo(score_wrapper)
+          .click(function(){
+            self.restart();
+          });
+        $('<div>')
+          .addClass('intSharing_btn_share btn_restart')
+          .append($('<div>').addClass('share_icon'))
+          .append($('<div>').addClass('share_label').html('Restart'))
+          .appendTo(share_btns_wrapper);
         var btns = IntSharing.appendShareBtns(share_btns_wrapper);
         btns.fb.click(function(){
             IntSharing.facebookShare({
@@ -304,6 +315,13 @@ SimpleQuiz.prototype = {
         });
       });
     }
+  },
+  restart:function(){
+    this.questions.forEach(function(question){
+      question.answered = false;
+      delete question.selected_choice;
+    });
+    this.goToLocation(0);
   },
   printTitleSlide:function(){
     this.clear();
@@ -344,13 +362,13 @@ SimpleQuiz.prototype = {
       .prependTo(btn_wrapper);
     (function addSoundListener(){
       if(getIEversion()===8){
-        require(['lib/soundjs/soundjs-0.5.2.min','lib/soundjs/FlashPlugin.js','lib/soundjs/swfobject.js','IntSound'],function(SoundJS,FlashPlugin,SwfObject,IntSound){
+        require(['SoundJS','SJS_FlashPlugin','SJS_SwfObject','IntSound'],function(SoundJS,FlashPlugin,SwfObject,IntSound){
           IntSound.initialize(INT_PATH+'lib/soundjs');
           go(IntSound);
         });
       }
       else{
-        require(['lib/soundjs/soundjs-0.5.2.min','IntSound'],function(SoundJS,IntSound){
+        require(['SoundJS','IntSound'],function(SoundJS,IntSound){
           go(IntSound);
         });
       }
@@ -359,7 +377,6 @@ SimpleQuiz.prototype = {
       self.IntSound_used = true;
       var sound_id = (typeof sound_data === 'object' ? sound_data.id : sound_data);
       IntSound.tieToButton(btn,INT_PATH+'quizzes/'+self.slug+'/sound/',sound_id);
-      console.log(sound_data.autoplay);
       if(typeof sound_data === 'object' && sound_data.autoplay === "true"){
         btn.trigger('click');
       }
@@ -501,19 +518,13 @@ Question.prototype = {
     this.getExcludedChoices();
     writeHTML();
     if(self.par.QUIZ_DATA.blocked_choices=="true"){
-      equalizeChoiceHeights();
+      waitForWebfonts(['sl-ApresRegular','sl-ApresBold','sl-ApresIt'],function(){
+        equalizeChoiceHeights();
+      });
     }
     function writeHTML(){
       var target_wrapper = choice_wrapper;
       choices_data.forEach(function(choice_data,i){
-        if(self.par.QUIZ_DATA.blocked_choices=="true"){
-          if(i===0 || i%2 === 0){
-            var row = $('<div>')
-              .addClass('choice_row')
-              .appendTo(choice_wrapper);
-            target_wrapper = row;
-          }
-        }
         if(self.choices[i]){
           self.choices[i].build(target_wrapper);
         }
@@ -587,7 +598,7 @@ Question.prototype = {
     }
     this.answered = true;
     this.selected_choice = choice;
-    if(this.par.QUIZ_DATA.auto_advance && !rechoosing){
+    if(this.par.QUIZ_DATA.auto_advance==="true" && !rechoosing){
       this.reflectChoice(choice, true);
       this.par.advanceOne();
     }
@@ -775,6 +786,9 @@ Choice.prototype = {
       .data('choice_index',this.choice_index)
       .addClass('choice')
       .appendTo(target_container);
+    this.inner = $('<div>')
+      .addClass('inner')
+      .appendTo(this.container);
     this.recordValidity();
     if(this.par.exclusions && this.par.exclusions.length > 0 && this.par.exclusions.indexOf(this.data.id)>-1){
       this.container.addClass('excluded');
@@ -798,12 +812,12 @@ Choice.prototype = {
         .addClass('sound_content');
       this.printSound(sound_content_wrapper);
       content_wrapper.appendTo(sound_content_wrapper);
-      sound_content_wrapper.appendTo(this.container);
+      sound_content_wrapper.appendTo(this.inner);
     }
     else{
-      content_wrapper.appendTo(this.container);
+      content_wrapper.appendTo(this.inner);
     }
-    if(this.par.par.QUIZ_DATA.blocked_choices){
+    if(this.par.par.QUIZ_DATA.blocked_choices === "true"){
       this.container.addClass('blocked');
     }
   },
@@ -822,8 +836,10 @@ Choice.prototype = {
     var src = this.data.img;
     var self = this;
     $('<img>')
+      .addClass('choice_img')
       .attr('src',INT_PATH+'quizzes/'+this.par.par.slug+'/img/'+src)
-      .appendTo(self.container);
+      .appendTo(self.inner);
+    this.container.addClass('with_img');
   },
   printSound:function(target){
     var self = this;
@@ -852,7 +868,6 @@ Choice.prototype = {
     return this;
   }
 };
-
 
 function createQuiz(container,slug){
   var url = INT_PATH+'quizzes/'+slug+'/'+slug+'.json';
@@ -908,6 +923,7 @@ function getIEversion(){
 
 
 
+/* jshint ignore:start */
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.com/#x15.4.4.18
 if (!Array.prototype.forEach) {
@@ -1014,3 +1030,56 @@ if(!Array.isArray) {
     return Object.prototype.toString.call(arg) === '[object Array]';
   };
 }
+function waitForWebfonts(fonts, callback) {
+  var loadedFonts = 0;
+  for(var i = 0, l = fonts.length; i < l; ++i) {
+    (function(font) {
+      var node = document.createElement('span');
+      // Characters that vary significantly among different fonts
+      node.innerHTML = 'giItT1WQy@!-/#';
+      // Visible - so we can measure it - but not on the screen
+      node.style.position      = 'absolute';
+      node.style.left          = '-10000px';
+      node.style.top           = '-10000px';
+      // Large font size makes even subtle changes obvious
+      node.style.fontSize      = '300px';
+      // Reset any font properties
+      node.style.fontFamily    = 'sans-serif';
+      node.style.fontVariant   = 'normal';
+      node.style.fontStyle     = 'normal';
+      node.style.fontWeight    = 'normal';
+      node.style.letterSpacing = '0';
+      document.body.appendChild(node);
+
+      // Remember width with no applied web font
+      var width = node.offsetWidth;
+
+      node.style.fontFamily = font;
+
+      var interval;
+      function checkFont() {
+        // Compare current width with original width
+        if(node && node.offsetWidth != width) {
+          ++loadedFonts;
+          node.parentNode.removeChild(node);
+          node = null;
+        }
+
+        // If all fonts have been loaded
+        if(loadedFonts >= fonts.length) {
+          if(interval) {
+            clearInterval(interval);
+          }
+          if(loadedFonts == fonts.length) {
+            callback();
+            return true;
+          }
+        }
+      };
+
+      if(!checkFont()) {
+        interval = setInterval(checkFont, 50);
+      }
+    })(fonts[i]);
+  }
+};

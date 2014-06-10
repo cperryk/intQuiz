@@ -15,6 +15,8 @@ Top-level properties. Mandatory properties in red.
 - **exclusionary_choices**: Boolean. Setting to true makes each question's answer disable the corresponding choice in subsequent chances. Only works when the .choices variable is set so that choices are consistent across questions.
 - **attribution**: Adds text to the attribution. Useful if you must give image credits to images that appear in the choices containers.
 - **teaser**: String. A blurb that appears at the end to tease to another article.
+- **matcher**: Object. If this is set, this is a Matching Quiz, in which the user answers questions that matches him or her to one of a predetermined set of results. This object contains information specific to the matchmaking logic of the quiz. See *Matcher* below.
+- **autoadvance**: Boolean. If true, the quiz will automatically advance to the next question after the user answers. Default is false.
 
 <h3>Question</h3>
 - **content**: String. Text representing the question. May contain HTML.
@@ -29,12 +31,24 @@ Top-level properties. Mandatory properties in red.
 - **sound**: String. The ID a sound to go with the choice. Sounds must be stored in a "sounds" directory within the quiz directory.
 - **id**: String or integer. Used when choices are set at the top level so that questions can connect with them.
 
+<hr/>
 <h3>Feedback</h3>
 - **content**: String. The HTML to show on feedback.
 - **img**: Object or string. If string, the SRC of the image. If object, see "Feedback Img" below.
 - **sound**: In progress.
 
-<h3>Feedback Img</h3>
+<h4>Feedback Img</h4>
 - **src**: String. The name of the image. The program will look inside the quiz directory for the image.
 - **credit**: String. A credit for the image. This will appear in a semi-transparent overlay in the lower right-hand corner of the image.
 - **position**: String, "bottom" or "top." If "bottom," the image will appear below the choice content. If "top," the image will appear above the choice content. Defaults to bottom.
+
+<hr/>
+<h3>Matcher</h3>
+- **results**: Object. A dictionary of results objects. See **Matcher Result** below.
+- **end_text**: String. This is the text that appears before the result text. For example, "Your city is..." or "Your song is..."
+
+<h3>Matcher Result</h3>
+- **content**: String. The title of the result. For example, a song title or city name.
+- **descriptor**: String. A description of the result and/or why the user received it. Appears below the result content.
+- **youtube**: String. The ID of a YouTube video related to the result. If set, a video will appear above the result content. A YouTube video's ID can be found at the end of its URL.
+- **share_text**: String. What will appear in the share dialogs for this result.

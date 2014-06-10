@@ -1,0 +1,101 @@
+{
+  "title": "Who Wrote It, Lennon or McCartney?",
+  "description": "For each song on <em>A Hard Day's Night</em>, guess whether John Lennon or Paul McCartney wrote it.",
+  "blocked_choices": "true",
+  "choices":[
+    {
+      "content":"John Lennon wrote it.",
+      "id":"lennon",
+      "img":"lennon.jpg"
+    },
+    {
+      "content":"Paul McCartney wrote it.",
+      "id":"mccartney",
+      "img":"mccartney.jpg"
+    },
+    {
+      "content":"Both wrote it.",
+      "id":"both"
+    }
+  ],
+  "questions": [
+    {
+      "content": "A Hard Day's Night",
+      "sound":"a_hard_days_night",
+      "correct": "lennon",
+      "feedback":"This song was written by John Lennon."
+    },
+    {
+      "content": "I Should Have Known Better",
+      "sound":"i_should_have_known_better",
+      "correct": "lennon",
+      "feedback":"This song was written by John Lennon (and inspired, in part, by Bob Dylan)."
+    },
+    {
+      "content": "If I Fell",
+      "sound":"if_i_fell",
+      "correct": "lennon",
+      "feedback":"This song was written by Lennon."
+    },
+    {
+      "content": "I'm Happy Just To Dance With You",
+      "sound":"im_happy_just_to_dance_with_you",
+      "correct": "lennon",
+      "feedback":"This song was written by Lennon."
+    },
+    {
+      "content": "And I Love Her",
+      "sound":"and_i_love_her",
+      "correct": "both",
+      "feedback":"“The first half was Paul’s and the middle eight is mine,” Lennon later recalled."
+    },
+    {
+      "content": "Tell Me Why",
+      "sound":"tell_me_why",
+      "correct": "lennon",
+      "feedback":"This song was written by Lennon."
+    },
+    {
+      "content": "Can't Buy Me Love",
+      "sound":"cant_buy_me_love",
+      "correct": ["mccartney","both"],
+      "feedback":"This song was written by John and Paul, “but mainly Paul,” Lennon later recalled."
+    },
+    {
+      "content": "Any Time At All",
+      "sound":"any_time_at_all",
+      "correct": "lennon",
+      "feedback":"This song was written by Lennon."
+    },
+    {
+      "content": "I'll Cry Instead",
+      "sound":"ill_cry_instead",
+      "correct": "lennon",
+      "feedback":"This song was written by Lennon."
+    },
+    {
+      "content": "Things We Said Today",
+      "sound":"things_we_said_today",
+      "correct": "mccartney",
+      "feedback":"Though it resembles Lennon’s style, this song was written by McCartney when he was with Jane Asher in the Bahamas."
+    },
+    {
+      "content": "When I Get Home",
+      "sound":"when_i_get_home",
+      "correct": "lennon",
+      "feedback":"This song was written by Lennon."
+    },
+    {
+      "content": "You Can't Do That",
+      "sound":"you_cant_do_that",
+      "correct": "lennon",
+      "feedback":"This song was written by Lennon."
+    },
+    {
+      "content": "I'll Be Back",
+      "sound":"ill_be_back",
+      "correct": "lennon",
+      "feedback":"This song was written by Lennon. “A nice tune, though the middle is a bit tatty,” he later recalled."
+    }
+  ]
+}
