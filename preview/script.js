@@ -518,7 +518,7 @@ Question.prototype = {
     this.getExcludedChoices();
     writeHTML();
     if(self.par.QUIZ_DATA.blocked_choices=="true"){
-      waitForWebfonts(['sl-ApresRegular','sl-ApresBold','sl-ApresIt'],function(){
+      waitForWebfonts(['sl-ApresRegular'],function(){
         equalizeChoiceHeights();
       });
     }
