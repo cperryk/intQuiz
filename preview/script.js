@@ -673,93 +673,12 @@ Question.prototype = {
       return this;
     }
     var self = this;
-    this.feedback_wrapper = $('<div>')
-      .addClass('feedback');
-    $('<p>')
-      .addClass('feedback_content')
-      .html(this.getFeedbackText())
-      .appendTo(this.feedback_wrapper);
-    this.printFeedbackImage(function(){
-      self.feedback_wrapper
-        .appendTo(target);
+    this.feedback = new Feedback(target,this.data.feedback,this,function(){
       if(callback){
         callback();
       }
     });
     return this;
-  },
-  printFeedbackImage:function(callback){
-    if(typeof this.data.feedback !== 'object' || !this.data.feedback.img){
-      if(callback){
-        callback();
-      }
-      return this;
-    }
-    var self = this;
-    var img_data = this.data.feedback.img;
-    var url = getImgURL();
-    var wrapper = $('<div>')
-      .addClass('img_wrapper');
-    var img = $('<img>')
-      .attr('src',url);
-    img.load(function(){
-        placeImg();
-        placeCredit();
-        callback();
-      });
-    return this;
-
-    function placeImg(){
-      img
-        .removeAttr('width height') // because IE adds width and height attributes that force the image to appear at its actual dimensions
-        .appendTo(wrapper);
-      if(img_data.position){
-        if(img_data.position === 'top'){
-          wrapper.prependTo(self.feedback_wrapper);
-        }
-        else{
-          wrapper.appendTo(self.feedback_wrapper);
-        }
-      }
-      else{
-        wrapper.appendTo(self.feedback_wrapper);
-      }
-      wrapper.css('display','inline-block');
-    }
-    function placeCredit(){
-      if(img_data.credit || img_data.caption){
-        $('<p>')
-          .addClass('caption')
-          .html(img_data.credit)
-          .appendTo(wrapper);
-      }
-    }
-    function getImgURL(){
-      var url = INT_PATH+'quizzes/'+self.par.slug+'/img/';
-      if(typeof img_data === 'object'){
-        url += img_data.src;
-      }
-      else{
-        url += img_data;
-      }
-      return url;
-    }
-  },
-  getFeedbackText:function(){
-    var s = '';
-    if(typeof this.data.feedback === 'string'){
-      s+=this.data.feedback;
-    }
-    else if(typeof this.data.feedback === 'object'){
-      s+=this.data.feedback.content;
-    }
-    if(this.validity==='true'){
-      s='<span class="correct">Correct!</span> '+s;
-    }
-    else{
-      s='<span class="incorrect">Incorrect.</span> '+s;
-    }
-    return s;
   },
   printNextBtn:function(target){
     var self = this;
@@ -866,6 +785,102 @@ Choice.prototype = {
       this.validity = validity.toString();
     }
     return this;
+  }
+};
+
+function Feedback(target,data,parent,callback){
+  this.par = parent;
+  this.data = data;
+  this.build(target,callback);
+}
+Feedback.prototype = {
+  build:function(target,callback){
+    var self = this;
+    this.container = $('<div>')
+      .addClass('feedback');
+    $('<p>')
+      .addClass('feedback_content')
+      .html(this.getFeedbackText())
+      .appendTo(this.container);
+    this.printFeedbackImage(function(){
+      self.container.appendTo(target);
+      if(callback){
+        callback();
+      }
+    });
+  },
+  getFeedbackText:function(){
+    var s = '';
+    if(typeof this.data === 'string'){
+      s+=this.data;
+    }
+    else if(typeof this.data === 'object'){
+      s+=this.data.content;
+    }
+    if(this.par.validity==='true'){
+      s='<span class="correct">Correct!</span> '+s;
+    }
+    else{
+      s='<span class="incorrect">Incorrect.</span> '+s;
+    }
+    return s;
+  },
+  printFeedbackImage:function(callback){
+    if(typeof this.data !== 'object' || !this.data.img){
+      if(callback){
+        callback();
+      }
+      return this;
+    }
+    var self = this;
+    var img_data = this.data.img;
+    var url = getImgURL();
+    var wrapper = $('<div>')
+      .addClass('img_wrapper');
+    var img = $('<img>')
+      .attr('src',url);
+    img.load(function(){
+        placeImg();
+        placeCredit();
+        callback();
+      });
+    return this;
+
+    function placeImg(){
+      img
+        .removeAttr('width height') // because IE adds width and height attributes that force the image to appear at its actual dimensions
+        .appendTo(wrapper);
+      if(img_data.position){
+        if(img_data.position === 'top'){
+          wrapper.prependTo(self.container);
+        }
+        else{
+          wrapper.appendTo(self.container);
+        }
+      }
+      else{
+        wrapper.appendTo(self.container);
+      }
+      wrapper.css('display','inline-block');
+    }
+    function placeCredit(){
+      if(img_data.credit || img_data.caption){
+        $('<p>')
+          .addClass('caption')
+          .html(img_data.credit)
+          .appendTo(wrapper);
+      }
+    }
+    function getImgURL(){
+      var url = INT_PATH+'quizzes/'+self.par.par.slug+'/img/';
+      if(typeof img_data === 'object'){
+        url += img_data.src;
+      }
+      else{
+        url += img_data;
+      }
+      return url;
+    }
   }
 };
 
