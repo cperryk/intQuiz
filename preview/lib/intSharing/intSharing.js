@@ -80,22 +80,22 @@ define(function(){
     appendShareBtns:function(container){
       return {
         fb:$('<div>')
-          .addClass('intSharing_btn_share')
-          .addClass('intSharing_fb_share')
-          .append($('<div>').addClass('share_icon'))
-          .append($('<div>').addClass('share_label').html('Share'))
+          .addClass('intSharing-btn-share')
+          .addClass('intSharing-fb-share')
+          .append($('<div>').addClass('share-icon'))
+          .append($('<div>').addClass('share-label').html('Share'))
           .appendTo(container),
         tw:$('<div>')
-          .addClass('intSharing_btn_share')
-          .addClass('intSharing_tw_share')
-          .append($('<div>').addClass('share_icon'))
-          .append($('<div>').addClass('share_label').html('Tweet'))
+          .addClass('intSharing-btn-share')
+          .addClass('intSharing-tw-share')
+          .append($('<div>').addClass('share-icon'))
+          .append($('<div>').addClass('share-label').html('Tweet'))
           .appendTo(container),
         email:$('<div>')
-          .addClass('intSharing_btn_share')
-          .addClass('intSharing_email_share')
-          .append($('<div>').addClass('share_icon'))
-          .append($('<div>').addClass('share_label').html('Email'))
+          .addClass('intSharing-btn-share')
+          .addClass('intSharing-email-share')
+          .append($('<div>').addClass('share-icon'))
+          .append($('<div>').addClass('share-label').html('Email'))
           .appendTo(container)
       };
     }

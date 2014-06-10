@@ -196,6 +196,17 @@ $base_color: #57828D;
     .btn_sound_wrapper{
       vertical-align:top;
     }
+    &:not(.with_img ){
+      .inner{
+        display:table;
+        width:100%;
+        height:100%;
+      }
+      .choice_content{
+        display:table-cell;
+        vertical-align:middle;
+      }
+    }
   }
   &.excluded{
     opacity:0.2;

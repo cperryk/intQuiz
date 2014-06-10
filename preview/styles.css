@@ -151,6 +151,13 @@
         text-align: center; }
       .simple_quiz .choice.blocked .btn_sound_wrapper {
         vertical-align: top; }
+      .simple_quiz .choice.blocked:not(.with_img) .inner {
+        display: table;
+        width: 100%;
+        height: 100%; }
+      .simple_quiz .choice.blocked:not(.with_img) .choice_content {
+        display: table-cell;
+        vertical-align: middle; }
     .simple_quiz .choice.excluded {
       opacity: 0.2; }
     .simple_quiz .choice .choice_content {
