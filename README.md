@@ -8,24 +8,26 @@ Top-level properties. Mandatory properties in red.
 - **title_slide**: Boolean. If true, a title slide with the title and description will be the first to appear instead of the first question. Default is false.
 - **share_name**: String. What the quiz should be called in the share dialogs. Will default to *"[title] quiz"*
 - **fb_description**: String. Text that appears as the description in a Facebook share request. Defaults to description.
-- **thumbnail**: String. A URL to a thumbnail that will appear in the Facebook share request.
+- **thumbnail**: String. A URL to a thumbnail that will appear in the Facebook share request. If none is provided, the program will look for a promo image on the Slate. If none is found, IntSharing defaults to a Slate logo.
 - <span style="color:red">**questions**</span>: Array. An array of question objects. See *Question* below.
-- **choices**: Array. An array of choice objects. Set the choice objects here instead of in each question if the questions all share the same choices.
+- **choices**: Array or dictionary. If an array, an array of choice objects. Set the choice objects here instead of in each question if the questions all share the same choices. If an object, a dictionary of rounds, with each key being a round ID and each value being an array of choices. Rounds are useful if you multiple groups of the questions, and choices are consistent inside each group but not between groups.
 - **blocked_choices**: Boolean. Setting to true shrinks the width of all choice elements, allowing two to appear in the same row. Good for short choices.
-- **exclusionary_choices**: Boolean. Setting to true makes each question's answer disable the corresponding choice in subsequent chances. Only works when the .choices variable is set so that choices are consistent across questions.
-- **attribution**: Adds text to the attribution. Useful if you must give image credits to images that appear in the choices containers.
+- **exclusionary_choices**: Boolean. Setting to true makes each question's answer disable the corresponding choice in subsequent questions. Only works when the top-level .choices variable is set so that choices are consistent across questions.
+- **attribution**: String. Adds text to the attribution. Useful if you must give image credits to images that appear in the choices containers.
 - **teaser**: String. A blurb that appears at the end to tease to another article.
 - **matcher**: Object. If this is set, this is a Matching Quiz, in which the user answers questions that matches him or her to one of a predetermined set of results. This object contains information specific to the matchmaking logic of the quiz. See *Matcher* below.
-- **autoadvance**: Boolean. If true, the quiz will automatically advance to the next question after the user answers. Default is false.
+- **auto_advance**: Boolean. If true, the quiz will automatically advance to the next question after the user answers. Default is false.
 
 <h3>Question</h3>
 - **content**: String. Text representing the question. May contain HTML.
-- **choices**: Array. An array of choice objects.
+- **img**: String. The filename of the image to appear with this question, above the question content.
+- **choices**: Array or string. If an array, an array of choice objects. If a string, the ID of the choice round, as set inside the top level "choices" variable. If blank, the program will assume the top-level "choices" variable is an array of choices and use that. See *Choice*.
 - **correct**: String, integer, or array. The ID or IDs of the correct choice(s), if choices are set at the top level, or an array of IDs.
-- feedback. Object. Describes the contents of the feedback. The feedback is what appears when the user answers a question. See feedback below.
+- **feedback**. Object. Describes the contents of the feedback. The feedback is what appears when the user answers a question. See feedback below.
 - **sound**: String. The ID of a sound to go with the choice. Sounds must be stored in a "sounds" directory within the quiz directory.
 
 <h3>Choice</h3>
+A choice can be an object or a string. If the choice is a string, it is assumed to be purely textual, with a false validity.
 - **content**: String. Text representign the choice. May contain HTML.
 - **validity**: Boolean. Set to "true" if the choice is correct. Default is "false." Multiple choices may be marked as correct.
 - **sound**: String. The ID a sound to go with the choice. Sounds must be stored in a "sounds" directory within the quiz directory.
