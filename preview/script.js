@@ -282,7 +282,6 @@ SimpleQuiz.prototype = {
         }
       }
       require(['IntSharing'],function(IntSharing){
-        console.log(IntSharing);
         var share_btns_wrapper = $('<div>')
           .addClass('share_btns')
           .appendTo(score_wrapper);
@@ -489,6 +488,7 @@ Question.prototype = {
   },
   printQuestionContent:function(){
     var self = this;
+    var loader =  new IntLoader(this.container,'Loading question...',250);
     var question_wrapper = $('<div>')
       .addClass('question');
     var question_content = $('<div>')
@@ -504,11 +504,17 @@ Question.prototype = {
     var question_text = $('<span>')
       .html(this.data.content || this.par.question.content)
       .appendTo(main_text);
-    question_wrapper.appendTo(this.container);
+    question_wrapper
+      .hide()
+      .appendTo(this.container);
+    question_wrapper.imagesLoaded(function(){
+      question_wrapper.fadeIn();
+      loader.kill();
+    });
     (function printSub(){
       if(self.data.sub){
         $('<p>')
-          .html(this.data.sub)
+          .html(self.data.sub)
           .addClass('sub_text')
           .appendTo(question_content);
       }

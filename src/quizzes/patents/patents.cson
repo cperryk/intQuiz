@@ -1,7 +1,8 @@
 {
-  title: "What Is That Invention?"
+  title: "What's That Invention?"
   description: "Guess what each invention is baesd on its patent model."
   blocked_choices: "true"
+  attribution:"Images courtesy of Alan Rothschild, PatentModel.org, Wikimedia Commons."
   questions:[
     {
       img:"washing_machine.jpg"
@@ -151,11 +152,11 @@
         "Typewriter"
         "Hatpin maker"
         {
-          content:"Horsehoe-making machine"
+          content:"Horseshoe-making machine"
           validity:"true"
         }
       ]
-      feedback:"This is a horsehoe-making machine invented in 1880. When this patent was filed, horses were still a main means of transportation, and the Kentucky Derby was only in its 5<sup>th</sup> year."
+      feedback:"This is a horseshoe-making machine invented in 1880. When this patent was filed, horses were still a main means of transportation, and the Kentucky Derby was only in its 5<sup>th</sup> year."
     }
     {
       img:"oatmeal_machine.jpg"
@@ -259,7 +260,7 @@
       img:"life_boat.jpg"
       content:"What is this invention?"
       choices:[
-        "Barabeque smoker"
+        "Barbecue smoker"
         "Furnace"
         "Mailbox"
         {
