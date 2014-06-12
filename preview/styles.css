@@ -1,12 +1,3 @@
-.int_loader {
-  width: 92%;
-  margin: 1em 0;
-  text-align: left;
-  padding: 2%;
-  margin: 2%; }
-  .int_loader img {
-    margin-right: 0.5em; }
-
 .simple_quiz {
   color: #281b21;
   overflow: hidden;
@@ -74,6 +65,17 @@
     font-family: 'sl-ApresRegular'; }
     .simple_quiz .question strong {
       font-family: 'sl-ApresBold'; }
+    .simple_quiz .question .main_text {
+      margin: 0px; }
+    .simple_quiz .question .sub_text {
+      margin: 0.2em 0 0 0;
+      font-size: 0.6em;
+      padding-left: 1em; }
+    .simple_quiz .question .img_wrapper {
+      text-align: center;
+      margin-bottom: 1em; }
+      .simple_quiz .question .img_wrapper img {
+        max-width: 100%; }
     .simple_quiz .question .question_number {
       color: #6e6e6e;
       font-size: 0.7em;
@@ -97,9 +99,9 @@
     display: table-cell;
     vertical-align: middle; }
   .simple_quiz .btn_sound {
-    width: 80px;
-    height: 80px;
-    background: url("graphics/btn_playstopsound.png") no-repeat;
+    width: 50px;
+    height: 50px;
+    background: url("graphics/btn_playstopsound_small.png") no-repeat;
     cursor: pointer;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); }
     .simple_quiz .btn_sound:hover {
@@ -111,7 +113,7 @@
     .simple_quiz .btn_sound.loading {
       background: #55b5ae url("graphics/sound_loader.gif") center no-repeat; }
     .simple_quiz .btn_sound.playing_sound {
-      background-position: -80px 0px; }
+      background-position: -50px 0px; }
   .simple_quiz .choices {
     padding: 4%;
     width: 92%; }
@@ -241,6 +243,12 @@
         color: #39B54A; }
       .simple_quiz .feedback .feedback_content .incorrect {
         color: #ED1C24; }
+    .simple_quiz .feedback.with_sound .feedback_content {
+      display: table-cell;
+      vertical-align: middle; }
+    .simple_quiz .feedback .btn_sound_wrapper {
+      display: table-cell;
+      padding-right: 1em; }
   .simple_quiz .btn_next {
     text-align: center;
     background-color: red;
@@ -346,7 +354,10 @@
     border-top: 1px solid #57828d; }
     .simple_quiz .quiz_inner {
       padding-left: 0;
-      padding-right: 0; } }
+      padding-right: 0; }
+
+  .simple_quiz .choice.blocked img {
+    max-width: 100%; } }
 .intSharing_btn_share {
   padding: 5px;
   border: 1px solid #c7c7c7;
@@ -386,6 +397,15 @@
 
 .intSharing_email_share .share_icon {
   background: url(graphics/email.jpg); }
+
+.int_loader {
+  width: 92%;
+  margin: 1em 0;
+  text-align: left;
+  padding: 2%;
+  margin: 2%; }
+  .int_loader img {
+    margin-right: 0.5em; }
 
 .btn_restart .share_icon {
   background: url(graphics/restart.png); }

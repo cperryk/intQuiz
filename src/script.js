@@ -282,23 +282,24 @@ SimpleQuiz.prototype = {
         }
       }
       require(['IntSharing'],function(IntSharing){
+        console.log(IntSharing);
         var share_btns_wrapper = $('<div>')
           .addClass('share_btns')
-          .appendTo(score_wrapper)
-          .click(function(){
-            self.restart();
-          });
+          .appendTo(score_wrapper);
         $('<div>')
           .addClass('intSharing_btn_share btn_restart')
           .append($('<div>').addClass('share_icon'))
           .append($('<div>').addClass('share_label').html('Restart'))
-          .appendTo(share_btns_wrapper);
+          .appendTo(share_btns_wrapper)
+          .click(function(){
+            self.restart();
+          });
         var btns = IntSharing.appendShareBtns(share_btns_wrapper);
         btns.fb.click(function(){
             IntSharing.facebookShare({
               head:share_strings.facebook,
               desc:self.QUIZ_DATA.fb_description || self.QUIZ_DATA.description,
-              img:self.QUIZ_DATA.thumbnail
+              img:self.QUIZ_DATA.thumbnail || $('link[rel="image_src"]').attr('href')
             });
           });
         btns.tw.click(function(){
@@ -322,6 +323,11 @@ SimpleQuiz.prototype = {
       delete question.selected_choice;
     });
     this.goToLocation(0);
+    if(this.par.user){
+      if(this.par.user.score){
+        this.par.user.score = 0;
+      }
+    }
   },
   printTitleSlide:function(){
     this.clear();
@@ -488,14 +494,35 @@ Question.prototype = {
     var question_content = $('<div>')
       .addClass('question_content')
       .appendTo(question_wrapper);
+    var main_text = $('<p>')
+      .addClass('main_text')
+      .appendTo(question_content);
     var question_number = $('<span>')
       .addClass('question_number')
       .html(this.question_number+'. ')
-      .appendTo(question_content);
+      .appendTo(main_text);
     var question_text = $('<span>')
       .html(this.data.content || this.par.question.content)
-      .appendTo(question_content);
+      .appendTo(main_text);
     question_wrapper.appendTo(this.container);
+    (function printSub(){
+      if(self.data.sub){
+        $('<p>')
+          .html(this.data.sub)
+          .addClass('sub_text')
+          .appendTo(question_content);
+      }
+    })();
+    (function printImg(){
+      if(self.data.img){
+        var img_wrapper = $('<div>')
+          .addClass('img_wrapper')
+          .prependTo(question_wrapper);
+        $('<img>')
+          .attr('src',INT_PATH+'quizzes/'+self.par.slug+'/img/'+self.data.img)
+          .prependTo(img_wrapper);
+      }
+    })();
     (function adjustFontSize(){
       if(self.data.content.length < 15){
         question_wrapper.addClass('big');
@@ -593,7 +620,7 @@ Question.prototype = {
       });
       rechoosing = true;
     }
-    if(!choice.validity || choice.validity==='true'){
+    if(choice.validity && choice.validity==='true'){
       this.par.user.score++;
     }
     this.answered = true;
@@ -694,7 +721,12 @@ Question.prototype = {
 function Choice(choice_data,choice_index,target_container,parent){
   var self = this;
   this.choice_index = choice_index;
-  this.data = choice_data;
+  if(typeof choice_data == 'object'){
+    this.data = choice_data;
+  }
+  else if(typeof choice_data == 'string'){
+    this.data = {content:choice_data};
+  }
   this.par = parent;
   this.build(target_container);
 }
@@ -802,6 +834,7 @@ Feedback.prototype = {
       .addClass('feedback_content')
       .html(this.getFeedbackText())
       .appendTo(this.container);
+    this.printSound();
     this.printFeedbackImage(function(){
       self.container.appendTo(target);
       if(callback){
@@ -880,6 +913,12 @@ Feedback.prototype = {
         url += img_data;
       }
       return url;
+    }
+  },
+  printSound:function(){
+    if(this.data.sound){
+      this.container.addClass('with_sound');
+      this.par.par.appendSoundBtn(this.container, this.data.sound);
     }
   }
 };

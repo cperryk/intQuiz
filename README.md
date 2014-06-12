@@ -52,3 +52,7 @@ Top-level properties. Mandatory properties in red.
 - **descriptor**: String. A description of the result and/or why the user received it. Appears below the result content.
 - **youtube**: String. The ID of a YouTube video related to the result. If set, a video will appear above the result content. A YouTube video's ID can be found at the end of its URL.
 - **share_text**: String. What will appear in the share dialogs for this result.
+
+<h1>To-do</h1>
+- When a sound button is pressed, and the user advances to the next slide before the sound loads, the sound plays, with no way to stop it but playing a different sound
+- In mobile, blocked choices should be unblocked

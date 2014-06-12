@@ -1,0 +1,36 @@
+{
+  title: "Drug or Programming Language?",
+  description: "It's not surprising that the FBI can't find programmers <a target=\"_blank\" href=\"http://www.slate.com/blogs/the_slatest/2014/05/20/fbi_director_says_considering_changing_drug_employment_rules.html\">who aren't baked out of their minds</a>. Do programming languages sound like drugs, or are we just high? You be the judge: For these 25 terms, guess whether each represents a drug or a programming language.",
+  fb_description: "For each question, guess whether the word or phrase describes a drug or a programming language.",
+  attribution: "Code icon by <a target=\"_blank\" href=\"https://www.iconfinder.com/iconsets/picol-vector#readme\">PICOL</a> / <a target=\"blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons</a>. Drug icon by iStock.",
+  blocked_choices: "true",
+  choices:[
+    {
+      content:"True!",
+      img:"drug.png",
+      id:"truth"
+    },
+    {
+      content: "B.S.",
+      img:"source_code-512.png",
+      id:"untrue"
+    }
+  ],
+  questions:[
+    {
+      content:"For the first time ever, a computer passed the Turing Test by convincing scientists that they were chatting with a real person.",
+      correct:"untrue",
+      feedback:"Not so fast. http://www.slate.com/articles/technology/bitwise/2014/06/turing_test_reading_university_did_eugene_goostman_finally_make_the_grade.html"
+    },
+    {
+      content:"Obama signed a bill forgiving all student loan debt.",
+      correct:"untrue",
+      feedback:"This rumor was started by a chain email, and PolitiFact has debunked it. http://www.politifact.com/truth-o-meter/statements/2014/jun/09/chain-email/did-barack-obama-sign-bill-forgive-all-outstanding/"
+    },
+    {
+      content:"George R.R. Martin's first tweet sent people back to his LiveJournal page",
+      correct:"true",
+      feedback:""
+    }
+  ]
+}
