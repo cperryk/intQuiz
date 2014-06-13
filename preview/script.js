@@ -549,14 +549,17 @@ Question.prototype = {
       .addClass('choices'+(self.par.QUIZ_DATA.blocked_choices=="true"?' blocked':''))
       .appendTo(this.container);
     this.getExcludedChoices();
-    writeHTML();
+    writeChoices();
     if(self.par.QUIZ_DATA.blocked_choices=="true"){
       waitForWebfonts(['sl-ApresRegular'],function(){
         equalizeChoiceHeights();
       });
     }
-    function writeHTML(){
+    function writeChoices(){
       var target_wrapper = choice_wrapper;
+      if(self.par.QUIZ_DATA.randomize_choices==="true"){
+        shuffleArray(choices_data);
+      }
       choices_data.forEach(function(choice_data,i){
         if(self.choices[i]){
           self.choices[i].build(target_wrapper);
@@ -761,9 +764,13 @@ Choice.prototype = {
     if(this.data.img){
       this.printImg();
     }
+    var content_string = this.data.content;
+    if(content_string[0]==='*'){
+      content_string = content_string.substring(1,content_string.length);
+    }
     var content_wrapper = $('<p>')
       .addClass('choice_content')
-      .html(this.data.content);
+      .html(content_string);
     if(this.data.sound){
       var sound_content_wrapper = $('<div>')
         .addClass('sound_content');
@@ -788,6 +795,9 @@ Choice.prototype = {
     this.container
       .removeClass('correct')
       .removeClass('incorrect');
+  },
+  printContent:function(){
+
   },
   printImg:function(){
     var src = this.data.img;
@@ -821,6 +831,9 @@ Choice.prototype = {
       }
       var validity = correct_choice_ids.indexOf(this.data.id)>-1;
       this.validity = validity.toString();
+    }
+    if(this.data.content[0]==="*"){
+      this.validity = "true";
     }
     return this;
   }

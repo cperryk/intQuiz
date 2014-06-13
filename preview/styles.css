@@ -153,7 +153,7 @@
         text-align: center; }
       .simple_quiz .choice.blocked .btn_sound_wrapper {
         vertical-align: top; }
-      .simple_quiz .choice.blocked:not(.with_img) .inner {
+      .simple_quiz .choice.blocked .inner {
         display: table;
         width: 100%;
         height: 100%; }

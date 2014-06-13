@@ -7,22 +7,22 @@
     {
       "content":"Paul McCartney",
       "id":"mccartney",
-      "img":"mccartney6.jpg"
+      "img":"mccartney8.jpg"
     },
     {
       "content":"John Lennon",
       "id":"lennon",
-      "img":"lennon8.jpg"
+      "img":"lennon10.jpg"
     },
     {
       "content":"Both",
       "id":"both",
-      "img":"both3.jpg"
+      "img":"both6.jpg"
     },
     {
       "content":"Neither",
       "id":"neither",
-      "img":"MysteryMan3.jpg"
+      "img":"neither.jpg"
     }
   ],
   "questions": [
