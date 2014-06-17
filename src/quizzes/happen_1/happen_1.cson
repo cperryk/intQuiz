@@ -26,11 +26,6 @@
       content:"Obama signed a bill forgiving all student loan debt.",
       correct:"untrue",
       feedback:"This rumor was started by a chain email, and PolitiFact has debunked it. http://www.politifact.com/truth-o-meter/statements/2014/jun/09/chain-email/did-barack-obama-sign-bill-forgive-all-outstanding/"
-    },
-    {
-      content:"George R.R. Martin's first tweet sent people back to his LiveJournal page",
-      correct:"true",
-      feedback:""
     }
   ]
 }

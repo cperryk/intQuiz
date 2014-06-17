@@ -322,9 +322,9 @@ SimpleQuiz.prototype = {
       delete question.selected_choice;
     });
     this.goToLocation(0);
-    if(this.par.user){
-      if(this.par.user.score){
-        this.par.user.score = 0;
+    if(this.user){
+      if(this.user.score){
+        this.user.score = 0;
       }
     }
   },
@@ -353,7 +353,7 @@ SimpleQuiz.prototype = {
   printAttribution:function(){
     $('<p>')
       .addClass('int_attribution')
-      .html('Quiz template by <a href="https://twitter.com/chrkirk">Chris Kirk</a>.'+(this.QUIZ_DATA.attribution?' '+this.QUIZ_DATA.attribution:''))
+      .html('Interactive by <a href="https://twitter.com/chrkirk">Chris Kirk</a>.'+(this.QUIZ_DATA.attribution?' '+this.QUIZ_DATA.attribution:''))
       .insertAfter(this.container);
     return this;
   },
@@ -474,19 +474,25 @@ function Question(question_data,question_number,parent){
 }
 Question.prototype = {
   build:function(target_container){
+    var self = this;
     this.container = $('<div>')
       .addClass('question_wrapper')
       .appendTo(target_container)
       .hide();
+    self.container
+      .css('opacity',0)
+      .show();
     this
-      .printQuestionContent()
-      .printChoices();
-    if(this.answered){
-      this.reflectChoice();
-    }
-    this.container.fadeIn();
+      .printChoices()
+      .printQuestionContent(function(){
+        self.container
+          .css('opacity',1);
+        if(self.answered){
+          self.reflectChoice();
+        }
+      });
   },
-  printQuestionContent:function(){
+  printQuestionContent:function(callback){
     var self = this;
     var loader =  new IntLoader(this.container,'Loading question...',250);
     var question_wrapper = $('<div>')
@@ -506,10 +512,13 @@ Question.prototype = {
       .appendTo(main_text);
     question_wrapper
       .hide()
-      .appendTo(this.container);
+      .prependTo(this.container);
     question_wrapper.imagesLoaded(function(){
-      question_wrapper.fadeIn();
+      question_wrapper.show();
       loader.kill();
+      if(callback){
+        callback();
+      }
     });
     (function printSub(){
       if(self.data.sub){
@@ -552,9 +561,12 @@ Question.prototype = {
     writeChoices();
     if(self.par.QUIZ_DATA.blocked_choices=="true"){
       waitForWebfonts(['sl-ApresRegular'],function(){
-        equalizeChoiceHeights();
+        choice_wrapper.imagesLoaded(function(){
+          equalizeChoiceHeights();
+        });
       });
     }
+    return this;
     function writeChoices(){
       var target_wrapper = choice_wrapper;
       if(self.par.QUIZ_DATA.randomize_choices==="true"){
@@ -570,17 +582,43 @@ Question.prototype = {
       });
     }
     function equalizeChoiceHeights(){
-      choice_wrapper.imagesLoaded(function(){
-        var max_height = 0;
-        self.choices.forEach(function(choice){
-          if(choice.container.height()>max_height){
-            max_height = choice.container.height();
-          }
-        });
-        self.choices.forEach(function(choice){
-          choice.container.css('height',max_height);
-        });
+      var max_height = 0;
+      self.choices.forEach(function(choice){
+        if(choice.container.height()>max_height){
+          max_height = choice.container.height();
+        }
       });
+      self.choices.forEach(function(choice){
+        choice.container.css('height',max_height);
+      });
+    }
+    function uncenter(){
+      // If all images are equal heights, vertical-align top on the choice cells
+      if(allImagesEqualHeight()){
+        self.choices.forEach(function(choice){
+          choice.container.addClass('equal_height');
+        });
+      }
+      function allImagesEqualHeight(){
+        var height;
+        for(var i=0;i<self.choices.length;i++){
+          var choice = self.choices[i];
+          if(choice.img){
+            if(i===0){
+              height = choice.img.height();
+            }
+            else{
+              if(choice.img.height()!==height){
+                return false;
+              }
+            }
+          }
+        }
+        if(height===undefined){
+          return false;
+        }
+        return true;
+      }
     }
     function getChoicesToPrint(){
       if(self.data.choices){
@@ -737,6 +775,7 @@ function Choice(choice_data,choice_index,target_container,parent){
     this.data = {content:choice_data};
   }
   this.par = parent;
+  this.recordValidity();
   this.build(target_container);
 }
 Choice.prototype = {
@@ -749,7 +788,9 @@ Choice.prototype = {
     this.inner = $('<div>')
       .addClass('inner')
       .appendTo(this.container);
-    this.recordValidity();
+    this.content_wrapper = $('<div>')
+      .addClass('content_wrapper')
+      .appendTo(this.inner);
     if(this.par.exclusions && this.par.exclusions.length > 0 && this.par.exclusions.indexOf(this.data.id)>-1){
       this.container.addClass('excluded');
     }
@@ -776,10 +817,10 @@ Choice.prototype = {
         .addClass('sound_content');
       this.printSound(sound_content_wrapper);
       content_wrapper.appendTo(sound_content_wrapper);
-      sound_content_wrapper.appendTo(this.inner);
+      sound_content_wrapper.appendTo(this.content_wrapper);
     }
     else{
-      content_wrapper.appendTo(this.inner);
+      content_wrapper.appendTo(this.content_wrapper);
     }
     if(this.par.par.QUIZ_DATA.blocked_choices === "true"){
       this.container.addClass('blocked');
@@ -796,16 +837,12 @@ Choice.prototype = {
       .removeClass('correct')
       .removeClass('incorrect');
   },
-  printContent:function(){
-
-  },
   printImg:function(){
     var src = this.data.img;
-    var self = this;
-    $('<img>')
+    this.img = $('<img>')
       .addClass('choice_img')
       .attr('src',INT_PATH+'quizzes/'+this.par.par.slug+'/img/'+src)
-      .appendTo(self.inner);
+      .appendTo(this.content_wrapper);
     this.container.addClass('with_img');
   },
   printSound:function(target){

@@ -1,233 +1,287 @@
 {
   "title": "Can you identify each famous song by its first second?",
-  "slug":"first_second",
-  "title_slide":"false",
-  "blocked_choices":"true",
-  "exclusionary_choices":"true",
-  "randomize_questions":"false",
-  "share":{
-    "facebook":"Can you identify a song based only on its first second?",
-    "twitter":"Can you identify a song based only on its first second? I scored %score out of %question_length.",
-    "email":""
+  "slug": "first_second",
+  "title_slide": "false",
+  "blocked_choices": "true",
+  "exclusionary_choices": "true",
+  "share": {
+    "facebook": "Can you identify a song based only on its first second?",
+    "twitter": "Can you identify a song based only on its first second?\n    I scored %score out of %question_length.",
+    "email": ""
   },
-  "choices":{
-    "round1":[
+  "choices": {
+    "round1": [
       {
-        "content":"&#8220;Call Me Maybe&#8221; by Carly Rae Jepsen",
-        "id":"call_me_maybe"
+        "content": "&#8220;Call Me Maybe&#8221; by Carly Rae Jepsen",
+        "id": "call_me_maybe"
       },
       {
-        "id":"rolling_in_the_deep",
-        "content":"&#8220;Rolling In The Deep&#8221; by Adele"
+        "id": "rolling_in_the_deep",
+        "content": "&#8220;Rolling In The Deep&#8221; by Adele"
       },
       {
-        "id":"we_are_young",
-        "content":"&#8220;We Are Young&#8221; by Fun"
+        "id": "we_are_young",
+        "content": "&#8220;We Are Young&#8221; by Fun"
       },
       {
-        "id":"payphone",
-        "content":"&#8220;Payphone&#8221; by Wiz Khalifa"
+        "id": "payphone",
+        "content": "&#8220;Payphone&#8221; by Wiz Khalifa"
       },
       {
-        "id":"blurred_lines",
-        "content":"&#8220;Blurred Lines&#8221; by Robin Thicke"
+        "id": "blurred_lines",
+        "content": "&#8220;Blurred Lines&#8221; by Robin Thicke"
       },
       {
-        "id":"thrift_shop",
-        "content":"&#8220;Thrift Shop&#8221; by Macklemore"
+        "id": "thrift_shop",
+        "content": "&#8220;Thrift Shop&#8221; by Macklemore"
       },
       {
-        "id":"radioactive",
-        "content":"&#8220;Radioactive&#8221; by Imagine Dragons"
+        "id": "radioactive",
+        "content": "&#8220;Radioactive&#8221; by Imagine Dragons"
       },
       {
-        "id":"harlem_shake",
-        "content":"&#8220;Harlem Shake&#8221; by Baauer"
+        "id": "harlem_shake",
+        "content": "&#8220;Harlem Shake&#8221; by Baauer"
       },
       {
-        "id":"mirrors",
-        "content":"&#8220;Mirrors&#8221; by Justin Timberlake"
+        "id": "mirrors",
+        "content": "&#8220;Mirrors&#8221; by Justin Timberlake"
       },
       {
-        "id":"somebody_that_i_used_to_know",
-        "content":"&#8220;Somebody That I Used To Know&#8221; by Gotye"
+        "id": "alejandro",
+        "content": "&#8220;Alejandro&#8221; by Lady Gaga"
       }
     ],
-    "round2":[
+    "round2": [
       {
-        "id":"fancy",
-        "content":"&#8220;Fancy&#8221; by Iggy Azalea, Charlie XCX"
+        "id": "fancy",
+        "content": "&#8220;Fancy&#8221; by Iggy Azalea Charlie XCX"
       },
       {
-        "id":"problem",
-        "content":"&#8220;Problem&#8221; by Ariana Grande, Iggy Azalea"
+        "id": "problem",
+        "content": "&#8220;Problem&#8221; by Ariana Grande Iggy Azalea"
       },
       {
-        "id":"let_it_go",
-        "content":"&#8220;Let It Go&#8221; by Idina Menzel"
+        "id": "let_it_go",
+        "content": "&#8220;Let It Go&#8221; by Idina Menzel"
       },
       {
-        "id":"all_of_me",
-        "content":"&#8220;All of Me&#8221; by John Legend"
+        "id": "all_of_me",
+        "content": "&#8220;All of Me&#8221; by John Legend"
       },
       {
-        "id":"happy",
-        "content":"&#8220;Happy&#8221; by Pharrell Williams"
+        "id": "happy",
+        "content": "&#8220;Happy&#8221; by Pharrell Williams"
+      },
+      {
+        "id": "somebody_that_i_used_to_know",
+        "content": "&#8220;Somebody That I Used To Know&#8221; by Gotye"
       }
     ]
   },
   "questions": [
     {
       "content": "Which song is this?",
-      "choices":"round1",
-      "sound":{
-        "id":"blurred_lines",
-        "autoplay":"false"
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round1",
+      "sound": {
+        "id": "blurred_lines",
+        "autoplay": "false"
       },
-      "correct":"blurred_lines",
-      "feedback":{
-        "content":"That was &#8220;Blurred Lines.&#8221;",
-        "sound":"blurred_lines_full"
-      }
-    },
-    {
-      "content": "Which song is this?",
-      "choices":"round1",
-      "sound":{
-        "id":"call_me_maybe",
-        "autoplay":"true"
-      },
-      "correct":"call_me_maybe",
-      "feedback":{
-        "content":"That was &#8220;Call Me Maybe.&#8221;",
-        "sound":"full_call_me_maybe"
-      }
-    },
-    {
-      "content": "Which song is this?",
-      "choices":"round1",
-      "sound":{
-        "id":"harlem_shake",
-        "autoplay":"true"
-      },
-      "correct":"harlem_shake",
-      "feedback":{
-        "content":"That was &#8220;Harlem Shake.&#8221;",
-        "sound":"full_harlem_shake"
-      }
-    },
-    {
-      "content": "Which song is this?",
-      "choices":"round1",
-      "sound":{
-        "id":"mirrors",
-        "autoplay":"true"
-      },
-      "correct":"mirrors",
-      "feedback":{
-        "content":"That was &#8220;Mirrors.&#8221;",
-        "sound":"full_mirrors"
-      }
-    },
-    {
-      "content": "Which song is this?",
-      "choices":"round1",
-      "sound":{
-        "id":"payphone",
-        "autoplay":"true"
-      },
-      "correct":"payphone",
-      "feedback":{
-        "content":"That was &#8220;Payphone.&#8221;",
-        "sound":"full_payphone"
-      }
-    },
-    {
-      "content": "Which song is this?",
-      "choices":"round1",
-      "sound":{
-        "id":"radioactive",
-        "autoplay":"true"
-      },
-      "correct":"radioactive",
-      "feedback":{"content":"That was &#8220;Radioactive.&#8221;","sound":"full_radioactive"}
-    },
-    {
-      "content": "Which song is this?",
-      "choices":"round1",
-      "sound":{
-        "id":"rolling_in_the_deep",
-        "autoplay":"true"
-      },
-      "correct":"rolling_in_the_deep",
-      "feedback":{
-        "content":"That was &#8220;Rolling In The Deep.&#8221;",
-        "sound":"full_rolling_in_the_deep"
-      }
-    },
-    {
-      "content": "Which song is this?",
-      "choices":"round1",
-      "sound":{
-        "id":"somebody_that_i_used_to_know",
-        "autoplay":"true"
-      },
-      "correct":"somebody_that_i_used_to_know",
-      "feedback":{
-        "content":"That was &#8220;Somebody That I Used To Know.&#8221;",
-        "sound":"full_somebody_that_i_used_to_know"
-      }
-    },
-    {
-      "content": "Which song is this?",
-      "choices":"round1",
-      "sound":{
-        "id":"thrift_shop",
-        "autoplay":"true"
-      },
-      "correct":"thrift_shop",
-      "feedback":{
-        "content":"That was &#8220;Thrift Shop.&#8221;",
-        "sound":"full_thrift_shop"
+      "correct": "blurred_lines",
+      "feedback": {
+        "content": "That was &#8220;Blurred Lines.&#8221;",
+        "sound": {
+          "id": "full_blurred_lines",
+          "autoplay": "true"
         }
+      }
     },
     {
       "content": "Which song is this?",
-      "choices":"round1",
-      "sound":{
-        "id":"we_are_young",
-        "autoplay":"true"
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round1",
+      "sound": {
+        "id": "call_me_maybe",
+        "autoplay": "true"
       },
-      "correct":"we_are_young",
-      "feedback":{
-        "content":"That was &#8220;We Are Young.&#8221;",
-        "sound":"full_we_are_young"
+      "correct": "call_me_maybe",
+      "feedback": {
+        "content": "That was &#8220;Call Me Maybe.&#8221;",
+        "sound": {
+          "id": "full_call_me_maybe",
+          "autoplay": "true"
         }
+      }
     },
     {
       "content": "Which song is this?",
-      "choices":"round2",
-      "sound":{
-        "id":"happy",
-        "autoplay":"true"
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round1",
+      "sound": {
+        "id": "harlem_shake",
+        "autoplay": "true"
       },
-      "correct":"happy",
-      "feedback":{
-        "content":"That was &#8220;Happy.&#8221;",
-        "sound":"full_happy"
+      "correct": "harlem_shake",
+      "feedback": {
+        "content": "That was &#8220;Harlem Shake.&#8221;",
+        "sound": {
+          "id": "full_harlem_shake",
+          "autoplay": "true"
         }
+      }
     },
     {
       "content": "Which song is this?",
-      "choices":"round2",
-      "sound":{
-        "id":"fancy",
-        "autoplay":"true"
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round1",
+      "sound": {
+        "id": "mirrors",
+        "autoplay": "true"
       },
-      "correct":"fancy",
-      "feedback":{
-        "content":"That was &#8220;Fancy.&#8221;",
-        "sound":"full_fancy"
+      "correct": "mirrors",
+      "feedback": {
+        "content": "That was &#8220;Mirrors.&#8221;",
+        "sound": {
+          "id": "full_mirrors",
+          "autoplay": "true"
+        }
+      }
+    },
+    {
+      "content": "Which song is this?",
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round1",
+      "sound": {
+        "id": "payphone",
+        "autoplay": "true"
+      },
+      "correct": "payphone",
+      "feedback": {
+        "content": "That was &#8220;Payphone.&#8221;",
+        "sound": {
+          "id": "full_payphone",
+          "autoplay": "true"
+        }
+      }
+    },
+    {
+      "content": "Which song is this?",
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round1",
+      "sound": {
+        "id": "radioactive",
+        "autoplay": "true"
+      },
+      "correct": "radioactive",
+      "feedback": {
+        "content": "That was &#8220;Radioactive.&#8221;",
+        "sound": {
+          "id": "full_radioactive",
+          "autoplay": "true"
+        }
+      }
+    },
+    {
+      "content": "Which song is this?",
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round1",
+      "sound": {
+        "id": "rolling_in_the_deep",
+        "autoplay": "true"
+      },
+      "correct": "rolling_in_the_deep",
+      "feedback": {
+        "content": "That was &#8220;Rolling In The Deep.&#8221;",
+        "sound": {
+          "id": "full_rolling_in_the_deep",
+          "autoplay": "true"
+        }
+      }
+    },
+    {
+      "content": "Which song is this?",
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round1",
+      "sound": {
+        "id": "thrift_shop",
+        "autoplay": "true"
+      },
+      "correct": "thrift_shop",
+      "feedback": {
+        "content": "That was &#8220;Thrift Shop.&#8221;",
+        "sound": {
+          "id": "full_thrift_shop",
+          "autoplay": "true"
+        }
+      }
+    },
+    {
+      "content": "Which song is this?",
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round1",
+      "sound": {
+        "id": "we_are_young",
+        "autoplay": "true"
+      },
+      "correct": "we_are_young",
+      "feedback": {
+        "content": "That was &#8220;We Are Young.&#8221;",
+        "sound": {
+          "id": "full_we_are_young",
+          "autoplay": "true"
+        }
+      }
+    },
+    {
+      "content": "Which song is this?",
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round2",
+      "sound": {
+        "id": "somebody_that_i_used_to_know",
+        "autoplay": "true"
+      },
+      "correct": "somebody_that_i_used_to_know",
+      "feedback": {
+        "content": "That was &#8220;Somebody That I Used To Know.&#8221;",
+        "sound": {
+          "id": "full_somebody_that_i_used_to_know",
+          "autoplay": "true"
+        }
+      }
+    },
+    {
+      "content": "Which song is this?",
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round2",
+      "sound": {
+        "id": "happy",
+        "autoplay": "true"
+      },
+      "correct": "happy",
+      "feedback": {
+        "content": "That was &#8220;Happy.&#8221;",
+        "sound": {
+          "id": "full_happy",
+          "autoplay": "true"
+        }
+      }
+    },
+    {
+      "content": "Which song is this?",
+      "sub": "Click the play button to listen to the first second.",
+      "choices": "round2",
+      "sound": {
+        "id": "fancy",
+        "autoplay": "true"
+      },
+      "correct": "fancy",
+      "feedback": {
+        "content": "That was &#8220;Fancy.&#8221;",
+        "sound": {
+          "id": "full_fancy",
+          "autoplay": "true"
+        }
       }
     }
   ]

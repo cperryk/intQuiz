@@ -1,8 +1,7 @@
 {
   "title": "Who Wrote It, Lennon or McCartney?",
-  "description": "For each song on <em>A Hard Day's Night</em>, guess whether John Lennon or Paul McCartney wrote it.",
+  "description": "For each song on \"A Hard Day's Night\", guess whether John Lennon or Paul McCartney wrote it.",
   "blocked_choices": "true",
-  "attribution":"Lennon photo by WikiMedia Commons and modified. McCartney photo by WikiMedia Commons. Lennon and McCartney photo by WikiMedia Commons. \"Neither\" photo courtesy of Shuttershock.",
   "choices":[
     {
       "content":"Paul McCartney",
@@ -27,80 +26,80 @@
   ],
   "questions": [
     {
-      "content": "Who wrote <strong>\"A Hard Day's Night\"</strong>?",
+      "content": "Who wrote <strong>&#8220;A Hard Day's Night&#8221;</strong>?",
       "sub":"Click the play button to hear it.",
       "sound":"a_hard_days_night",
       "correct": "lennon",
       "feedback":"This song was written by John Lennon."
     },
     {
-      "content": "Who wrote <strong>\"I Should Have Known Better\"</strong>?",
+      "content": "Who wrote <strong>&#8220;I Should Have Known Better&#8221;</strong>?",
       "sound":"i_should_have_known_better",
       "correct": "lennon",
       "feedback":"This song was written by John Lennon (and inspired, in part, by Bob Dylan)."
     },
     {
-      "content": "Who wrote <strong>\"If I Fell\"</strong>?",
+      "content": "Who wrote <strong>&#8220;If I Fell&#8221;</strong>?",
       "sound":"if_i_fell",
       "correct": "lennon",
       "feedback":"This song was written by Lennon."
     },
     {
-      "content": "Who wrote <strong>\"I'm Happy Just To Dance With You\"</strong>?",
+      "content": "Who wrote <strong>&#8220;I'm Happy Just To Dance With You&#8221;</strong>?",
       "sound":"im_happy_just_to_dance_with_you",
       "correct": "lennon",
       "feedback":"This song was written by Lennon."
     },
     {
-      "content": "Who wrote <strong>\"And I Love Her\"</strong>?",
+      "content": "Who wrote <strong>&#8220;And I Love Her&#8221;</strong>?",
       "sound":"and_i_love_her",
       "correct": "both",
       "feedback":"“The first half was Paul’s and the middle eight is mine,” Lennon later recalled."
     },
     {
-      "content": "Who wrote <strong>\"Tell Me Why\"</strong>?",
+      "content": "Who wrote <strong>&#8220;Tell Me Why&#8221;</strong>?",
       "sound":"tell_me_why",
       "correct": "lennon",
       "feedback":"This song was written by Lennon."
     },
     {
-      "content": "Who wrote <strong>\"Can't Buy Me Love\"</strong>?",
+      "content": "Who wrote <strong>&#8220;Can't Buy Me Love&#8221;</strong>?",
       "sound":"cant_buy_me_love",
       "correct": ["mccartney","both"],
       "feedback":"This song was written by John and Paul, “but mainly Paul,” Lennon later recalled."
     },
     {
-      "content": "Who wrote <strong>\"Any Time At All\"</strong>?",
+      "content": "Who wrote <strong>&#8220;Any Time At All&#8221;</strong>?",
       "sound":"any_time_at_all",
       "correct": "lennon",
       "feedback":"This song was written by Lennon."
     },
     {
-      "content": "Who wrote <strong>\"I'll Cry Instead\"</strong>?",
+      "content": "Who wrote <strong>&#8220;I'll Cry Instead&#8221;</strong>?",
       "sound":"ill_cry_instead",
       "correct": "lennon",
       "feedback":"This song was written by Lennon."
     },
     {
-      "content": "Who wrote <strong>\"Things We Said Today\"</strong>?",
+      "content": "Who wrote <strong>&#8220;Things We Said Today&#8221;</strong>?",
       "sound":"things_we_said_today",
       "correct": "mccartney",
       "feedback":"Though it resembles Lennon’s style, this song was written by McCartney when he was with Jane Asher in the Bahamas."
     },
     {
-      "content": "Who wrote <strong>\"When I Get Home\"</strong>?",
+      "content": "Who wrote <strong>&#8220;When I Get Home&#8221;</strong>?",
       "sound":"when_i_get_home",
       "correct": "lennon",
       "feedback":"This song was written by Lennon."
     },
     {
-      "content": "Who wrote <strong>\"You Can't Do That\"</strong>?",
+      "content": "Who wrote <strong>&#8220;You Can't Do That&#8221;</strong>?",
       "sound":"you_cant_do_that",
       "correct": "lennon",
       "feedback":"This song was written by Lennon."
     },
     {
-      "content": "Who wrote <strong>\"I'll Be Back\"</strong>?",
+      "content": "Who wrote <strong>&#8220;I'll Be Back&#8221;</strong>?",
       "sound":"ill_be_back",
       "correct": "lennon",
       "feedback":"This song was written by Lennon. “A nice tune, though the middle is a bit tatty,” he later recalled."

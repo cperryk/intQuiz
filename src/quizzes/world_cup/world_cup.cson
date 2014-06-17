@@ -3,7 +3,6 @@
   description: "Guess what each World Cup country is
   based on aerial shots."
   blocked_choices: "true"
-  randomize_questions: "true"
   attribution: "Images courtesy of NASA."
   randomize_choices: "true"
   questions:[
@@ -307,10 +306,8 @@
         "Ecuador"
         "Chile"
       ]
-      feedback:"A volcanic eruption in 2009 created an ash cloud that rose
-      so quickly it created a circular window in low-lying clouds, and
-      mushroomlike condensing steam on top. The volcano is on Matua island,
-      part of the Kuril Islands."
+      feedback:"That's Tokyo. A large black spot near the city center marks
+      the Imperial palace and garden."
     }
     {
       content:"What country is this?"
