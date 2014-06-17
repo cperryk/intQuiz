@@ -1,9 +1,11 @@
 {
-  title: "Can you identify each famous song by its first second?"
+  title: "Can you identify each billboard hit by its first second?"
   slug:"first_second"
   title_slide:"false"
   blocked_choices:"true"
   exclusionary_choices:"true"
+  collapse_choices:"true"
+  collapse_questions:"true"
   share:{
     facebook:"Can you identify a song based only on its first second?"
     twitter:"Can you identify a song based only on its first second?
@@ -96,6 +98,9 @@
           id:"full_blurred_lines"
           autoplay:"true"
         }
+        img:{
+          src:"blurred_lines.jpg"
+        }
       }
     }
     {
@@ -112,6 +117,9 @@
         sound:{
           id:"full_call_me_maybe"
           autoplay:"true"
+        }
+        img:{
+          src:"call_me_maybe.jpg"
         }
       }
     }

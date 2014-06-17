@@ -17,6 +17,8 @@ Top-level properties. Mandatory properties in red.
 - **teaser**: String. A blurb that appears at the end to tease to another article.
 - **matcher**: Object. If this is set, this is a Matching Quiz, in which the user answers questions that matches him or her to one of a predetermined set of results. This object contains information specific to the matchmaking logic of the quiz. See *Matcher* below.
 - **auto_advance**: Boolean. If true, the quiz will automatically advance to the next question after the user answers. Default is false.
+- **collapse_questions**: Boolean. If true, the quiz will automatically collapse the question container after the user has answered a question. Useful so the quiz container doens't get too tall with the addition of the feedback container.
+- **collapse_choices**: Boolean. If true, the quiz will automatically collapse the choices container after ther user has answered a question. Useful so the quiz container doesn't get too tall with the addition of the feedback container.
 
 <h3>Question</h3>
 - **content**: String. Text representing the question. May contain HTML.

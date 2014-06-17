@@ -554,21 +554,21 @@ Question.prototype = {
   printChoices:function(){
     var self = this;
     var choices_data = getChoicesToPrint();
-    var choice_wrapper = $('<div>')
+    this.choice_wrapper = $('<div>')
       .addClass('choices'+(self.par.QUIZ_DATA.blocked_choices=="true"?' blocked':''))
       .appendTo(this.container);
     this.getExcludedChoices();
     writeChoices();
     if(self.par.QUIZ_DATA.blocked_choices=="true"){
       waitForWebfonts(['sl-ApresRegular'],function(){
-        choice_wrapper.imagesLoaded(function(){
+        self.choice_wrapper.imagesLoaded(function(){
           equalizeChoiceHeights();
         });
       });
     }
     return this;
     function writeChoices(){
-      var target_wrapper = choice_wrapper;
+      var target_wrapper = self.choice_wrapper;
       if(self.par.QUIZ_DATA.randomize_choices==="true"){
         shuffleArray(choices_data);
       }
@@ -679,6 +679,21 @@ Question.prototype = {
     else{
       this.reflectChoice(choice);
     }
+    if(!rechoosing && this.par.QUIZ_DATA.collapse_choices==='true'){
+      this.collapseChoices();
+    }
+    if(!rechoosing && this.par.QUIZ_DATA.collapse_questions==='true'){
+      this.collapseQuestion();
+    }
+  },
+  collapseChoices:function(){
+    this.choice_wrapper
+      .slideUp();
+    this.container.find('.choice_bottom').css('border-top','none');
+  },
+  collapseQuestion:function(){
+    this.container.find('.question')
+      .slideUp();
   },
   reflectChoice:function(choice, no_bottom){
     var self = this;
@@ -940,15 +955,15 @@ Feedback.prototype = {
         .removeAttr('width height') // because IE adds width and height attributes that force the image to appear at its actual dimensions
         .appendTo(wrapper);
       if(img_data.position){
-        if(img_data.position === 'top'){
-          wrapper.prependTo(self.container);
+        if(img_data.position === 'bottom'){
+          wrapper.appendTo(self.container);
         }
         else{
-          wrapper.appendTo(self.container);
+          wrapper.prependTo(self.container);
         }
       }
       else{
-        wrapper.appendTo(self.container);
+        wrapper.prependTo(self.container);
       }
       wrapper.css('display','inline-block');
     }
