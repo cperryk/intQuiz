@@ -1,7 +1,7 @@
 {
   "title": "Who Wrote It, Lennon or McCartney?",
   "description": "For each song on \"A Hard Day's Night\", guess whether John Lennon or Paul McCartney wrote it.",
-  "blocked_choices": "true",
+  "blocked_choices": true,
   "choices":[
     {
       "content":"Paul McCartney",

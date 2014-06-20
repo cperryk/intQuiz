@@ -1,11 +1,8 @@
 {
   "title": "Bribery Quiz",
   "description":"For each bribery charge, guess who committed it: An Olympics official, a FIFA official, a congressman, or a dictator.",
-  "title_slide":"false",
-  "fb_description": "",
   "share_name":"Bribery Quiz",
-  "thumbnail": "",
-  "blocked_choices":"true",
+  "blocked_choices":true,
   "choices":[
     {
       "content":"Olympics official",

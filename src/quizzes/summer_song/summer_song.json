@@ -1,10 +1,9 @@
 {
 	"title": "What's Your Summer Jam?",
 	"description": "Let us know what songs you loved in summers past, and we'll let you know which song you'll love this summer.",
-	"title_slide": "false",
-	"blocked_choices": "true",
+	"blocked_choices": true,
 	"thumbnail":"http://www.slate.com/content/dam/slate/blogs/browbeat/2014/06/10/140610_BB_singers.jpg.CROP.promovar-mediumlarge.jpg",
-	"auto_advance":"true",
+	"auto_advance":true,
 	"teaser":"Now turn up your new music and see if you can beat <a href=\"http://www.slate.com/blogs/the_spot/2014/06/05/fifa_corruption_take_our_quiz_to_match_the_corrupt_act_to_the_corrupt_organization.html\">Slate's Bribery Quiz</a>.",
 	"matcher": {
 		"results": {
@@ -113,7 +112,7 @@
 		},
 		"end_text": "Your summer jam is"
 	},
-	"slides": [
+	"questions": [
 		{
 			"content": "Which <strong>Summer 2013</strong> jam do you like best?",
 			"choices": [

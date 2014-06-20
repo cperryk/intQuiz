@@ -3,7 +3,7 @@
   description: "Pop Quiz, Hot Shot! On Its 20th Anniversary, Test Your
   Knowledge of Speed."
   share_name:"\"Speed\" Trivia Quiz"
-  blocked_choices: "false"
+  blocked_choices: false
   questions:[
     {
       content:"<em>Speed</em> has remarkably snappy dialogue for a

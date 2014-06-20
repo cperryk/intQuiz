@@ -1,11 +1,10 @@
 {
   "title": "Can you identify each billboard hit by its first second?",
   "slug": "first_second",
-  "title_slide": "false",
-  "blocked_choices": "true",
-  "exclusionary_choices": "true",
-  "collapse_choices": "true",
-  "collapse_questions": "true",
+  "blocked_choices": true,
+  "exclusionary_choices": true,
+  "collapse_choices": true,
+  "collapse_questions": true,
   "share": {
     "facebook": "Can you identify a song based only on its first second?",
     "twitter": "Can you identify a song based only on its first second?\n    I scored %score out of %question_length.",
@@ -98,14 +97,14 @@
       "choices": "round1",
       "sound": {
         "id": "blurred_lines",
-        "autoplay": "false"
+        "autoplay": false
       },
       "correct": "blurred_lines",
       "feedback": {
         "content": "That was &#8220;Blurred Lines.&#8221;",
         "sound": {
           "id": "full_blurred_lines",
-          "autoplay": "true"
+          "autoplay": true
         },
         "img": {
           "src": "blurred_lines.jpg"
@@ -118,14 +117,14 @@
       "choices": "round1",
       "sound": {
         "id": "call_me_maybe",
-        "autoplay": "true"
+        "autoplay": true
       },
       "correct": "call_me_maybe",
       "feedback": {
         "content": "That was &#8220;Call Me Maybe.&#8221;",
         "sound": {
           "id": "full_call_me_maybe",
-          "autoplay": "true"
+          "autoplay": true
         },
         "img": {
           "src": "call_me_maybe.jpg"
@@ -138,14 +137,14 @@
       "choices": "round1",
       "sound": {
         "id": "harlem_shake",
-        "autoplay": "true"
+        "autoplay": true
       },
       "correct": "harlem_shake",
       "feedback": {
         "content": "That was &#8220;Harlem Shake.&#8221;",
         "sound": {
           "id": "full_harlem_shake",
-          "autoplay": "true"
+          "autoplay": true
         }
       }
     },
@@ -155,14 +154,14 @@
       "choices": "round1",
       "sound": {
         "id": "mirrors",
-        "autoplay": "true"
+        "autoplay": true
       },
       "correct": "mirrors",
       "feedback": {
         "content": "That was &#8220;Mirrors.&#8221;",
         "sound": {
           "id": "full_mirrors",
-          "autoplay": "true"
+          "autoplay": true
         }
       }
     },
@@ -172,14 +171,14 @@
       "choices": "round1",
       "sound": {
         "id": "payphone",
-        "autoplay": "true"
+        "autoplay": true
       },
       "correct": "payphone",
       "feedback": {
         "content": "That was &#8220;Payphone.&#8221;",
         "sound": {
           "id": "full_payphone",
-          "autoplay": "true"
+          "autoplay": true
         }
       }
     },
@@ -189,14 +188,14 @@
       "choices": "round1",
       "sound": {
         "id": "radioactive",
-        "autoplay": "true"
+        "autoplay": true
       },
       "correct": "radioactive",
       "feedback": {
         "content": "That was &#8220;Radioactive.&#8221;",
         "sound": {
           "id": "full_radioactive",
-          "autoplay": "true"
+          "autoplay": true
         }
       }
     },
@@ -206,7 +205,7 @@
       "choices": "round1",
       "sound": {
         "id": "rolling_in_the_deep",
-        "autoplay": "true"
+        "autoplay": true
       },
       "correct": "rolling_in_the_deep",
       "feedback": {
@@ -214,7 +213,7 @@
         "img": "adele_full.jpg",
         "sound": {
           "id": "full_rolling_in_the_deep",
-          "autoplay": "true"
+          "autoplay": true
         }
       }
     },
@@ -224,14 +223,14 @@
       "choices": "round1",
       "sound": {
         "id": "thrift_shop",
-        "autoplay": "true"
+        "autoplay": true
       },
       "correct": "thrift_shop",
       "feedback": {
         "content": "That was &#8220;Thrift Shop.&#8221;",
         "sound": {
           "id": "full_thrift_shop",
-          "autoplay": "true"
+          "autoplay": true
         }
       }
     },
@@ -241,14 +240,14 @@
       "choices": "round1",
       "sound": {
         "id": "we_are_young",
-        "autoplay": "true"
+        "autoplay": true
       },
       "correct": "we_are_young",
       "feedback": {
         "content": "That was &#8220;We Are Young.&#8221;",
         "sound": {
           "id": "full_we_are_young",
-          "autoplay": "true"
+          "autoplay": true
         }
       }
     },
@@ -258,14 +257,14 @@
       "choices": "round2",
       "sound": {
         "id": "somebody_that_i_used_to_know",
-        "autoplay": "true"
+        "autoplay": true
       },
       "correct": "somebody_that_i_used_to_know",
       "feedback": {
         "content": "That was &#8220;Somebody That I Used To Know.&#8221;",
         "sound": {
           "id": "full_somebody_that_i_used_to_know",
-          "autoplay": "true"
+          "autoplay": true
         }
       }
     },
@@ -275,14 +274,14 @@
       "choices": "round2",
       "sound": {
         "id": "happy",
-        "autoplay": "true"
+        "autoplay": true
       },
       "correct": "happy",
       "feedback": {
         "content": "That was &#8220;Happy.&#8221;",
         "sound": {
           "id": "full_happy",
-          "autoplay": "true"
+          "autoplay": true
         }
       }
     },
@@ -292,14 +291,14 @@
       "choices": "round2",
       "sound": {
         "id": "fancy",
-        "autoplay": "true"
+        "autoplay": true
       },
       "correct": "fancy",
       "feedback": {
         "content": "That was &#8220;Fancy.&#8221;",
         "sound": {
           "id": "full_fancy",
-          "autoplay": "true"
+          "autoplay": true
         }
       }
     }

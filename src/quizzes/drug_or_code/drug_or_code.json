@@ -1,11 +1,9 @@
 {
   "title": "Drug or Programming Language?",
   "description": "It's not surprising that the FBI can't find programmers <a target=\"_blank\" href=\"http://www.slate.com/blogs/the_slatest/2014/05/20/fbi_director_says_considering_changing_drug_employment_rules.html\">who aren't baked out of their minds</a>. Do programming languages sound like drugs, or are we just high? You be the judge: For these 25 terms, guess whether each represents a drug or a programming language.",
-  "title_slide": "false",
   "fb_description": "For each question, guess whether the word or phrase describes a drug or a programming language.",
-  "thumbnail": "",
   "attribution": "Code icon by <a target=\"_blank\" href=\"https://www.iconfinder.com/iconsets/picol-vector#readme\">PICOL</a> / <a target=\"blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons</a>. Drug icon by iStock.",
-  "blocked_choices": "true",
+  "blocked_choices": true,
   "teaser":"Did that quiz leave you with the munchies? Try our <a href=\"http://www.slate.com/articles/life/low_concept/2014/05/fast_food_generator_forget_the_waffle_taco_use_our_fast_food_generator_to.html\">Fast Food Generator</a>.",
   "choices":[
     {

@@ -38,7 +38,7 @@
       type:"fill_in_the_blank",
       sound:{
         id:"cheers"
-        autoplay:"true"
+        autoplay:true
       }
       correct:"Scandal"
       feedback:{
@@ -64,7 +64,7 @@
       type:"fill_in_the_blank",
       sound:{
         id:"different_strokes"
-        autoplay:"true"
+        autoplay:true
       }
       correct:"The Wire"
       feedback:{
@@ -90,7 +90,7 @@
       type:"fill_in_the_blank",
       sound:{
         id:"patty_duke"
-        autoplay:"true"
+        autoplay:true
       }
       correct:"The X-Files"
       feedback:{
@@ -116,7 +116,7 @@
       type:"fill_in_the_blank",
       sound:{
         id:"welcome_back"
-        autoplay:"true"
+        autoplay:true
       }
       correct:"House"
       feedback:{
@@ -142,7 +142,7 @@
       type:"fill_in_the_blank",
       sound:{
         id:"wkrp"
-        autoplay:"true"
+        autoplay:true
       }
       correct:"Mad Men"
       feedback:{

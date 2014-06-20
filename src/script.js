@@ -51,7 +51,7 @@ SimpleQuiz.prototype = {
 	makeSlides:function(){
 		var self = this;
 		this.slides = [];
-		var slides_data = this.QUIZ_DATA.slides;
+		var slides_data = this.QUIZ_DATA.questions;
 		if(this.QUIZ_DATA.randomize_questions){
 			shuffleArray(slides_data);
 		}

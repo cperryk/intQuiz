@@ -2,9 +2,9 @@
   title: "Name These World Cup Countries From Space"
   description: "Guess what each World Cup country is
   based on aerial shots."
-  blocked_choices: "true"
+  blocked_choices: true
   attribution: "Images courtesy of NASA."
-  randomize_choices: "true"
+  randomize_choices: true
   questions:[
     {
       content:"What country is this?"

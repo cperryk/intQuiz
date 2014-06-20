@@ -1,18 +1,18 @@
 {
   "title": "Not Wanted: Sex Offenders",
   "description":"In each state, sex offenders are banned from a wide variety of occupations for offenses as innocuous, in some states, as public urination or streaking. With this quiz, explore some of the strangest vocational penalties.",
-  "title_slide":"true",
+  "title_slide":true,
   "fb_description": "",
   "thumbnail": "",
   "teaser":"Test teaser",
-  "blocked_choices":"true",
+  "blocked_choices":true,
   "questions": [
     {
       "content": "In Illinois, sex offenders cannot have which of these jobs?",
       "choices": [
         {
           "content": "Pizza chef",
-          "validity": "true"
+          "validity": true
         },
         {
           "content": "Comic book store employee",
@@ -20,7 +20,7 @@
         },
         {
           "content":"Carnival worker",
-          "validty":"true"
+          "validty":true
         },
         {
           "content":"Dog Walker",
@@ -34,7 +34,7 @@
       "choices":[
         {
           "content":"Transport hazardous waste",
-          "validity":"true"
+          "validity":true
         },
         {
           "content":"Own a race horse",
@@ -60,7 +60,7 @@
         },
         {
           "content": "Sport fishing guide",
-          "validity": "true"
+          "validity": true
         },
         {
           "content":"Moose hunting guide",
@@ -78,19 +78,19 @@
       "choices": [
         {
           "content": "Taxi dispatcher",
-          "validity": "true"
+          "validity": true
         },
         {
           "content": "Funeral limo driver",
-          "validity": "true"
+          "validity": true
         },
         {
           "content":"Athletic agent",
-          "validity":"true"
+          "validity":true
         },
         {
           "content":"Wrestling promoter",
-          "validity":"true"
+          "validity":true
         }
       ],
       "feedback":"This one's a freebie&#8212;offenders are prohibited from all of these jobs. The taxi dispatcher ban, however, only applies to Philadelphia."
@@ -108,7 +108,7 @@
         },
         {
           "content":"Erectile dysfunction treatment",
-          "validity":"true"
+          "validity":true
         },
         {
           "content":"LASIK eye surgery",

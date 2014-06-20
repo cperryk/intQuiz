@@ -1,7 +1,7 @@
 {
   title: "What's That Invention?"
   description: "Guess what each invention is baesd on its patent model."
-  blocked_choices: "true"
+  blocked_choices: true
   attribution:"Images courtesy of Alan Rothschild, PatentModel.org, Wikimedia Commons."
   questions:[
     {
@@ -10,7 +10,7 @@
       choices:[
         {
           content:"Washing machine"
-          validity:"true"
+          validity:true
         }
         "Ice cream maker"
         "Keg"
@@ -26,7 +26,7 @@
         "Chipmunk jungle gym"
         {
           content:"Fence fabricating machine"
-          validity:"true"
+          validity:true
         }
         "Electric chair"
       ]
@@ -38,7 +38,7 @@
       choices:[
         {
           content:"Brick-pressing machine"
-          validity:"true"
+          validity:true
         }
         "Walnut engraver"
         "Pasta press"
@@ -55,7 +55,7 @@
         "Weaving machine"
         {
           content:"Tobacco-cutting machine"
-          validity:"true"
+          validity:true
         }
       ]
       feedback:"This is a tobacco-cutting machine invented in 1878: a necessary step between tobacco fields and your cigarettes. "
@@ -67,7 +67,7 @@
         "Slicer"
         {
           content:"Brush maker"
-          validity:"true"
+          validity:true
         }
         "Vise grip"
         "Wine opener"
@@ -83,7 +83,7 @@
         "Meth Lab"
         {
           content:"Lathe for dental surgery"
-          validity:"true"
+          validity:true
         }
       ]
       feedback:"This is a lathe for dental surgery invented in 1879. Luckily, dental technology has improved since then."
@@ -94,7 +94,7 @@
       choices:[
         {
           content:"Pigeon startler",
-          validity:"true"
+          validity:true
         }
         "Toy cat"
         "Jack-in-the-box"
@@ -109,7 +109,7 @@
         "Fire engine"
         {
           content:"Cotton seed planter"
-          validity:"true"
+          validity:true
         }
         "Potato harvester"
         "Castration station"
@@ -122,7 +122,7 @@
       choices:[
         {
           content:"Paper-bag-making machine",
-          validity:"true"
+          validity:true
         }
         "Pasta roller"
         "Phonograph"
@@ -138,7 +138,7 @@
         "Water sprinkler"
         {
           content:"Windmill",
-          validity:"true"
+          validity:true
         }
         "Mole whacker"
       ]
@@ -153,7 +153,7 @@
         "Hatpin maker"
         {
           content:"Horseshoe-making machine"
-          validity:"true"
+          validity:true
         }
       ]
       feedback:"This is a horseshoe-making machine invented in 1880. When this patent was filed, horses were still a main means of transportation, and the Kentucky Derby was only in its 5<sup>th</sup> year."
@@ -167,7 +167,7 @@
         "Pencil sharpener"
         {
           content:"Oatmeal machine"
-          validity:"true"
+          validity:true
         }
       ]
       feedback:"This is an oatmeal machine invented in 1878. It forced kernels of oatmeal kernels through its holes, effectively cutting the oatmeal into any desirable size."
@@ -179,7 +179,7 @@
         "Compass"
         {
           content:"Rock drill"
-          validity:"true"
+          validity:true
         }
         "Carpenter's level"
         "Metronome"
@@ -194,7 +194,7 @@
         "Battery"
         {
           content:"Alcohol still"
-          validity:"true"
+          validity:true
         }
         "Water purifier"
       ]
@@ -206,7 +206,7 @@
       choices:[
         {
           content:"Wood screw threader"
-          validity:"true"
+          validity:true
         }
         "Nut cracker"
         "Film projector"
@@ -223,7 +223,7 @@
         "Breathalyzer"
         {
           content:"Pressure Gauge"
-          validity:"true"
+          validity:true
         }
       ]
       feedback:"This is a pressure gauge invented in 1877. In a pinch, this probably <em>could</em> double as a scythe."
@@ -237,7 +237,7 @@
         "Cement mixer"
         {
           content:"Peat-drying machine"
-          validity:"true"
+          validity:true
         }
       ]
       feedback:"This is a peat-drying machine invented in 1874. Farmers wanted a way to dry peat so that it could be mixed more easily into soil."
@@ -248,7 +248,7 @@
       choices:[
         {
           content:"Bonnet-binding machine"
-          validity:"true"
+          validity:true
         }
         "Harp"
         "Music box"
@@ -265,7 +265,7 @@
         "Mailbox"
         {
           content:"Life boat"
-          validity:"true"
+          validity:true
         }
       ]
       feedback:"This is a life boat invented in 1858. Let’s hope no one’s life ever depended on staying afloat in this metal capsule."
@@ -276,7 +276,7 @@
       choices:[
         {
           content:"A device for buoying vessels over shoals"
-          validity:"true"
+          validity:true
         }
         "Ship-in-a-bottle maker"
         "Yarn spooler"
