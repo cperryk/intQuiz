@@ -317,10 +317,7 @@ SimpleQuiz.prototype = {
 		}
 	},
 	restart:function(){
-		this.questions.forEach(function(question){
-			question.answered = false;
-			delete question.selected_choice;
-		});
+		this.makeQuestions();
 		this.goToLocation(0);
 		if(this.user){
 			if(this.user.score){
