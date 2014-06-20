@@ -40,7 +40,7 @@ SimpleQuiz.prototype = {
 				.addClass('quiz_inner')
 				.appendTo(self.container);
 		}());
-		this.makeQuestions();
+		this.makeSlides();
 		this.printAttribution();
 		return this;
 	},
@@ -48,15 +48,15 @@ SimpleQuiz.prototype = {
 		this.inner.empty();
 		return this;
 	},
-	makeQuestions:function(){
+	makeSlides:function(){
 		var self = this;
-		this.questions = [];
-		var questions_data = this.QUIZ_DATA.questions;
+		this.slides = [];
+		var slides_data = this.QUIZ_DATA.slides;
 		if(this.QUIZ_DATA.randomize_questions){
-			shuffleArray(questions_data);
+			shuffleArray(slides_data);
 		}
-		questions_data.forEach(function(question_data, question_index){
-			self.questions.push(new Question(question_data, question_index+1, self));
+		slides_data.forEach(function(slide_data, slide_index){
+			self.slides.push(new Slide(slide_data, slide_index+1, self));
 		});
 		return this;
 	},
@@ -68,9 +68,9 @@ SimpleQuiz.prototype = {
 		this.goToLocation(this.current_location-1);
 		return this;
 	},
-	printQuestion:function(question_index){
+	printSlide:function(slide_index){
 		this.clear();
-		this.questions[question_index].build(this.inner);
+		this.slides[slide_index].build(this.inner);
 		return this;
 	},
 	goToLocation:function(location_index){
@@ -86,8 +86,8 @@ SimpleQuiz.prototype = {
 				if(location_index===0 && self.QUIZ_DATA.title_slide){
 					self.printTitleSlide();
 				}
-				else if(location_index < (self.questions.length + (self.QUIZ_DATA.title_slide?1:0))){
-						self.printQuestion(location_index - (self.QUIZ_DATA.title_slide?1:0));
+				else if(location_index < (self.slides.length + (self.QUIZ_DATA.title_slide?1:0))){
+						self.printSlide(location_index - (self.QUIZ_DATA.title_slide?1:0));
 				}
 				else{
 						self.end();
@@ -165,11 +165,8 @@ SimpleQuiz.prototype = {
 						.appendTo(result_wrapper);
 				}
 				if(best_result.youtube){
-					var youtube = $('<iframe allowfullscreen>')
-						.attr('src','//www.youtube.com/embed/'+best_result.youtube)
-						.attr('frameborder',0)
-						.insertAfter(matcher_end);
-					youtube.css('height',parseInt((315*youtube.width())/560,10));
+					var youtube_wrapper = $('<div>').insertAfter(matcher_end);
+					var youtube = new YouTube(best_result.youtube, youtube_wrapper);
 				}
 			})();
 			var share_text = getShareText();
@@ -206,9 +203,9 @@ SimpleQuiz.prototype = {
 				}
 				var best_result;
 				(function addScores(){
-					self.questions.forEach(function(question){
-						for(var i in question.selected_choice.data.results){
-							results[i].score += parseFloat(question.selected_choice.data.results[i]);
+					self.slides.forEach(function(question){
+						for(var i in question.responder.selected_choice.data.results){
+							results[i].score += parseFloat(question.responder.selected_choice.data.results[i]);
 						}
 					});
 				}());
@@ -231,7 +228,7 @@ SimpleQuiz.prototype = {
 			var result_wrapper = (function printScoreText(){
 				return $('<div>')
 					.addClass('quiz_result')
-					.html('You scored <strong>'+self.user.score+'</strong> out of '+self.questions.length+'!')
+					.html('You scored <strong>'+self.user.score+'</strong> out of '+self.slides.length+'!')
 					.appendTo(score_wrapper);
 			})();
 			var average_score = (function printAverageScore(){
@@ -257,9 +254,9 @@ SimpleQuiz.prototype = {
 			})();
 			var share_name = self.QUIZ_DATA.share_name?self.QUIZ_DATA.share_name:('"'+self.QUIZ_DATA.title+'" quiz!');
 			printShareBtns({
-				facebook:'I scored '+self.user.score+' out of '+self.questions.length+' on Slate\'s '+share_name,
-				twitter:'I scored '+self.user.score+' out of '+self.questions.length+' on @Slate\'s '+share_name,
-				email:'I scored '+self.user.score+' out of '+self.questions.length+' on Slate\'s '+share_name
+				facebook:'I scored '+self.user.score+' out of '+self.slides.length+' on Slate\'s '+share_name,
+				twitter:'I scored '+self.user.score+' out of '+self.slides.length+' on @Slate\'s '+share_name,
+				email:'I scored '+self.user.score+' out of '+self.slides.length+' on Slate\'s '+share_name
 			});
 		}
 		function printShareBtns(share_strings){
@@ -267,7 +264,7 @@ SimpleQuiz.prototype = {
 				if(!string){
 					return false;
 				}
-				return string.replace('%score',self.user.score).replace('%question_length',self.questions.length);
+				return string.replace('%score',self.user.score).replace('%question_length',self.slides.length);
 			}
 			var share_data = self.QUIZ_DATA.share;
 			if(share_data){
@@ -317,7 +314,7 @@ SimpleQuiz.prototype = {
 		}
 	},
 	restart:function(){
-		this.makeQuestions();
+		this.makeSlides();
 		this.goToLocation(0);
 		if(this.user){
 			if(this.user.score){
@@ -412,7 +409,6 @@ Nav.prototype = {
 	},
 	updateArrows: function(){
 		var location = this.par.current_location;
-		var question_count = this.par.questions.length;
 		var title_slide = this.par.QUIZ_DATA.title_slide;
 		this.left_arr
 			.add(this.right_arr)
@@ -425,8 +421,8 @@ Nav.prototype = {
 			this.right_arr
 				.removeClass('inactive');
 		}
-		else if(location !== this.par.questions.length + (title_slide?1:0)){
-			if(this.par.questions[location-(title_slide?1:0)].answered){
+		else if(location !== this.par.slides.length + (title_slide?1:0)){
+			if(this.par.slides[location-(title_slide?1:0)].answered){
 				this.right_arr
 					.removeClass('inactive');
 			}
@@ -440,11 +436,11 @@ Nav.prototype = {
 		if(location === 0 && title_slide){
 			location_string = 'Title';
 		}
-		else if(location === this.par.questions.length + (title_slide?1:0)){
+		else if(location === this.par.slides.length + (title_slide?1:0)){
 			location_string = 'End';
 		}
 		else{
-			location_string = 'Question <strong>'+(location+(title_slide?0:1))+'</strong> of '+this.par.questions.length;
+			location_string = 'Question <strong>'+(location+(title_slide?0:1))+'</strong> of '+this.par.slides.length;
 		}
 		this.location_readout.html(location_string);
 	},
@@ -463,17 +459,16 @@ Nav.prototype = {
 	}
 };
 
-function Question(question_data,question_number,parent){
-	this.data = question_data;
-	this.choices = [];
-	this.question_number = question_number;
+function Slide(slide_data,slide_number,parent){
+	this.data = slide_data;
+	this.slide_number = slide_number;
 	this.par = parent;
 }
-Question.prototype = {
+Slide.prototype = {
 	build:function(target_container){
 		var self = this;
 		this.container = $('<div>')
-			.addClass('question_wrapper')
+			.addClass('slide_wrapper')
 			.appendTo(target_container)
 			.hide();
 		self.container
@@ -493,12 +488,12 @@ Question.prototype = {
 			}
 		}
 		this
-			.printQuestionContent(function(){
+			.printSlideContent(function(){
 				self.container
 					.css('opacity',1);
 			});
 	},
-	printQuestionContent:function(callback){
+	printSlideContent:function(callback){
 		var self = this;
 		var loader =  new IntLoader(this.container,'Loading question...',250);
 		var question = question_wrapper = $('<div>')
@@ -509,9 +504,9 @@ Question.prototype = {
 		var main_text = $('<p>')
 			.addClass('main_text')
 			.appendTo(question_content);
-		var question_number = $('<span>')
-			.addClass('question_number')
-			.html(this.question_number+'. ')
+		var slide_number = $('<span>')
+			.addClass('slide_number')
+			.html(this.slide_number+'. ')
 			.appendTo(main_text);
 		var question_text = $('<span>')
 			.html(this.data.content || this.par.question.content)
@@ -596,13 +591,11 @@ Question.prototype = {
 	},
 	responseMade:function(){
 		var self = this;
-		console.log(this.responder);
 		if(!this.answered){
 			if(this.par.QUIZ_DATA.collapse_questions==true){
 				this.collapse();
 			}
 			if(this.par.QUIZ_DATA.collapse_responders==true){
-				console.log('try collapse');
 				this.responder.collapse();
 			}
 			if(this.par.QUIZ_DATA.auto_advance){
@@ -639,7 +632,7 @@ Question.prototype = {
 
 function ChoiceGroup(par,choices){
 	this.data = choices;
-	this.par_question = par;
+	this.par_slide = par;
 	this.par_quiz = par.par;
 	this.getConf();
 	this.build();
@@ -649,7 +642,7 @@ ChoiceGroup.prototype = {
 		var self = this;
 		this.container = $('<div>')
 			.addClass('choices'+(self.conf.blocked_choices ? ' blocked':''))
-			.appendTo(this.par_question.container);
+			.appendTo(this.par_slide.container);
 		this.getExcludedChoices();
 		writeChoices();
 		if(self.conf.blocked_choices){
@@ -780,12 +773,12 @@ ChoiceGroup.prototype = {
 			return;
 		}
 		var exclusions = [];
-		var questions = this.par_quiz.questions;
-		for(var i=0;i<questions.length;i++){
-			if(questions[i]===self.par_question){
+		var slides = this.par_quiz.slides;
+		for(var i=0;i<slides.length;i++){
+			if(slides[i]===self.par_slide){
 				break;
 			}
-			exclusions.push(questions[i].data.correct);
+			exclusions.push(slides[i].data.correct);
 		}
 		if(exclusions.length > 0){
 			this.exclusions = exclusions;
@@ -809,7 +802,7 @@ ChoiceGroup.prototype = {
 			this
 				.markCorrectChoice();
 		}
-		this.par_question.responseMade();
+		this.par_slide.responseMade();
 		if(!this.par_quiz.QUIZ_DATA.matcher){
 			this.deactivateChoices();
 		}
@@ -833,7 +826,7 @@ ChoiceGroup.prototype = {
 function Choice(choice_data,choice_index,par){
 	var self = this;
 	this.par_choice_group = par;
-	this.par_question = par.par_question;
+	this.par_slide = par.par_slide;
 	this.par_quiz = par.par_quiz;
 	this.choice_index = choice_index;
 	if(typeof choice_data == 'object'){
@@ -930,8 +923,8 @@ Choice.prototype = {
 			this.validity = this.data.validity;
 			return this;
 		}
-		if(this.par_question.data.correct){
-			var correct_choice_ids = this.par_question.data.correct;
+		if(this.par_slide.data.correct){
+			var correct_choice_ids = this.par_slide.data.correct;
 			if(typeof correct_choice_ids === 'string'){
 				correct_choice_ids = [correct_choice_ids];
 			}
@@ -952,7 +945,7 @@ Choice.prototype = {
 
 function FillInTheBlank(par,correct){
 	this.correct = correct;
-	this.par_question = par;
+	this.par_slide = par;
 	this.par_quiz = par.par;
 	this.reveals = 0;
 	this.mistakes = [];
@@ -963,15 +956,15 @@ function FillInTheBlank(par,correct){
 FillInTheBlank.prototype = {
 	build:function(){
 		var self = this;
-		if(self.par_question.answered){
-			self.container.appendTo(self.par_question.container);
-			self.par_question.responseMade();
+		if(self.par_slide.answered){
+			self.container.appendTo(self.par_slide.container);
+			self.par_slide.responseMade();
 			return;
 		}
 		(function printContainer(){
 			self.container = $('<div>')
 				.addClass('fill_in_the_blank')
-				.appendTo(self.par_question.container);
+				.appendTo(self.par_slide.container);
 		})();
 		(function printText(){
 			var correct = self.correct;
@@ -1094,18 +1087,18 @@ FillInTheBlank.prototype = {
 		}
 	},
 	complete:function(){
-		this.par_question.responseMade();
+		this.par_slide.responseMade();
 		this.removeKeyListener();
 		this.ghost_text_input.remove();
-		this.par_question.answered = true;
+		this.par_slide.answered = true;
 	},
 	success:function(){
-		this.par_question.validity = true;
+		this.par_slide.validity = true;
 		this.par_quiz.user.score++;
 		this.complete();
 	},
 	failure:function(){
-		this.par_question.validity = false;
+		this.par_slide.validity = false;
 		this.characters.forEach(function(character){
 			if(!character.revealed){
 				character.reveal(true);
@@ -1269,6 +1262,16 @@ Feedback.prototype = {
 	}
 };
 
+function YouTube(video_id,target){
+	var container = $('<iframe allowfullscreen>')
+		.attr('src','//www.youtube.com/embed/'+video_id)
+		.attr('frameborder',0)
+		.appendTo(target)
+	container
+		.css('height',parseInt((315*container.width())/560,10));
+	return container;
+}
+
 function createQuiz(container,slug){
 	var url = INT_PATH+'quizzes/'+slug+'/'+slug+'.json';
 	var loader = new IntLoader(container,'Loading interactive',200);
@@ -1320,7 +1323,6 @@ function getIEversion(){
 }
 
 }); //end jQuery
-
 
 
 /* jshint ignore:start */

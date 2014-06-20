@@ -9,14 +9,14 @@
   text-align: center; }
   .simple_quiz .quiz_inner {
     font-family: 'sl-ApresRegular',verdana; }
-  .simple_quiz .question_wrapper {
+  .simple_quiz .slide_wrapper {
     background: url("graphics/stripe.png"); }
-    .simple_quiz .question_wrapper:not(.answered) .choice:not(.excluded) {
+    .simple_quiz .slide_wrapper:not(.answered) .choice:not(.excluded) {
       cursor: pointer;
       line-height: 1.4; }
-      .simple_quiz .question_wrapper:not(.answered) .choice:not(.excluded):hover:not(.no_highlight) {
+      .simple_quiz .slide_wrapper:not(.answered) .choice:not(.excluded):hover:not(.no_highlight) {
         background-color: #fdffcf; }
-      .simple_quiz .question_wrapper:not(.answered) .choice:not(.excluded):active:not(.no_highlight) {
+      .simple_quiz .slide_wrapper:not(.answered) .choice:not(.excluded):active:not(.no_highlight) {
         position: relative;
         top: 1px; }
   .simple_quiz .top_bar {
