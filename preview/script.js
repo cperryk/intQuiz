@@ -52,7 +52,7 @@ SimpleQuiz.prototype = {
 		var self = this;
 		this.questions = [];
 		var questions_data = this.QUIZ_DATA.questions;
-		if(this.QUIZ_DATA.randomize_questions==="true"){
+		if(this.QUIZ_DATA.randomize_questions){
 			shuffleArray(questions_data);
 		}
 		questions_data.forEach(function(question_data, question_index){
@@ -83,11 +83,11 @@ SimpleQuiz.prototype = {
 		this.inner
 			.stop(true,true)
 			.fadeTo(200,0,function(){
-				if(location_index===0 && self.QUIZ_DATA.title_slide === 'true'){
+				if(location_index===0 && self.QUIZ_DATA.title_slide){
 					self.printTitleSlide();
 				}
-				else if(location_index < (self.questions.length + (self.QUIZ_DATA.title_slide==="true"?1:0))){
-						self.printQuestion(location_index - (self.QUIZ_DATA.title_slide==="true"?1:0));
+				else if(location_index < (self.questions.length + (self.QUIZ_DATA.title_slide?1:0))){
+						self.printQuestion(location_index - (self.QUIZ_DATA.title_slide?1:0));
 				}
 				else{
 						self.end();
@@ -379,7 +379,7 @@ SimpleQuiz.prototype = {
 			self.IntSound_used = true;
 			var sound_id = (typeof sound_data === 'object' ? sound_data.id : sound_data);
 			IntSound.tieToButton(btn,INT_PATH+'quizzes/'+self.slug+'/sound/',sound_id);
-			if(typeof sound_data === 'object' && sound_data.autoplay === "true"){
+			if(typeof sound_data === 'object' && sound_data.autoplay){
 				btn.trigger('click');
 			}
 		}
@@ -421,12 +421,12 @@ Nav.prototype = {
 			this.left_arr
 				.removeClass('inactive');
 		}
-		if(location === 0 && title_slide==="true"){
+		if(location === 0 && title_slide){
 			this.right_arr
 				.removeClass('inactive');
 		}
-		else if(location !== this.par.questions.length + (title_slide==="true"?1:0)){
-			if(this.par.questions[location-(title_slide==="true"?1:0)].answered){
+		else if(location !== this.par.questions.length + (title_slide?1:0)){
+			if(this.par.questions[location-(title_slide?1:0)].answered){
 				this.right_arr
 					.removeClass('inactive');
 			}
@@ -437,14 +437,14 @@ Nav.prototype = {
 		var location = this.par.current_location;
 		var location_string;
 		var title_slide = this.par.QUIZ_DATA.title_slide;
-		if(location === 0 && title_slide==="true"){
+		if(location === 0 && title_slide){
 			location_string = 'Title';
 		}
-		else if(location === this.par.questions.length + (title_slide==="true"?1:0)){
+		else if(location === this.par.questions.length + (title_slide?1:0)){
 			location_string = 'End';
 		}
 		else{
-			location_string = 'Question <strong>'+(location+(title_slide==="true"?0:1))+'</strong> of '+this.par.questions.length;
+			location_string = 'Question <strong>'+(location+(title_slide?0:1))+'</strong> of '+this.par.questions.length;
 		}
 		this.location_readout.html(location_string);
 	},
@@ -596,11 +596,16 @@ Question.prototype = {
 	},
 	responseMade:function(){
 		var self = this;
+		console.log(this.responder);
 		if(!this.answered){
-			if(this.par.QUIZ_DATA.collapse_questions==='true'){
+			if(this.par.QUIZ_DATA.collapse_questions==true){
 				this.collapse();
 			}
-			if(this.par.QUIZ_DATA.auto_advance==="true"){
+			if(this.par.QUIZ_DATA.collapse_responders==true){
+				console.log('try collapse');
+				this.responder.collapse();
+			}
+			if(this.par.QUIZ_DATA.auto_advance){
 				this.par.advanceOne();
 			}
 			else{
@@ -629,9 +634,6 @@ Question.prototype = {
 						});
 			});
 		}
-	},
-	collapse:function(){
-		this.question_wrapper.slideUp();
 	}
 };
 
@@ -739,6 +741,9 @@ ChoiceGroup.prototype = {
 			self.choices.push(new Choice(choice_data,choice_index,self));
 		}
 	},
+	collapse:function(){
+		this.container.slideUp();
+	},
 	choiceClicked:function(choice){
 		var rechoosing = false;
 		if(this.selected_choice){
@@ -748,12 +753,12 @@ ChoiceGroup.prototype = {
 			});
 			rechoosing = true;
 		}
-		if(choice.validity && choice.validity==='true'){
+		if(choice.validity && choice.validity){
 			this.par_quiz.user.score++;
 		}
 		this.selected_choice = choice;
 		this.reflectChoice(this.selected_choice);
-		if(this.par_quiz.QUIZ_DATA.collapse_choices==='true'){
+		if(this.par_quiz.QUIZ_DATA.collapse_choices){
 			this.collapse();
 		}
 		this.complete = true;
@@ -771,7 +776,7 @@ ChoiceGroup.prototype = {
 	},
 	getExcludedChoices:function(){
 		var self = this;
-		if(this.conf.exclusionary_choices!=="true" || !this.par_quiz.QUIZ_DATA.choices){
+		if(!this.conf.exclusionary_choices || !this.par_quiz.QUIZ_DATA.choices){
 			return;
 		}
 		var exclusions = [];
@@ -798,7 +803,7 @@ ChoiceGroup.prototype = {
 			choice.markCorrect();
 		}
 		else{
-			if(!choice.validity || choice.validity!=="true"){
+			if(!choice.validity || !choice.validity){
 					choice.markIncorrect();
 				}
 			this
@@ -811,7 +816,7 @@ ChoiceGroup.prototype = {
 	},
 	markCorrectChoice:function(){
 		this.choices.forEach(function(choice){
-			if(choice.validity=="true"){
+			if(choice.validity){
 				choice.markCorrect();
 			}
 		});
@@ -886,7 +891,7 @@ Choice.prototype = {
 		else{
 			content_wrapper.appendTo(this.content_wrapper);
 		}
-		if(this.par_quiz.QUIZ_DATA.blocked_choices === "true"){
+		if(this.par_quiz.QUIZ_DATA.blocked_choices){
 			this.container.addClass('blocked');
 		}
 	},
@@ -935,10 +940,10 @@ Choice.prototype = {
 			return this;
 		}
 		if(this.data.content[0]==="*"){
-			this.validity = "true";
+			this.validity = true;
 			return this;
 		}
-		this.validity = "false";
+		this.validity = false;
 
 		return this;
 	}
@@ -951,6 +956,7 @@ function FillInTheBlank(par,correct){
 	this.par_quiz = par.par;
 	this.reveals = 0;
 	this.mistakes = [];
+	this.entered_characters = [];
 	this.max_mistakes = 3;
 	this.build();
 }
@@ -996,11 +1002,9 @@ FillInTheBlank.prototype = {
 			self.mistakes_wrapper = $('<div>')
 				.addClass('mistakes')
 				.appendTo(self.container);
+			self.printed_mistakes = [];
 			for(var i=0;i<self.max_mistakes;i++){
-				$('<div>')
-					.addClass('mistake unfilled')
-					.html('&#160;')
-					.prependTo(self.mistakes_wrapper);
+				self.printed_mistakes.push(new Mistake(self.mistakes_wrapper));
 			}
 			$('<div>')
 				.addClass('mistakes_label')
@@ -1012,20 +1016,8 @@ FillInTheBlank.prototype = {
 			self.ghost_text_input = $('<input type="text">')
 				.addClass('ghost_text_input')
 				.prependTo(self.text_wrapper)
-				.focus();
-			self.addGhostListener();
 		})();
 		this.addKeyListener();
-	},
-	addGhostListener:function(){
-		this.text_wrapper
-			.click(function(){
-				self.ghost_text_input.focus();
-			})
-	},
-	removeGhostListener:function(){
-		this.mistakes_wrapper
-			.unbind('click');
 	},
 	addKeyListener:function(){
 		var self = this;
@@ -1046,6 +1038,13 @@ FillInTheBlank.prototype = {
 	characterEntered:function(char){
 		var self = this;
 		var character_found = false;
+		if(this.entered_characters.indexOf(char)>-1){
+			this.characters.forEach(function(character){
+				if(character.char===char){
+					character.bounce();
+				}
+			});
+		}
 		this.characters.forEach(function(character){
 			if(character.char === char){
 				if(!character.revealed){
@@ -1059,6 +1058,7 @@ FillInTheBlank.prototype = {
 			this.mistake(char);
 		}
 		this.checkCorrect();
+		this.entered_characters.push(char);
 	},
 	checkCorrect:function(){
 		if(this.reveals === this.characters.length){
@@ -1066,8 +1066,16 @@ FillInTheBlank.prototype = {
 		}
 	},
 	mistake:function(char){
+		var self = this;
 		var already_made = this.mistakes.indexOf(char)>-1;
 		if(already_made){
+			(function bounceMistake(){
+				for(var i=self.printed_mistakes.length-1;i>=0;i--){
+					if(self.printed_mistakes[i].char===char){
+						self.printed_mistakes[i].bounce();
+					}
+				}
+			}());
 			return;
 		}
 		this.printMistake(char);
@@ -1077,26 +1085,36 @@ FillInTheBlank.prototype = {
 		}
 	},
 	printMistake:function(char){
-		this.mistakes_wrapper
-			.find('.mistake.unfilled')
-			.first()
-			.html(char)
-			.removeClass('unfilled');
+		var printed_mistakes = this.printed_mistakes;
+		for(var i=printed_mistakes.length-1;i>=0;i--){
+			if(!this.printed_mistakes[i].filled){
+				this.printed_mistakes[i].fill(char);
+				break;
+			}
+		}
 	},
 	complete:function(){
 		this.par_question.responseMade();
 		this.removeKeyListener();
-		this.removeGhostListener();
+		this.ghost_text_input.remove();
 		this.par_question.answered = true;
 	},
 	success:function(){
-		this.par_question.validity = "true";
+		this.par_question.validity = true;
 		this.par_quiz.user.score++;
 		this.complete();
 	},
 	failure:function(){
-		this.par_question.validity = "false";
+		this.par_question.validity = false;
+		this.characters.forEach(function(character){
+			if(!character.revealed){
+				character.reveal(true);
+			}
+		})
 		this.complete();
+	},
+	collapse:function(){
+		this.container.slideUp();
 	}
 };
 function Character(char,target){
@@ -1106,11 +1124,47 @@ function Character(char,target){
 		.appendTo(target);
 }
 Character.prototype = {
-	reveal:function(){
+	reveal:function(wrong){
 		this.container.html(this.char);
 		this.revealed = true;
+		if(wrong){
+			this.container.addClass('wrong');
+		}
+	},
+	bounce:function(){
+		var self = this;
+		this.container
+			.addClass('used')
+		setTimeout(function(){
+			self.container.removeClass('used');
+		},300);
 	}
 }
+function Mistake(target){
+	this.filled = false;
+	this.container = $('<div>')
+		.addClass('mistake unfilled')
+		.html('&#160;')
+		.prependTo(target);
+}
+Mistake.prototype = {
+	fill:function(char){
+		this.char = char;
+		this.container
+			.html(char)
+		this.filled = true;
+	},
+	bounce:function(){
+		var self = this;
+		this.container
+			.addClass('used')
+		setTimeout(function(){
+			self.container.removeClass('used');
+		},300);
+	}
+}
+
+
 
 function Feedback(target,data,parent,callback){
 	this.par = parent;
@@ -1142,7 +1196,7 @@ Feedback.prototype = {
 		else if(typeof this.data === 'object'){
 			s+=this.data.content;
 		}
-		if(this.par.validity==='true'){
+		if(this.par.validity){
 			s='<span class="correct">Correct!</span> '+s;
 		}
 		else{
