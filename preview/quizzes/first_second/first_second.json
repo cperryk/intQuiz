@@ -14,44 +14,54 @@
   "choices": {
     "round1": [
       {
-        "content": "&#8220;Call Me Maybe&#8221; by Carly Rae Jepsen",
-        "id": "call_me_maybe"
+        "content": "Carly Rae Jepsen, &#8220;Call Me Maybe&#8221;",
+        "id": "call_me_maybe",
+        "img": "carly.jpg"
       },
       {
         "id": "rolling_in_the_deep",
-        "content": "&#8220;Rolling In The Deep&#8221; by Adele"
+        "img": "adele.jpg",
+        "content": "Adele, &#8220;Rolling In The Deep&#8221;"
       },
       {
         "id": "we_are_young",
-        "content": "&#8220;We Are Young&#8221; by Fun"
+        "img": "fun.jpg",
+        "content": "Fun, &#8220;We Are Young&#8221;"
       },
       {
         "id": "payphone",
-        "content": "&#8220;Payphone&#8221; by Wiz Khalifa"
+        "img": "payphone.jpg",
+        "content": "Maroon Five, &#8220;Payphone&#8221;"
       },
       {
         "id": "blurred_lines",
-        "content": "&#8220;Blurred Lines&#8221; by Robin Thicke"
+        "img": "blurred_lines.jpg",
+        "content": "Robin Thicke, &#8220;Blurred Lines&#8221;"
+      },
+      {
+        "id": "roar",
+        "img": "roar.jpg",
+        "content": "Katy Perry, Roar"
       },
       {
         "id": "thrift_shop",
-        "content": "&#8220;Thrift Shop&#8221; by Macklemore"
+        "img": "thrift_shop.jpg",
+        "content": "Macklemore, &#8220;Thrift Shop&#8221;"
       },
       {
         "id": "radioactive",
-        "content": "&#8220;Radioactive&#8221; by Imagine Dragons"
+        "img": "radioactive.jpg",
+        "content": "Imagine Dragons, &#8220;Radioactive&#8221;"
       },
       {
         "id": "harlem_shake",
-        "content": "&#8220;Harlem Shake&#8221; by Baauer"
+        "img": "harlem_shake.jpg",
+        "content": "Baauer, &#8220;Harlem Shake&#8221;"
       },
       {
         "id": "mirrors",
-        "content": "&#8220;Mirrors&#8221; by Justin Timberlake"
-      },
-      {
-        "id": "alejandro",
-        "content": "&#8220;Alejandro&#8221; by Lady Gaga"
+        "img": "mirrors.jpg",
+        "content": "Justin Timberlake, &#8220;Mirrors&#8221;"
       }
     ],
     "round2": [
@@ -201,6 +211,7 @@
       "correct": "rolling_in_the_deep",
       "feedback": {
         "content": "That was &#8220;Rolling In The Deep.&#8221;",
+        "img": "adele_full.jpg",
         "sound": {
           "id": "full_rolling_in_the_deep",
           "autoplay": "true"
