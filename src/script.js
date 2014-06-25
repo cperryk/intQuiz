@@ -165,8 +165,7 @@ SimpleQuiz.prototype = {
 						.appendTo(result_wrapper);
 				}
 				if(best_result.youtube){
-					var youtube_wrapper = $('<div>').insertAfter(matcher_end);
-					var youtube = new YouTube(best_result.youtube, youtube_wrapper);
+					var youtube = new YouTube(best_result.youtube,matcher_end);
 				}
 			})();
 			var share_text = getShareText();
@@ -185,9 +184,9 @@ SimpleQuiz.prototype = {
 				}
 				else{
 					return {
-						facebook:matcher_data.share_text.replace('%s',best_result.content),
-						twitter:matcher_data.share_text.replace('%s',best_result.content),
-						email:matcher_data.share_text.replace('%s',best_result.content)
+						facebook:self.QUIZ_DATA.share_text.replace('%s',best_result.content),
+						twitter:self.QUIZ_DATA.share_text.replace('%s',best_result.content),
+						email:self.QUIZ_DATA.share_text.replace('%s',best_result.content)
 					};
 				}
 			}
@@ -252,12 +251,33 @@ SimpleQuiz.prototype = {
 					IntQuizScore.sendScore(self.slug,self.user.score);
 				});
 			})();
+			var share_strings = getShareStrings();
+			printShareBtns(share_strings);
+		}
+		function getShareStrings(){
+			if(self.QUIZ_DATA.share_text){
+				var share_text = self.QUIZ_DATA.share_text;
+				if(typeof share_text === 'object'){
+					return {
+						facebook:share_text.facebook.replace('%s',self.user.score).replace('%l',self.slides.length),
+						twitter:share_text.twitter.replace('%s',self.user.score).replace('%l',self.slides.length),
+						email:share_text.email.replace('%s',self.user.score).replace('%l',self.slides.length)
+					};
+				}
+				else{
+					return {
+						facebook:share_text.replace('%s',self.user.score).replace('%l',self.slides.length),
+						twitter:share_text.replace('%s',self.user.score).replace('%l',self.slides.length),
+						email:share_text.replace('%s',self.user.score).replace('%l',self.slides.length)
+					};
+				}
+			}
 			var share_name = self.QUIZ_DATA.share_name?self.QUIZ_DATA.share_name:('"'+self.QUIZ_DATA.title+'" quiz!');
-			printShareBtns({
+			return {
 				facebook:'I scored '+self.user.score+' out of '+self.slides.length+' on Slate\'s '+share_name,
 				twitter:'I scored '+self.user.score+' out of '+self.slides.length+' on @Slate\'s '+share_name,
 				email:'I scored '+self.user.score+' out of '+self.slides.length+' on Slate\'s '+share_name
-			});
+			};
 		}
 		function printShareBtns(share_strings){
 			function parseShareString(string){
@@ -384,6 +404,10 @@ SimpleQuiz.prototype = {
 	}
 };
 
+function End(){
+	
+}
+
 function Nav(target_container,parent){
 	this.par = parent;
 	this.container = $('<div>')
@@ -496,7 +520,7 @@ Slide.prototype = {
 	printSlideContent:function(callback){
 		var self = this;
 		var loader =  new IntLoader(this.container,'Loading question...',250);
-		var question = question_wrapper = $('<div>')
+		var question_wrapper = $('<div>')
 			.addClass('question');
 		var question_content = $('<div>')
 			.addClass('question_content')
@@ -591,11 +615,16 @@ Slide.prototype = {
 	},
 	responseMade:function(){
 		var self = this;
+		if(this.par.IntSound_used){
+			require(['IntSound'],function(IntSound){
+				IntSound.stopAll();
+			});
+		}
 		if(!this.answered){
-			if(this.par.QUIZ_DATA.collapse_questions==true){
+			if(this.par.QUIZ_DATA.collapse_questions===true){
 				this.collapse();
 			}
-			if(this.par.QUIZ_DATA.collapse_responders==true){
+			if(this.par.QUIZ_DATA.collapse_responders===true){
 				this.responder.collapse();
 			}
 			if(this.par.QUIZ_DATA.auto_advance){
@@ -619,11 +648,12 @@ Slide.prototype = {
 				.printLoader()
 				.printFeedback(bottom_wrapper,function(){
 					self.removeLoader();
-					self
-						.printNextBtn(bottom_wrapper);
+					self.printNextBtn(bottom_wrapper);
 					bottom_wrapper
 						.imagesLoaded(function(){
-							bottom_wrapper.slideDown();
+							bottom_wrapper.slideDown(function(){
+								self.feedback.printYouTube();
+							});
 						});
 			});
 		}
@@ -734,9 +764,6 @@ ChoiceGroup.prototype = {
 			self.choices.push(new Choice(choice_data,choice_index,self));
 		}
 	},
-	collapse:function(){
-		this.container.slideUp();
-	},
 	choiceClicked:function(choice){
 		var rechoosing = false;
 		if(this.selected_choice){
@@ -791,12 +818,12 @@ ChoiceGroup.prototype = {
 	reflectChoice:function(choice){
 		var self = this;
 		choice = choice || this.selected_choice;
-		this.validity = choice.validity;
+		this.par_slide.validity = choice.validity;
 		if(this.par_quiz.QUIZ_DATA.matcher){
 			choice.markCorrect();
 		}
 		else{
-			if(!choice.validity || !choice.validity){
+			if(!choice.validity){
 					choice.markIncorrect();
 				}
 			this
@@ -928,8 +955,7 @@ Choice.prototype = {
 			if(typeof correct_choice_ids === 'string'){
 				correct_choice_ids = [correct_choice_ids];
 			}
-			var validity = correct_choice_ids.indexOf(this.data.id)>-1;
-			this.validity = validity.toString();
+			this.validity = correct_choice_ids.indexOf(this.data.id)>-1;
 			return this;
 		}
 		if(this.data.content[0]==="*"){
@@ -979,17 +1005,30 @@ FillInTheBlank.prototype = {
 					.appendTo(self.text_wrapper);
 				for(var i=0;i<word.length;i++){
 					var character = word[i];
-					if([',','.','?','!',"'",' ','-'].indexOf(character)>-1){
+					if(isLetterOrNumber(character)){
+						self.characters.push(new Character(character, word_wrapper));
+					}
+					else{
 						$('<div>')
 							.addClass('character')
 							.html(character)
 							.appendTo(word_wrapper);
 					}
-					else{
-						self.characters.push(new Character(character, word_wrapper));
-					}
 				}
 			});
+			function isLetterOrNumber(character){
+				var char_code = character.charCodeAt(0);
+				if(char_code>=65&&char_code<=90){
+					return true; //is uppercase character
+				}
+				if(char_code>=97&&char_code<=122){
+					return true; //is lowercase character
+				}
+				if(char_code>=48&&char_code<=57){
+					return true; 
+				}
+				return false;
+			}
 		})();
 		(function printMistakesWrapper(){
 			self.mistakes_wrapper = $('<div>')
@@ -1008,7 +1047,7 @@ FillInTheBlank.prototype = {
 			//for mobile
 			self.ghost_text_input = $('<input type="text">')
 				.addClass('ghost_text_input')
-				.prependTo(self.text_wrapper)
+				.prependTo(self.text_wrapper);
 		})();
 		this.addKeyListener();
 	},
@@ -1103,7 +1142,7 @@ FillInTheBlank.prototype = {
 			if(!character.revealed){
 				character.reveal(true);
 			}
-		})
+		});
 		this.complete();
 	},
 	collapse:function(){
@@ -1127,12 +1166,12 @@ Character.prototype = {
 	bounce:function(){
 		var self = this;
 		this.container
-			.addClass('used')
+			.addClass('used');
 		setTimeout(function(){
 			self.container.removeClass('used');
 		},300);
 	}
-}
+};
 function Mistake(target){
 	this.filled = false;
 	this.container = $('<div>')
@@ -1144,18 +1183,18 @@ Mistake.prototype = {
 	fill:function(char){
 		this.char = char;
 		this.container
-			.html(char)
+			.html(char);
 		this.filled = true;
 	},
 	bounce:function(){
 		var self = this;
 		this.container
-			.addClass('used')
+			.addClass('used');
 		setTimeout(function(){
 			self.container.removeClass('used');
 		},300);
 	}
-}
+};
 
 
 
@@ -1259,16 +1298,28 @@ Feedback.prototype = {
 			this.container.addClass('with_sound');
 			this.par.par.appendSoundBtn(this.container, this.data.sound);
 		}
+	},
+	printYouTube:function(){
+		if(this.data.youtube){
+			new YouTube(this.data.youtube, this.container)
+				.hide()
+				.prependTo(this.container)
+				.fadeIn(200);
+		}
 	}
 };
 
 function YouTube(video_id,target){
-	var container = $('<iframe allowfullscreen>')
+	var container = $('<div>')
+		.addClass('youtube_wrapper')
+		.appendTo(target);
+	var iframe = $('<iframe allowfullscreen>')
 		.attr('src','//www.youtube.com/embed/'+video_id)
 		.attr('frameborder',0)
-		.appendTo(target)
-	container
-		.css('height',parseInt((315*container.width())/560,10));
+		.prependTo(container);
+	var parent_container = target;
+	iframe
+		.css('height',parseInt((315*parent_container.width())/560,10));
 	return container;
 }
 

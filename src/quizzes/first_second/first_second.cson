@@ -106,10 +106,8 @@
         sound:{
           id:"full_blurred_lines"
           autoplay:true
-        }
-        img:{
-          src:"blurred_lines.jpg"
-        }
+        },
+        img:"blurred_lines_full.jpg"
       }
     }
     {
@@ -127,9 +125,7 @@
           id:"full_call_me_maybe"
           autoplay:true
         }
-        img:{
-          src:"call_me_maybe.jpg"
-        }
+        img:"carly_full.jpg"
       }
     }
     {
@@ -147,6 +143,7 @@
           id:"full_harlem_shake"
           autoplay:true
         }
+        img:"harlem_shake_full.jpg"
       }
     }
     {
@@ -164,6 +161,7 @@
           id:"full_mirrors"
           autoplay:true
         }
+        img:"mirrors_full.jpg"
       }
     }
     {
@@ -181,6 +179,7 @@
           id:"full_payphone"
           autoplay:true
         }
+        img:"payphone_full.jpg"
       }
     }
     {
@@ -198,6 +197,7 @@
           id:"full_radioactive"
           autoplay:true
         }
+        img:"radioactive_full.jpg"
       }
     }
     {
@@ -216,6 +216,7 @@
           id:"full_rolling_in_the_deep"
           autoplay:true
         }
+        img:"adele_full.jpg"
       }
     }
     {
@@ -233,6 +234,7 @@
           id:"full_thrift_shop"
           autoplay:true
         }
+        img:"thrift_shop_full.jpg"
       }
     }
     {
@@ -250,6 +252,7 @@
           id:"full_we_are_young"
           autoplay:true
         }
+        img:"fun_full.jpg"
       }
     }
     {

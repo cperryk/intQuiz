@@ -1,8 +1,13 @@
 {
-  title: "The TV Theme Show Game"
+  title: "The TV Theme Song Game"
   slug:"first_second"
   collapse_responders: true
   collapse_questions: true
+  share_text: {
+    facebook:"I scored %s out of %l on NPR's TV Theme Song Quiz!"
+    twitter:"I scored %s out of %l on @NPRAskMeAnother's TV Theme Song Quiz on @Slate! Can you beat me?"
+    email:"I scored %s out of %l on NPR's Ask Me Another's TV Theme Song Quiz on Slate!"
+  }
   questions: [
     {
       content: "What modern TV show does this song describe?"
@@ -10,25 +15,25 @@
       type:"fill_in_the_blank",
       sound:{
         id:"gilligan"
-        autoplay:"false"
+        autoplay:false
       }
       correct:"Downton Abbey"
       feedback:{
-        img:
-        content:"That was <em>Downton Abbey</em>."
+        img:"downton_abbey.jpg"
+        content:"That song described <em>Downton Abbey</em>."
       }
     },
     {
-      content: "On what old show's theme song was that based?"
+      content: "On what old show’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
         id:"gilligan"
-        autoplay:"false"
+        autoplay:false
       }
-      correct:"Gilligan's Island"
+      correct:"Gilligan’s Island"
       feedback:{
-        content:"That was <em>Gilligan's Island</em>."
+        content:"That song was based on the theme from <em>Gilligan’s Island</em>."
         youtube:"Q8jhb5NnADM"
       }
     },
@@ -42,20 +47,22 @@
       }
       correct:"Scandal"
       feedback:{
-        content:"That was <em>Scandal</em>."
+        img:"scandal.jpg"
+        content:"That song described <em>Scandal</em>."
       }
     },
     {
-      content: "On what old show's theme song was that based?"
+      content: "On what old show’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
         id:"cheers"
-        autoplay:"false"
+        autoplay:false
       }
       correct:"Cheers"
       feedback:{
-        content:"That was <em>Cheers</em>."
+        youtube:"rS0VQOHX7lM"
+        content:"That song was based on the theme from <em>Cheers</em>."
       }
     },
     {
@@ -68,20 +75,22 @@
       }
       correct:"The Wire"
       feedback:{
-        content:"That was <em>The Wire</em>."
+        youtube:"kcB3yQTvJkk"
+        content:"That song described <em>The Wire</em>."
       }
     },
     {
-      content: "On what old show's theme song was that based?"
+      content: "On what old show’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
         id:"different_strokes"
-        autoplay:"false"
+        autoplay:false
       }
-      correct:"Different Strokes"
+      correct:"Diff’rent Strokes"
       feedback:{
-        content:"That was <em>Different Strokes</em>."
+        youtube:"W0CYJNw9YJQ"
+        content:"That song was based on the theme from <em>Diff’rent Strokes</em>."
       }
     },
     {
@@ -94,20 +103,22 @@
       }
       correct:"The X-Files"
       feedback:{
-        content:"That was <em>The X-Files</em>."
+        youtube:"MkMKzdTBEOc"
+        content:"That song described <em>The X-Files</em>."
       }
     },
     {
-      content: "On what old show's theme song was that based?"
+      content: "On what old show’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
         id:"patty_duke"
-        autoplay:"false"
+        autoplay:false
       }
-      correct:"Patty Duke"
+      correct:"The Patty Duke Show"
       feedback:{
-        content:"That was <em>Patty Duke</em>."
+        youtube:"qQTqKcojrVY"
+        content:"That song was based on the theme from <em>The Patty Duke Show</em>."
       }
     },
     {
@@ -120,20 +131,22 @@
       }
       correct:"House"
       feedback:{
-        content:"That was <em>House M.D.</em>."
+        youtube:"a6zJ9dEwNek"
+        content:"That song described <em>House</em>."
       }
     },
     {
-      content: "On what old show's theme song was that based?"
+      content: "On what old show’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
         id:"welcome_back"
-        autoplay:"false"
+        autoplay:false
       }
       correct:"Welcome Back Kotter"
       feedback:{
-        content:"That was <em>Welcome Back Kotter</em>."
+        youtube:"5VlGyMG0ksg"
+        content:"That song was based on the theme from <em>Welcome Back Kotter</em>."
       }
     },
     {
@@ -146,20 +159,22 @@
       }
       correct:"Mad Men"
       feedback:{
-        content:"That was <em>Mad Men</em>."
+        youtube:"WcRr-Fb5xQo"
+        content:"That song described <em>Mad Men</em>."
       }
     },
     {
-      content: "On what old show's theme song was that based?"
+      content: "On what old show’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
         id:"wkrp"
-        autoplay:"false"
+        autoplay:false
       }
-      correct:"Patty Duke"
+      correct:"WKRP in Cincinnati"
       feedback:{
-        content:"That was <em>WKRP</em>."
+        youtube:"poqvBlBXa4U" 
+        content:"That song was based on the theme from <em>WKRP in Cincinnati</em>."
       }
     }
   ]
