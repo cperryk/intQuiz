@@ -424,7 +424,7 @@
     .fill_in_the_blank .character.wrong {
       color: red; }
   .fill_in_the_blank .mistakes {
-    text-align: right;
+    text-align: left;
     font-size: 1em;
     margin: 1em 0 0 0;
     padding: 1em 0 0 0;
@@ -456,6 +456,23 @@
     border: 0px;
     opacity: 0;
     text-align: center; }
+  .fill_in_the_blank .btn_skip {
+    float: right;
+    margin-left: 1em;
+    margin-top: 0.2em;
+    color: gray;
+    display: inline-block;
+    background-color: white;
+    padding: 0.4em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    border: 1px solid #c7c7c7;
+    cursor: pointer; }
+    .fill_in_the_blank .btn_skip:hover {
+      color: black; }
+    .fill_in_the_blank .btn_skip:active {
+      position: relative;
+      top: 1px; }
 
 @media screen and (max-width: 580px) {
   .ghost_text_input {

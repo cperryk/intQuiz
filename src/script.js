@@ -571,7 +571,7 @@ Slide.prototype = {
 		})();
 		(function printSound(){
 			if(self.data.sound){
-				if(self.data.sound.autoplay && self.slide_number===1 && !self.par_quiz.QUIZ_DATA.title_slide){
+				if(self.data.sound.autoplay && self.slide_number===1 && !self.par.title_slide){
 					self.data.sound.autoplay = false;
 				}
 				question_wrapper.addClass('with_sound');
@@ -1046,6 +1046,15 @@ FillInTheBlank.prototype = {
 				.html("Wrong guesses: ")
 				.prependTo(self.mistakes_wrapper);
 		})();
+		(function printSkipBtn(){
+			$('<div>')
+				.addClass('btn_skip')
+				.html('Give Up')
+				.appendTo(self.mistakes_wrapper)
+				.click(function(){
+					self.giveUp();
+				});
+		}());
 		(function printGhostTextInput(){
 			//for mobile
 			self.ghost_text_input = $('<input type="text">')
@@ -1150,6 +1159,9 @@ FillInTheBlank.prototype = {
 	},
 	collapse:function(){
 		this.container.slideUp();
+	},
+	giveUp:function(){
+		this.failure();
 	}
 };
 function Character(char,target){

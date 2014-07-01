@@ -13,7 +13,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Let It Go"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"let_it_go"
         autoplay:false
@@ -31,7 +31,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Blurred Lines"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"blurred_lines"
         autoplay:false
@@ -50,7 +50,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Call Me Maybe"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"call_me_maybe"
         autoplay:true
@@ -68,7 +68,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Fancy"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"fancy"
         autoplay:true
@@ -86,7 +86,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Happy"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"happy"
         autoplay:true
@@ -104,7 +104,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Rude"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"rude"
         autoplay:true
@@ -122,7 +122,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Radioactive"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"radioactive"
         autoplay:true
@@ -140,7 +140,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Problem"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"problem"
         autoplay:true
@@ -158,7 +158,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Thrift Shop"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"thrift_shop"
         autoplay:true
@@ -176,7 +176,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"We Are Young"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"we_are_young"
         autoplay:true
@@ -194,7 +194,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Somebody That I Used To Know"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"somebody_that_i_used_to_know"
         autoplay:true
@@ -212,7 +212,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"All Of Me"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"all_of_me"
         autoplay:true
@@ -230,7 +230,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Just Give Me A Reason"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"pink"
         autoplay:true
@@ -248,7 +248,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Harlem Shake"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"harlem_shake"
         autoplay:true
@@ -266,7 +266,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Rolling In The Deep"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"rolling_in_the_deep"
         autoplay:true
@@ -285,7 +285,7 @@
       content: "Which song is this?"
       type:"fill_in_the_blank"
       correct:"Mirrors"
-      sub:"Click the play button to listen to the first second."
+      sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"mirrors"
         autoplay:true
