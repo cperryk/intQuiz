@@ -1,301 +1,23 @@
 {
   title: "Can you identify each billboard hit by its first second?"
-  slug:"first_second"
-  blocked_choices:true
-  exclusionary_choices:true
-  collapse_choices:true
+  collapse_responders:true
   collapse_questions:true
+  randomize_questions:true
   share:{
     facebook:"Can you identify a hit song based only on its first second?"
     twitter:"Can you identify a hit song based only on its first second? I scored %s out of %l."
     email:"Can you identify a song based only on its first second?"
   }
-  choices:{
-    round1:[
-      {
-        content:"Carly Rae Jepsen, “Call Me Maybe”"
-        id:"call_me_maybe"
-        img:'carly.jpg'
-      }
-      {
-        id:"happy"
-        content:"Pharrell Williams, “Happy”"
-        img:"happy.jpg"
-      }
-      {
-        id:"we_are_young"
-        img:"fun.jpg"
-        content:"Fun, “We Are Young”"
-      }
-      {
-        id:"rude"
-        img:"rude.jpg"
-        content:"Magic!, “Rude”"
-      }
-      {
-        id:"blurred_lines"
-        img:"blurred_lines.jpg"
-        content:"Robin Thicke, “Blurred Lines”"
-      }
-      {
-        id:"roar"
-        img:"roar.jpg"
-        content:"Katy Perry, “Roar”"
-      }
-      {
-        id:"thrift_shop"
-        img:"thrift_shop.jpg"
-        content:"Macklemore, “Thrift Shop”"
-      }
-      {
-        id:"radioactive"
-        img:"radioactive.jpg"
-        content:"Imagine Dragons, “Radioactive”"
-      }
-      {
-        id:"fancy"
-        img:"fancy.jpg"
-        content:"Iggy Azalea, “Fancy”"
-      }
-      {
-        id:"problem"
-        img:"problem.jpg"
-        content:"Ariana Grande, “Problem”"
-      }
-    ]
-    round2:[
-      {
-        id:"harlem_shake"
-        img:"harlem_shake.jpg"
-        content:"Baauer, “Harlem Shake”"
-      }
-      {
-        id:"mirrors"
-        img:"mirrors.jpg"
-        content:"Justin Timberlake, “Mirrors”"
-      }
-      {
-        id:"let_it_go"
-        img:"let_it_go.jpg"
-        content:"Idina Menzel, “Let It Go”"
-      }
-      {
-        id:"rolling_in_the_deep"
-        img:'adele.jpg'
-        content:"Adele, “Rolling In The Deep”"
-      }
-      {
-        id:"all_of_me"
-        img:"all_of_me.jpg"
-        content:"John Legend, “All of Me”"
-      }
-      {
-        id:"somebody_that_i_used_to_know"
-        content:"Gotye, “Somebody That I Used To Know”"
-        img:"gotye.jpg"
-      }
-      {
-        id:"just_give_me_a_reason"
-        img:"pink.jpg"
-        content:"P!nk, “Just Give Me A Reason”"
-      }
-      {
-        id:"payphone"
-        img:"payphone.jpg"
-        content:"Maroon 5, “Payphone”"
-      }
-    ]
-  }
   "questions": [
     {
       content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Let It Go"
       sub:"Click the play button to listen to the first second."
-      choices:"round1"
-      sound:{
-        id:"blurred_lines"
-        autoplay:false
-      }
-      correct:"blurred_lines"
-      feedback:{
-        content:"That was “Blurred Lines.”"
-        sound:{
-          id:"full_blurred_lines"
-          autoplay:true
-        },
-        img:"blurred_lines_full.jpg"
-      }
-    }
-    {
-      content: "Which song is this?"
-      sub:"Click the play button to listen to the first second."
-      choices:"round1"
-      sound:{
-        id:"call_me_maybe"
-        autoplay:true
-      }
-      correct:"call_me_maybe"
-      feedback:{
-        content:"That was “Call Me Maybe.”"
-        sound:{
-          id:"full_call_me_maybe"
-          autoplay:true
-        }
-        img:"carly_full.jpg"
-      }
-    }
-    {
-      content: "Which song is this?"
-      sub:"Click the play button to listen to the first second."
-      choices:"round1"
-      sound:{
-        id:"fancy"
-        autoplay:true
-      }
-      correct:"fancy"
-      feedback:{
-        content:"That was “Fancy.”"
-        sound:{
-          id:"full_fancy"
-          autoplay:true
-        }
-        img:"fancy_full.jpg"
-      }
-    }
-    {
-      content: "Which song is this?"
-      sub:"Click the play button to listen to the first second."
-      choices:"round1"
-      sound:{
-        id:"happy"
-        autoplay:true
-      }
-      correct:"happy"
-      feedback:{
-        content:"That was “Happy.”"
-        sound:{
-          id:"full_happy"
-          autoplay:true
-        }
-        img:"happy_full.jpg"
-      }
-    }
-    {
-      content: "Which song is this?"
-      sub:"Click the play button to listen to the first second."
-      choices:"round1"
-      sound:{
-        id:"rude"
-        autoplay:true
-      }
-      correct:"rude"
-      feedback:{
-        content:"That was “Rude” by Magic."
-        sound:{
-          id:"full_rude"
-          autoplay:true
-        }
-        img:"rude_full.jpg"
-      }
-    }
-    {
-      content: "Which song is this?"
-      sub:"Click the play button to listen to the first second."
-      choices:"round1"
-      sound:{
-        id:"radioactive"
-        autoplay:true
-      }
-      correct:"radioactive"
-      feedback:{
-        content:"That was “Radioactive.”"
-        sound:{
-          id:"full_radioactive"
-          autoplay:true
-        }
-        img:"radioactive_full.jpg"
-      }
-    }
-    {
-      content: "Which song is this?"
-      sub:"Click the play button to listen to the first second."
-      choices:"round1"
-      sound:{
-        id:"problem"
-        autoplay:true
-      }
-      correct:"problem"
-      feedback:{
-        content:"That was “Problem” by Ariana Grande."
-        sound:{
-          id:"full_problem"
-          autoplay:true
-        }
-        img:"problem_full.jpg"
-      }
-    }
-    {
-      content: "Which song is this?"
-      sub:"Click the play button to listen to the first second."
-      choices:"round1"
-      sound:{
-        id:"thrift_shop"
-        autoplay:true
-      }
-      correct:"thrift_shop"
-      feedback:{
-        content:"That was “Thrift Shop.”"
-        sound:{
-          id:"full_thrift_shop"
-          autoplay:true
-        }
-        img:"thrift_shop_full.jpg"
-      }
-    }
-    {
-      content: "Which song is this?"
-      sub:"Click the play button to listen to the first second."
-      choices:"round1"
-      sound:{
-        id:"we_are_young"
-        autoplay:true
-      }
-      correct:"we_are_young"
-      feedback:{
-        content:"That was “We Are Young.”"
-        sound:{
-          id:"full_we_are_young"
-          autoplay:true
-        }
-        img:"fun_full.jpg"
-      }
-    }
-    {
-      content: "Which song is this?"
-      sub:"Click the play button to listen to the first second."
-      choices:"round2"
-      sound:{
-        id:"somebody_that_i_used_to_know"
-        autoplay:true
-      }
-      correct:"somebody_that_i_used_to_know"
-      feedback:{
-        content:"That was “Somebody That I Used To Know.”"
-        sound:{
-          id:"full_somebody_that_i_used_to_know"
-          autoplay:true
-        }
-        img:"gotye_full.jpg"
-      }
-    }
-    {
-      content: "Which song is this?"
-      sub:"Click the play button to listen to the first second."
-      choices:"round2"
       sound:{
         id:"let_it_go"
-        autoplay:true
+        autoplay:false
       }
-      correct:"let_it_go"
       feedback:{
         content:"That was “Let It Go” by Idina Menzel."
         img:"let_it_go_full.jpg"
@@ -307,13 +29,194 @@
     }
     {
       content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Blurred Lines"
       sub:"Click the play button to listen to the first second."
-      choices:"round2"
+      sound:{
+        id:"blurred_lines"
+        autoplay:false
+      }
+      type:"fill_in_the_blank"
+      feedback:{
+        content:"That was “Blurred Lines.”"
+        sound:{
+          id:"full_blurred_lines"
+          autoplay:true
+        },
+        img:"blurred_lines_full.jpg"
+      }
+    }
+    {
+      content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Call Me Maybe"
+      sub:"Click the play button to listen to the first second."
+      sound:{
+        id:"call_me_maybe"
+        autoplay:true
+      }
+      feedback:{
+        content:"That was “Call Me Maybe.”"
+        sound:{
+          id:"full_call_me_maybe"
+          autoplay:true
+        }
+        img:"carly_full.jpg"
+      }
+    }
+    {
+      content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Fancy"
+      sub:"Click the play button to listen to the first second."
+      sound:{
+        id:"fancy"
+        autoplay:true
+      }
+      feedback:{
+        content:"That was “Fancy.”"
+        sound:{
+          id:"full_fancy"
+          autoplay:true
+        }
+        img:"fancy_full.jpg"
+      }
+    }
+    {
+      content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Happy"
+      sub:"Click the play button to listen to the first second."
+      sound:{
+        id:"happy"
+        autoplay:true
+      }
+      feedback:{
+        content:"That was “Happy.”"
+        sound:{
+          id:"full_happy"
+          autoplay:true
+        }
+        img:"happy_full.jpg"
+      }
+    }
+    {
+      content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Rude"
+      sub:"Click the play button to listen to the first second."
+      sound:{
+        id:"rude"
+        autoplay:true
+      }
+      feedback:{
+        content:"That was “Rude” by Magic."
+        sound:{
+          id:"full_rude"
+          autoplay:true
+        }
+        img:"rude_full.jpg"
+      }
+    }
+    {
+      content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Radioactive"
+      sub:"Click the play button to listen to the first second."
+      sound:{
+        id:"radioactive"
+        autoplay:true
+      }
+      feedback:{
+        content:"That was “Radioactive.”"
+        sound:{
+          id:"full_radioactive"
+          autoplay:true
+        }
+        img:"radioactive_full.jpg"
+      }
+    }
+    {
+      content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Problem"
+      sub:"Click the play button to listen to the first second."
+      sound:{
+        id:"problem"
+        autoplay:true
+      }
+      feedback:{
+        content:"That was “Problem” by Ariana Grande."
+        sound:{
+          id:"full_problem"
+          autoplay:true
+        }
+        img:"problem_full.jpg"
+      }
+    }
+    {
+      content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Thrift Shop"
+      sub:"Click the play button to listen to the first second."
+      sound:{
+        id:"thrift_shop"
+        autoplay:true
+      }
+      feedback:{
+        content:"That was “Thrift Shop.”"
+        sound:{
+          id:"full_thrift_shop"
+          autoplay:true
+        }
+        img:"thrift_shop_full.jpg"
+      }
+    }
+    {
+      content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"We Are Young"
+      sub:"Click the play button to listen to the first second."
+      sound:{
+        id:"we_are_young"
+        autoplay:true
+      }
+      feedback:{
+        content:"That was “We Are Young.”"
+        sound:{
+          id:"full_we_are_young"
+          autoplay:true
+        }
+        img:"fun_full.jpg"
+      }
+    }
+    {
+      content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Somebody That I Used To Know"
+      sub:"Click the play button to listen to the first second."
+      sound:{
+        id:"somebody_that_i_used_to_know"
+        autoplay:true
+      }
+      feedback:{
+        content:"That was “Somebody That I Used To Know.”"
+        sound:{
+          id:"full_somebody_that_i_used_to_know"
+          autoplay:true
+        }
+        img:"gotye_full.jpg"
+      }
+    }
+    {
+      content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"All Of Me"
+      sub:"Click the play button to listen to the first second."
       sound:{
         id:"all_of_me"
         autoplay:true
       }
-      correct:"all_of_me"
       feedback:{
         content:"That was “All Of Me” by John Legend."
         img:"all_of_me_full.jpg"
@@ -325,13 +228,13 @@
     }
     {
       content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Just Give Me A Reason"
       sub:"Click the play button to listen to the first second."
-      choices:"round2"
       sound:{
         id:"pink"
         autoplay:true
       }
-      correct:"just_give_me_a_reason"
       feedback:{
         content:"That was “Just Give Me A Reason” by P!nk."
         sound:{
@@ -343,13 +246,13 @@
     }
     {
       content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Harlem Shake"
       sub:"Click the play button to listen to the first second."
-      choices:"round2"
       sound:{
         id:"harlem_shake"
         autoplay:true
       }
-      correct:"harlem_shake"
       feedback:{
         content:"That was “Harlem Shake.”"
         sound:{
@@ -361,13 +264,13 @@
     }
     {
       content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Rolling In The Deep"
       sub:"Click the play button to listen to the first second."
-      choices:"round2"
       sound:{
         id:"rolling_in_the_deep"
         autoplay:true
       }
-      correct:"rolling_in_the_deep"
       feedback:{
         content:"That was “Rolling In The Deep.”"
         img:"adele_full.jpg"
@@ -380,13 +283,13 @@
     }
     {
       content: "Which song is this?"
+      type:"fill_in_the_blank"
+      correct:"Mirrors"
       sub:"Click the play button to listen to the first second."
-      choices:"round2"
       sound:{
         id:"mirrors"
         autoplay:true
       }
-      correct:"mirrors"
       feedback:{
         content:"That was “Mirrors.”"
         sound:{

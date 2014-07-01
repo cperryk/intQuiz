@@ -571,6 +571,9 @@ Slide.prototype = {
 		})();
 		(function printSound(){
 			if(self.data.sound){
+				if(self.data.sound.autoplay && self.slide_number===1 && !self.par_quiz.QUIZ_DATA.title_slide){
+					self.data.sound.autoplay = false;
+				}
 				question_wrapper.addClass('with_sound');
 				self.par.appendSoundBtn(question_wrapper, self.data.sound);
 			}

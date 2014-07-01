@@ -78,7 +78,7 @@
     .simple_quiz .question .sub_text {
       margin: 0.2em 0 0 0;
       font-size: 0.6em;
-      padding-left: 1em; }
+      line-height: 1.4em; }
     .simple_quiz .question .img_wrapper {
       text-align: center;
       margin-bottom: 1em; }
@@ -404,9 +404,12 @@
   .fill_in_the_blank .text_wrapper {
     font-size: 1.5em;
     position: relative; }
+  .fill_in_the_blank .word {
+    display: inline-block;
+    padding: 0.5em 0.8em; }
   .fill_in_the_blank .character {
     background-color: white;
-    margin: 0.25em;
+    margin: 0 0.15em;
     width: 1.2em;
     height: 1.5em;
     padding: 0.1em;

@@ -24,7 +24,7 @@
       }
     },
     {
-      content: "On what old show’s theme song was that based?"
+      content: "On what <strong>old show</strong>’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
@@ -52,7 +52,7 @@
       }
     },
     {
-      content: "On what old show’s theme song was that based?"
+      content: "On what <strong>old show</strong>’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
@@ -80,7 +80,7 @@
       }
     },
     {
-      content: "On what old show’s theme song was that based?"
+      content: "On what <strong>old show</strong>’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
@@ -108,7 +108,7 @@
       }
     },
     {
-      content: "On what old show’s theme song was that based?"
+      content: "On what <strong>old show</strong>’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
@@ -136,7 +136,7 @@
       }
     },
     {
-      content: "On what old show’s theme song was that based?"
+      content: "On what <strong>old show</strong>’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
@@ -164,7 +164,7 @@
       }
     },
     {
-      content: "On what old show’s theme song was that based?"
+      content: "On what <strong>old show</strong>’s theme song was that based?"
       sub:"Click the play button to listen to it again."
       type:"fill_in_the_blank",
       sound:{
