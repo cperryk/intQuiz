@@ -303,6 +303,10 @@ $base_color: #57828D;
 
   .feedback {
     margin-bottom:1em;
+    strong{
+      font-family:'sl-ApresBold';
+      font-weight: normal;
+    }
     .img_wrapper{
       display:inline-block;
       margin:0 0 0.5em 0;
@@ -595,7 +599,7 @@ $base_color: #57828D;
     width:100%;
     height:100%;
     position: absolute;
-    display:none;
+    cursor:default;
     top:0px;
     left:0px;
     background:none;
@@ -624,11 +628,6 @@ $base_color: #57828D;
       top:1px;
     }
   }
-}
-@media screen and (max-width:580px){
-  .ghost_text_input{
-    display:block;
-  } 
 }
 
 @-webkit-keyframes usedLetter {

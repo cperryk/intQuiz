@@ -574,6 +574,9 @@ Slide.prototype = {
 				if(self.data.sound.autoplay && self.slide_number===1 && !self.par.title_slide){
 					self.data.sound.autoplay = false;
 				}
+				if(self.answered){
+					self.data.sound.autoplay = false;
+				}
 				question_wrapper.addClass('with_sound');
 				self.par.appendSoundBtn(question_wrapper, self.data.sound);
 			}
@@ -1311,6 +1314,10 @@ Feedback.prototype = {
 	printSound:function(){
 		if(this.data.sound){
 			this.container.addClass('with_sound');
+			console.log(this);
+			if(this.data.sound.autoplay && this.par.answered){
+				this.data.sound.autoplay = false;
+			}
 			this.par.par.appendSoundBtn(this.container, this.data.sound);
 		}
 	},

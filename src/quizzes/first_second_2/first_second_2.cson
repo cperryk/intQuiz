@@ -16,10 +16,10 @@
       sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"let_it_go"
-        autoplay:false
+        autoplay:true
       }
       feedback:{
-        content:"That was “Let It Go” by Idina Menzel."
+        content:"That was <strong>Indina Menzel, “Let It Go.”</strong>"
         img:"let_it_go_full.jpg"
         sound:{
           id:"full_let_it_go"
@@ -34,11 +34,11 @@
       sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"blurred_lines"
-        autoplay:false
+        autoplay:true
       }
       type:"fill_in_the_blank"
       feedback:{
-        content:"That was “Blurred Lines.”"
+        content:"That was <strong>Robin Thicke, “Blurred Lines,” featuring T.I, Pharrell.</strong>"
         sound:{
           id:"full_blurred_lines"
           autoplay:true
@@ -56,7 +56,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “Call Me Maybe.”"
+        content:"That was <strong>Carly Rae Jepsen, “Call Me Maybe.”</strong>"
         sound:{
           id:"full_call_me_maybe"
           autoplay:true
@@ -74,7 +74,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “Fancy.”"
+        content:"That was <strong>Iggy Azalea, “Fancy,” featuring Charli XCX.</strong>"
         sound:{
           id:"full_fancy"
           autoplay:true
@@ -92,7 +92,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “Happy.”"
+        content:"That was <strong>Pharrell Williams, “Happy.”</strong>"
         sound:{
           id:"full_happy"
           autoplay:true
@@ -110,7 +110,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “Rude” by Magic."
+        content:"That was <strong>Magic, “Rude.”</strong>"
         sound:{
           id:"full_rude"
           autoplay:true
@@ -128,7 +128,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “Radioactive.”"
+        content:"That was <strong>Imagine Dragons, “Radioactive.”</strong>"
         sound:{
           id:"full_radioactive"
           autoplay:true
@@ -146,7 +146,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “Problem” by Ariana Grande."
+        content:"That was <strong>Ariana Grande, “Problem.”</strong>"
         sound:{
           id:"full_problem"
           autoplay:true
@@ -164,7 +164,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “Thrift Shop.”"
+        content:"That was <strong>Macklemore & Ryan Lewis, “Thrift Shop.”</strong>"
         sound:{
           id:"full_thrift_shop"
           autoplay:true
@@ -182,7 +182,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “We Are Young.”"
+        content:"That was <strong>Fun, “We Are Young,” featuring Janelle Monáe.</strong>"
         sound:{
           id:"full_we_are_young"
           autoplay:true
@@ -200,7 +200,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “Somebody That I Used To Know.”"
+        content:"That was <strong>Gotye, “Somebody That I Used to Know.”</strong>"
         sound:{
           id:"full_somebody_that_i_used_to_know"
           autoplay:true
@@ -218,7 +218,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “All Of Me” by John Legend."
+        content:"That was <strong>John Legend, “All of Me.”</strong>"
         img:"all_of_me_full.jpg"
         sound:{
           id:"full_all_of_me"
@@ -236,7 +236,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “Just Give Me A Reason” by P!nk."
+        content:"That was <strong>Pink, “Just Give Me A Reason.”</strong>"
         sound:{
           id:"full_pink"
           autoplay:true
@@ -254,7 +254,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “Harlem Shake.”"
+        content:"That was <strong>Baauer, “Harlem Shake.”</strong>"
         sound:{
           id:"full_harlem_shake"
           autoplay:true
@@ -265,14 +265,14 @@
     {
       content: "Which song is this?"
       type:"fill_in_the_blank"
-      correct:"Rolling In The Deep"
+      correct:"Rolling in the Deep"
       sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
       sound:{
         id:"rolling_in_the_deep"
         autoplay:true
       }
       feedback:{
-        content:"That was “Rolling In The Deep.”"
+        content:"That was <strong>Adele, “Rolling in the Deep.”</strong>"
         img:"adele_full.jpg"
         sound:{
           id:"full_rolling_in_the_deep"
@@ -291,7 +291,7 @@
         autoplay:true
       }
       feedback:{
-        content:"That was “Mirrors.”"
+        content:"That was <strong>Justin Timberlake, “Mirrors.”</strong>"
         sound:{
           id:"full_mirrors"
           autoplay:true
