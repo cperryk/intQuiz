@@ -368,9 +368,23 @@
     .simple_quiz .quiz_inner {
       padding-left: 0;
       padding-right: 0; }
-
-  .simple_quiz .choice.blocked img {
-    max-width: 100%; } }
+    .simple_quiz .fill_in_the_blank .character {
+      margin: 0 0.1em;
+      width: 0.8em;
+      height: 0.9em;
+      padding: 0.1em;
+      font-size: 0.9em;
+      line-height: 1em; }
+    .simple_quiz .choice.blocked img {
+      max-width: 100%; }
+    .simple_quiz .top_bar .quiz_title {
+      display: inline-block; }
+    .simple_quiz .top_bar .quiz_nav {
+      display: inline-block;
+      padding: 0px;
+      margin: 0px;
+      float: none;
+      position: static; } }
 .intSharing_btn_share {
   padding: 5px;
   border: 1px solid #c7c7c7;

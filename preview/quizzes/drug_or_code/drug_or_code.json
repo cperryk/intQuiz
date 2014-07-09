@@ -4,6 +4,8 @@
   "fb_description": "For each question, guess whether the word or phrase describes a drug or a programming language.",
   "attribution": "Code icon by <a target=\"_blank\" href=\"https://www.iconfinder.com/iconsets/picol-vector#readme\">PICOL</a> / <a target=\"blank\" href=\"http://creativecommons.org/licenses/by-sa/3.0/\">Creative Commons</a>. Drug icon by iStock.",
   "blocked_choices": true,
+  "collapse_questions":true,
+  "collapse_choices":true,
   "teaser":"Did that quiz leave you with the munchies? Try our <a href=\"http://www.slate.com/articles/life/low_concept/2014/05/fast_food_generator_forget_the_waffle_taco_use_our_fast_food_generator_to.html\">Fast Food Generator</a>.",
   "choices":[
     {

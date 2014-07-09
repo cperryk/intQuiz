@@ -51,7 +51,6 @@ $base_color: #57828D;
     color:white;
     font-family:'sl-ApresRegular';
     -moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none;
-
     .quiz_nav{
       position: absolute;
       float:right;
@@ -497,9 +496,31 @@ $base_color: #57828D;
       padding-left:0;
       padding-right:0;
     }
-  }
-  .simple_quiz .choice.blocked img{
-    max-width:100%;
+    .fill_in_the_blank{
+      .character{
+        margin:0 0.1em;
+        width:0.8em;
+        height:0.9em;
+        padding:0.1em;
+        font-size:0.9em;
+        line-height:1em;
+      }
+    }
+    .choice.blocked img{
+      max-width:100%;
+    }
+    .top_bar{
+      .quiz_title{
+        display: inline-block;
+      }
+      .quiz_nav{
+        display: inline-block;
+        padding:0px;
+        margin:0px;
+        float:none;
+        position: static;
+      }
+    }
   }
 }
 

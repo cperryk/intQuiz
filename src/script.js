@@ -258,17 +258,13 @@ SimpleQuiz.prototype = {
 			if(self.QUIZ_DATA.share_text){
 				var share_text = self.QUIZ_DATA.share_text;
 				if(typeof share_text === 'object'){
-					return {
-						facebook:share_text.facebook.replace('%s',self.user.score).replace('%l',self.slides.length),
-						twitter:share_text.twitter.replace('%s',self.user.score).replace('%l',self.slides.length),
-						email:share_text.email.replace('%s',self.user.score).replace('%l',self.slides.length)
-					};
+					return share_text;
 				}
 				else{
 					return {
-						facebook:share_text.replace('%s',self.user.score).replace('%l',self.slides.length),
-						twitter:share_text.replace('%s',self.user.score).replace('%l',self.slides.length),
-						email:share_text.replace('%s',self.user.score).replace('%l',self.slides.length)
+						facebook:share_text,
+						twitter:share_text,
+						email:share_text
 					};
 				}
 			}
@@ -284,19 +280,17 @@ SimpleQuiz.prototype = {
 				if(!string){
 					return false;
 				}
-				return string.replace('%score',self.user.score).replace('%question_length',self.slides.length);
+				return string.replace('%s',self.user.score).replace('%l',self.slides.length);
 			}
 			var share_data = self.QUIZ_DATA.share;
-			if(share_data){
-				if(share_data.facebook){
-					share_strings.facebook = parseShareString(share_data.facebook);
-				}
-				if(share_data.twitter){
-					share_strings.twitter = parseShareString(share_data.twitter);
-				}
-				if(share_data.email){
-					share_strings.email = parseShareString(share_data.email);
-				}
+			if(share_strings.facebook){
+				share_strings.facebook = parseShareString(share_data.facebook);
+			}
+			if(share_strings.twitter){
+				share_strings.twitter = parseShareString(share_data.twitter);
+			}
+			if(share_strings.email){
+				share_strings.email = parseShareString(share_data.email);
 			}
 			require(['IntSharing'],function(IntSharing){
 				var share_btns_wrapper = $('<div>')
@@ -1314,7 +1308,6 @@ Feedback.prototype = {
 	printSound:function(){
 		if(this.data.sound){
 			this.container.addClass('with_sound');
-			console.log(this);
 			if(this.data.sound.autoplay && this.par.answered){
 				this.data.sound.autoplay = false;
 			}
