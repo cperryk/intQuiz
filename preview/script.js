@@ -1324,17 +1324,53 @@ Feedback.prototype = {
 	}
 };
 
-function YouTube(video_id,target){
-	var container = $('<div>')
-		.addClass('youtube_wrapper')
-		.appendTo(target);
-	var iframe = $('<iframe allowfullscreen>')
-		.attr('src','//www.youtube.com/embed/'+video_id)
-		.attr('frameborder',0)
-		.prependTo(container);
-	var parent_container = target;
-	iframe
-		.css('height',parseInt((315*parent_container.width())/560,10));
+function YouTube(video_data,target,parent_quiz){
+	if(typeof video_data === 'string'){
+		video_data = {id:video_data};
+	}
+	var parameters = ['theme=light'];
+	var container;
+	var src = '//www.youtube.com/embed/'+video_data.id;
+	(function addAutoplayParameter(){
+		console.log(video_data);
+		if(video_data.autoplay){
+			parameters.push('autoplay=1');
+			parameters.push('autohide=1');
+		}
+	}());
+	(function addStartParameters(){
+		if(video_data.start){
+			var seconds = 0;
+			if(typeof video_data.start === 'number'){
+				seconds = video_data.start;
+			}
+			if(typeof video_data.start === 'string'){
+				seconds = video_data.start.split(':');
+				seconds = (parseFloat(seconds[0])*60)+parseFloat(seconds[1]);
+				console.log(seconds);
+			}
+			parameters.push('start='+seconds);
+		}
+	}());
+	(function generateURL(){
+		if(parameters.length>0){
+			src += '?' + parameters.join('&');
+		}
+	}());
+	(function printIframe(){
+		container = $('<div>')
+			.addClass('youtube_wrapper')
+			.appendTo(target);
+		var iframe = $('<iframe allowfullscreen>')
+			.attr({
+				'src':src,
+				'frameborder':0
+			})
+			.prependTo(container);
+		var parent_container = target;
+		iframe
+			.css('height',parseInt((315*parent_container.width())/560,10));
+	}());
 	return container;
 }
 
