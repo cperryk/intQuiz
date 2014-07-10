@@ -59,5 +59,4 @@ A choice can be an object or a string. If the choice is a string, it is assumed 
 
 <h1>To-do</h1>
 - When a sound button is pressed, and the user advances to the next slide before the sound loads, the sound plays, with no way to stop it but playing a different sound
-- In mobile, blocked choices should be unblocked. Maybe.
-- Need a loader to appear if there is an image inside the question.
+- For fill in the blank questions, make it so that if the interactive is below or above the user's scroll, letters that are entered are not typed. This is to prevent people from accidentally responding to a question by typing a comment, for example.

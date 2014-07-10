@@ -320,10 +320,16 @@ SimpleQuiz.prototype = {
 				});
 				btns.email.click(function(){
 					IntSharing.emailShare({
-						subject:'Slate\'s '+self.QUIZ_DATA.title,
-						body:share_strings.email+': '+IntSharing.getURL()
+						subject:strip('Slate\'s '+self.QUIZ_DATA.title),
+						body:strip(share_strings.email+': '+IntSharing.getURL())
 					});
 				});
+				function strip(html)
+				{
+				   var tmp = document.createElement("DIV");
+				   tmp.innerHTML = html;
+				   return tmp.textContent || tmp.innerText || "";
+				}
 			});
 		}
 	},
@@ -1332,7 +1338,6 @@ function YouTube(video_data,target,parent_quiz){
 	var container;
 	var src = '//www.youtube.com/embed/'+video_data.id;
 	(function addAutoplayParameter(){
-		console.log(video_data);
 		if(video_data.autoplay){
 			parameters.push('autoplay=1');
 			parameters.push('autohide=1');
@@ -1347,7 +1352,6 @@ function YouTube(video_data,target,parent_quiz){
 			if(typeof video_data.start === 'string'){
 				seconds = video_data.start.split(':');
 				seconds = (parseFloat(seconds[0])*60)+parseFloat(seconds[1]);
-				console.log(seconds);
 			}
 			parameters.push('start='+seconds);
 		}

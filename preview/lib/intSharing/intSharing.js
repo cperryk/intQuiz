@@ -69,10 +69,13 @@ define(function(){
   	 * @return {null}
   	 */
   	emailShare:function(conf){
-  		window.location.href = "mailto:" +
-  			"?subject="+escape(conf.subject) +
-  			"&body="+escape(conf.body) +
-  			window.location;
+      console.log(conf);
+      var href = "mailto:" +
+        "?subject="+escape(conf.subject) +
+        "&body="+escape(conf.body) +
+        window.location;
+      console.log(href);
+  		window.location.href = href;
   	},
     /**
       Prints sharing buttons to a container. Returns the jQuery elements in a dictionary.
