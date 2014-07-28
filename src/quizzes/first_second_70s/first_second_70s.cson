@@ -1,0 +1,193 @@
+{
+  title: "Name a Song by Its First Second: '70<small>s</small> Edition"
+  description: "Put on your luckiest pair of parachute pants and see if you can name these '70s hits based on their first second."
+  collapse_responders:true
+  collapse_questions:true
+  teaser:"Now, can you do the same <a href=\"http://www.slate.com/blogs/browbeat/2014/07/17/_80s_music_quiz_name_these_1980s_hits_by_their_first_second_audio.html\">with the ’80s</a>?"
+  share:{
+    facebook:"Can you identify an '70s song based only on its first second?"
+    twitter:"Can you identify an '70s song based only on its first second? I scored %s out of %l."
+    email:"Can you identify an '70s song based only on its first second?"
+  }
+  question_template:{
+    content:"What song is this?"
+    sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
+    type:"fill_in_the_blank"
+    sound:{
+      autoplay:true
+    }
+    feedback:{
+      youtube:{
+        autoplay:true
+      }
+    }
+  }
+  questions: [
+    {
+      correct:"Stayin’ Alive"
+      sound:{
+        id:"stayin",
+        autoplay:false
+      }
+      feedback:{
+        content:"That was <strong>Bee Gees, “<a href=\"http://www.amazon.com/dp/B00122VD5G/?tag=slatmaga-20\">Stayin’ Alive</a>.”</strong>"
+        youtube:"I_izvAbhExY"
+      }
+    }
+    {
+      correct:"ABC"
+      sound:"abc"
+      feedback:{
+        content:"That was <strong>Jackson 5, “<a href=\"http://www.amazon.com/dp/B001NCKTRS/?tag=slatmaga-20\">ABC</a>.”</strong>"
+        youtube:{
+          id:"ho7796-au8U"
+          start:16
+        }
+      }
+    }
+    {
+      correct:"Go Your Own Way"
+      sound:"go_your"
+      feedback:{
+        content:"That was <strong>Fleetwood Mac, “<a href=\"http://www.amazon.com/dp/B0022WCMFK/?tag=slatmaga-20\">Go Your Own Way</a>.”</strong>"
+        youtube:"clCYmvmpIsA"
+      }
+    }
+    {
+      correct:"Bennie and the Jets"
+      sound:"bennie_and"
+      feedback:{
+        content:"That was <strong>Elton John, “<a href=\"http://www.amazon.com/dp/B000VWODQE/?tag=slatmaga-20\">Bennie and the Jets</a>.”</strong>"
+        youtube:
+          {
+            id:"8vLlpJc9mW0"
+            start:5
+          }
+
+      }
+    }
+    {
+      correct:"Heart of Gold"
+      sound:"heart_of"
+      feedback:{
+        content:"That was <strong>Neil Young, “<a href=\"http://www.amazon.com/dp/B002B40XAA/?tag=slatmaga-20\">Heart of Gold</a>.”</strong>"
+        youtube:{
+          id:"Eh44QPT1mPE"
+          start:"1:47"
+        }
+      }
+    }
+    {
+      correct:"Sir Duke"
+      sound:"sir_duke"
+      feedback:{
+        content:"That was <strong>Stevie Wonder, “<a href=\"http://www.amazon.com/dp/B000VH4M56/?tag=slatmaga-20\">Sir Duke</a>.”</strong>"
+        youtube:{
+          id:"hmKshpLXnxE"
+          start:2
+        }
+      }
+    }
+    {
+      correct:"Love to Love You Baby"
+      sound:"love_to"
+      feedback:{
+        content:"That was <strong>Donna Summer, “<a href=\"http://www.amazon.com/dp/B000001F9M/?tag=slatmaga-20\">Love to Love You Baby</a>.”</strong>"
+        youtube:{
+          id:"upIstttL9ew"
+          start:10
+        }
+      }
+    }
+    {
+      correct:"Maggie May"
+      sound:"maggie_may"
+      feedback:{
+        content:"That was <strong>Rod Stewart, “<a href=\"http://www.amazon.com/dp/B000V694LY/?tag=slatmaga-20\">Maggie May</a>.”</strong>"
+        youtube:{
+          id:"U_ceV9EJTk8"
+          start:"1:16"
+        }
+      }
+    }
+    {
+      correct:"Bridge over Troubled Water"
+      sound:"bridge_over"
+      feedback:{
+        content:"That was <strong>Simon and Garfunkel, “<a href=\"http://www.amazon.com/dp/B0044JTITW/?tag=slatmaga-20\">Bridge Over Troubled Water</a>.”</strong>"
+        youtube:{
+          id:"UVDg8fVC4EQ"
+          start:1
+        }
+      }
+    }
+    {
+      correct:"Joy to the World"
+      sound:"joy_to"
+      feedback:{
+        content:"That was <strong>Three Dog Night, “<a href=\"http://www.amazon.com/dp/B000VZV9TA/?tag=slatmaga-20\">Joy to the World</a>.”</strong>"
+        youtube:{
+          id:"16PUWjdxivc"
+          start:1
+        }
+      }
+    }
+    {
+      correct:"Let’s Get It On"
+      sound:"lets_get"
+      feedback:{
+        content:"That was <strong>Marvin Gaye, “<a href=\"http://www.amazon.com/dp/B00007FOMQ/?tag=slatmaga-20\">Let’s Get It On</a>.”</strong>"
+        youtube:"BKPoHgKcqag"
+      }
+    }
+    {
+      correct:"Le Freak"
+      sound:"le_freak"
+      feedback:{
+        content:"That was <strong>Chic, “<a href=\"http://www.amazon.com/dp/B001OGTNK2/?tag=slatmaga-20\">Le Freak</a>.”</strong>"
+        youtube:"4KUL9-eNXzQ"
+      }
+    }
+    {
+      correct:"Blitzkrieg Bop"
+      sound:"blitzkrieg_bop"
+      feedback:{
+        content:"That was <strong>Ramones, “<a href=\"http://www.amazon.com/dp/B001A33DYQ/?tag=slatmaga-20\">Blitzkrieg Bop</a>.”"
+        youtube:{
+          id:"TYh1lRR1m6Y"
+          start:8
+        }
+      }
+    }
+    {
+      correct:"It's Too Late"
+      sound:"its_too"
+      feedback:{
+        content:"That was <strong>Carole King, “<a href=\"http://www.amazon.com/dp/B00GP3JQSS/?tag=slatmaga-20\">It's Too Late</a>.”</strong>"
+        youtube:{
+          id:"E5TxpJVKKQ8"
+          start:12
+        }
+      }
+    }
+    {
+      correct:"Rhinestone Cowboy"
+      sound:"rhinestone_cowboy"
+      feedback:{
+        content:"That was <strong>Glen Campbell, “<a href=\"http://www.amazon.com/dp/B0013KFBMS/?tag=slatmaga-20\">Rhinestone Cowboy</a>.”</strong>"
+        youtube:"8kAU3B9Pi_U"
+      }
+    }
+    {
+      correct:"Stairway to Heaven"
+      sound:"stairway_to"
+      feedback:{
+        content:"That was <strong>Led Zeppelin, “<a href=\"http://www.amazon.com/dp/B0011Z3G8G/?tag=slatmaga-20\">Stairway to Heaven</a>.”</strong>"
+        youtube:{
+          id:"9Q7Vr3yQYWQ"
+          start:8
+        }
+      }
+    }
+  ]
+}

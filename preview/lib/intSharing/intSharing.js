@@ -80,27 +80,42 @@ define(function(){
     /**
       Prints sharing buttons to a container. Returns the jQuery elements in a dictionary.
     **/
-    appendShareBtns:function(container){
-      return {
+    appendShareBtns:function(container,conf){
+      var btns = {
         fb:$('<div>')
-          .addClass('intSharing_btn_share')
-          .addClass('intSharing_fb_share')
+          .addClass('intSharing_btn_share intSharing_fb_share')
           .append($('<div>').addClass('share_icon'))
           .append($('<div>').addClass('share_label').html('Share'))
           .appendTo(container),
         tw:$('<div>')
-          .addClass('intSharing_btn_share')
-          .addClass('intSharing_tw_share')
+          .addClass('intSharing_btn_share intSharing_tw_share')
           .append($('<div>').addClass('share_icon'))
           .append($('<div>').addClass('share_label').html('Tweet'))
           .appendTo(container),
         email:$('<div>')
-          .addClass('intSharing_btn_share')
-          .addClass('intSharing_email_share')
+          .addClass('intSharing_btn_share intSharing_email_share')
           .append($('<div>').addClass('share_icon'))
           .append($('<div>').addClass('share_label').html('Email'))
           .appendTo(container)
       };
+      if(conf){
+        if(conf.fb){
+          btns.fb.click(function(){
+            module.facebookShare(conf.fb);
+          });
+        }
+        if(conf.tw){
+          btns.tw.click(function(){
+            module.twitterShare(conf.tw);
+          });
+        }
+        if(conf.email){
+          btns.email.click(function(){
+            module.emailShare(conf.email);
+          });
+        }
+      }
+      return btns;
     }
   };
   return module;

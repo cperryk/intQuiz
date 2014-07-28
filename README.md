@@ -19,6 +19,7 @@ Top-level properties. Mandatory properties in red.
 - **auto_advance**: Boolean. If true, the quiz will automatically advance to the next question after the user answers. Default is false.
 - **collapse_questions**: Boolean. If true, the quiz will automatically collapse the question container after the user has answered a question. Useful so the quiz container doens't get too tall with the addition of the feedback container.
 - **collapse_choices**: Boolean. If true, the quiz will automatically collapse the choices container after ther user has answered a question. Useful so the quiz container doesn't get too tall with the addition of the feedback container.
+- **question_template**: Object. If set, every question will start as a clone of this object, then properties specific to that question as set in the "questions" object will merge in, overriding the properties of the template in cases of overlap. This is useful when questions share common values so those values need not be repeated for each question.
 
 <h3>Question</h3>
 - **content**: String. Text representing the question. May contain HTML.

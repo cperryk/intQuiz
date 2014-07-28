@@ -1,5 +1,11 @@
 $base_color: #57828D;
 
+@mixin scale($value){
+  transform:scale($value);
+  -ms-transform:scale($value); /* IE 9 */
+  -webkit-transform:scale($value); /* Opera, Chrome, and Safari */
+}
+
 .simple_quiz  {
   color:rgb(40, 27, 33);
   overflow:hidden;
@@ -9,7 +15,6 @@ $base_color: #57828D;
   max-width: 588px;
   margin: 20px auto 0px auto;
   text-align: center;
-
   .quiz_inner {
     font-family:'sl-ApresRegular',verdana;
   }
@@ -26,8 +31,7 @@ $base_color: #57828D;
         }
 
         &:active:not(.no_highlight){
-          position: relative;
-          top: 1px;
+          @include scale(0.95);
         }
       }
     }
@@ -39,7 +43,6 @@ $base_color: #57828D;
       width:100%;
     }
   }
-
   .top_bar {
     padding: 0.6% 1%;
     text-align: left;
@@ -378,8 +381,7 @@ $base_color: #57828D;
       top: 1px;
     }
     &:active {
-      position: relative;
-      top: 2px;
+      @include scale(0.95);
     }
   }
 
@@ -679,7 +681,7 @@ $base_color: #57828D;
   animation-name: usedLetter;
   animation-timing-function: ease-in;
   animation-duration: .15s;
-    
+
   -webkit-animation-name: usedLetter;
   -webkit-animation-timing-function: ease-in;
   -webkit-animation-duration: .15s;

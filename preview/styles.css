@@ -17,8 +17,11 @@
       .simple_quiz .slide_wrapper:not(.answered) .choice:not(.excluded):hover:not(.no_highlight) {
         background-color: #fdffcf; }
       .simple_quiz .slide_wrapper:not(.answered) .choice:not(.excluded):active:not(.no_highlight) {
-        position: relative;
-        top: 1px; }
+        transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        /* IE 9 */
+        -webkit-transform: scale(0.95);
+        /* Opera, Chrome, and Safari */ }
   .simple_quiz .youtube_wrapper {
     margin: 0 0 1em 0;
     width: 100%; }
@@ -277,8 +280,11 @@
       position: relative;
       top: 1px; }
     .simple_quiz .btn_next:active {
-      position: relative;
-      top: 2px; }
+      transform: scale(0.95);
+      -ms-transform: scale(0.95);
+      /* IE 9 */
+      -webkit-transform: scale(0.95);
+      /* Opera, Chrome, and Safari */ }
   .simple_quiz .end_wrapper {
     padding: 4%;
     text-align: center; }

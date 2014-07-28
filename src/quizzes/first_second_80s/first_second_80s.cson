@@ -1,0 +1,196 @@
+{
+  title: "Name a Song by Its First Second: '80<small>s</small> Edition"
+  description: "Put on your luckiest pair of parachute pants and see if you can name these '80s hits based on their first second."
+  collapse_responders:true
+  collapse_questions:true
+  teaser:"Now, can you do the same <a href=\"http://www.slate.com/blogs/browbeat/2014/07/02/pop_music_quiz_name_these_recent_billboard_hits_by_their_first_second.html\">with the ’90s</a>?"
+  share:{
+    facebook:"Can you identify an '80s song based only on its first second?"
+    twitter:"Can you identify an '80s song based only on its first second? I scored %s out of %l."
+    email:"Can you identify an '80s song based only on its first second?"
+  }
+  question_template:{
+    content:"What song is this?"
+    sub:"Click the play button to listen to the first second. Simply begin typing to guess letters."
+    type:"fill_in_the_blank"
+    sound:{
+      autoplay:true
+    }
+    feedback:{
+      youtube:{
+        autoplay:true
+      }
+    }
+  }
+  questions: [
+    {
+      correct:"Eye of the Tiger"
+      sound:{
+        id:"eye",
+        autoplay:false
+      }
+      feedback:{
+        content:"That was <strong>Survivor, “<a href=\"http://www.amazon.com/dp/B0013832A8/?tag=slatmaga-20\">Eye of the Tiger</a>.”</strong>"
+        youtube:{
+          id:"btPJPFnesV4"
+        }
+      }
+    }
+    {
+      correct:"Every Breath You Take"
+      sound:"every"
+      feedback:{
+        content:"That was <strong>The Police, “<a href=\"http://www.amazon.com/dp/B000WTWY30/?tag=slatmaga-20\">Every Breath You Take</a>.”</strong>"
+        youtube:{
+          id:"OMOGaugKpzs"
+        }
+      }
+    }
+    {
+      correct:"I Love Rock n Roll"
+      sound:"i_love"
+      feedback:{
+        content:"That was <strong>Joan Jett, “<a href=\"http://www.amazon.com/dp/B00FAXF4S0/?tag=slatmaga-20\">I Love Rock ‘n’ Roll</a>.”</strong>"
+        youtube:{
+          id:"xL5spALs-eA"
+          start:3
+        }
+      }
+    }
+    {
+      correct:"Beat It"
+      sound:"beat"
+      feedback:{
+        content:"That was <strong>Michael Jackson, “<a href=\"http://www.amazon.com/Beat-It-Single-Version/dp/B0013DDLPY/ref=sr_1_1?ie=UTF8&qid=1405607491&sr=8-1&keywords=beat+it\">Beat It</a>.”</strong>"
+        youtube:{
+          id:"oRdxUFDoQe0"
+          start:21
+        }
+      }
+    }
+    {
+      correct:"Bette Davis Eyes"
+      sound:"bette"
+      feedback:{
+        content:"That was <strong>Kim Carnes, “<a href=\"http://www.amazon.com/dp/B0013SELJO/?tag=slatmaga-20\">Bette Davis Eyes</a>.”</strong>"
+        youtube:{
+          id:"EPOIS5taqA8"
+        }
+      }
+    }
+    {
+      correct:"With or Without You"
+      sound:"with"
+      feedback:{
+        content:"That was <strong>U2, “<a href=\"http://www.amazon.com/dp/B001NB5BE0/?tag=slatmaga-20\">With or Without You</a>.”</strong>"
+        youtube:{
+          id:"XmSdTa9kaiQ"
+          start:4
+        }
+      }
+    }
+    {
+      correct:"Wake Me Up Before You Go-Go"
+      sound:"wake"
+      feedback:{
+        content:"that was <strong>Wham, “<a href=\"http://www.amazon.com/dp/B00136RVDY/?tag=slatmaga-20\">Wake Me Up Before You Go-Go</a>.”</strong>"
+        youtube:{
+          id:"pIgZ7gMze7A"
+        }
+      }
+    }
+    {
+      correct:"Walk Like an Egyptian"
+      sound:"walk_like"
+      feedback:{
+        content:"That was <strong>The Bangles, “<a href=\"http://www.amazon.com/dp/B0018PZ95C/?tag=slatmaga-20\">Walk Like an Egyptian</a>.”</strong>"
+        youtube:{
+          id:"Cv6tuzHUuuk"
+          start:3
+        }
+      }
+    }
+    {
+      correct:"Welcome to the Jungle"
+      sound:"welcome"
+      feedback:{
+        content:"That was <strong>Guns N’ Roses, “<a href=\"http://www.amazon.com/dp/B000V6A8SM/?tag=slatmaga-20\">Welcome to the Jungle</a>.”</strong>"
+        youtube:{
+          id:"o1tj2zJ2Wvg"
+          start:5
+        }
+      }
+    }
+    {
+      correct:"What’s Love Got To Do With It"
+      sound:"whats"
+      feedback:{
+        content:"That was <strong>Tina Turner, “<a href=\"http://www.amazon.com/dp/B000TDF8NC/?tag=slatmaga-20\">What's Love Got to Do With It</a>.”</strong>"
+        youtube:{
+          id:"oGpFcHTxjZs"
+        }
+      }
+    }
+    {
+      correct:"Miss You Much"
+      sound:"miss"
+      feedback:{
+        content:"That was <strong>Janet Jackson, “<a href=\"http://www.amazon.com/dp/B006U60MK6/?tag=slatmaga-20\">Miss You Much</a>.”</strong>"
+        youtube:{
+          id:"IVF0zcqr9Dg"
+          start:44
+        }
+      }
+    }
+    {
+      correct:"Physical"
+      sound:"physical"
+      feedback:{
+        content:"That was <strong>Olivia Newton John, “<a href=\"http://www.amazon.com/dp/B001O4QNJI/?tag=slatmaga-20\">Physical</a>.”</strong>"
+        youtube:{
+          id:"vWz9VN40nCA"
+        }
+      }
+    }
+    {
+      correct:"Jump"
+      sound:"jump"
+      feedback:{
+        content:"That was <strong>Van Halen, “<a href=\"http://www.amazon.com/dp/B001FEEYRK/?tag=slatmaga-20\">Jump</a>.”"
+        youtube:"SwYN7mTi6HM"
+      }
+    }
+    {
+      correct:"Walk This Way"
+      sound:"walk_this"
+      feedback:{
+        content:"That was <strong>Run-DMC featuring Aerosmith, “<a href=\"http://www.amazon.com/dp/B000WS2THW/?tag=slatmaga-20\">Walk This Way</a>.”</strong>"
+        youtube:{
+          start:34
+          id:"4B_UYYPb-Gk"
+        }
+      }
+    }
+    {
+      correct:"Like a Virgin"
+      sound:"like"
+      feedback:{
+        content:"That was <strong>Madonna, “<a href=\"http://www.amazon.com/dp/B00122FMC6/?tag=slatmaga-20\">Like a Virgin</a>.”</strong>"
+        youtube:{
+          id:"zHW5RVvg2v4"
+          start:24
+        }
+      }
+    }
+    {
+      correct:"9 to 5"
+      sound:"9"
+      feedback:{
+        content:"That was <strong>Dolly Parton, “<a href=\"http://www.amazon.com/dp/B00137V274/?tag=slatmaga-20\">9 to 5</a>.”</strong>"
+        youtube:{
+          id:"LwDMFOLIHxU"
+        }
+      }
+    }
+  ]
+}

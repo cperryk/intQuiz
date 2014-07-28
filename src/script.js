@@ -2,13 +2,17 @@ $(function(){
 var INT_PATH = 'http://localhost:9999/2014/05/simple_quiz/preview/';
 require.config({
 	paths: {
+		/* essential */
 		IntQuizScore: INT_PATH+'lib/intQuizScore',
 		IntSharing: INT_PATH+'lib/intSharing/intSharing',
-		IntSound: INT_PATH+'lib/intSound',
 		imagesLoaded: INT_PATH+'lib/imagesLoaded.min',
+		/* sound */
+		IntSound: INT_PATH+'lib/intSound',
 		SoundJS:INT_PATH+'lib/soundjs/soundjs-0.5.2.min',
 		SJS_FlashPlugin:INT_PATH+'lib/soundjs/FlashPlugin',
-		SJS_SwfObject:INT_PATH+'lib/soundjs/swfobject'
+		SJS_SwfObject:INT_PATH+'lib/soundjs/swfobject',
+		/* question types */
+		fill_in_the_blank:INT_PATH+'fill_in_the_blank'
 	}
 });
 
@@ -56,6 +60,22 @@ SimpleQuiz.prototype = {
 			shuffleArray(slides_data);
 		}
 		slides_data.forEach(function(slide_data, slide_index){
+			if(self.QUIZ_DATA.question_template){
+				if(slide_data.sound && typeof slide_data.sound === 'string'){
+					slide_data.sound = {id:slide_data.sound};
+				}
+				if(slide_data.youtube && typeof slide_data.youtube === 'string'){
+					slide.data.youtube = {id:slide_data.youtube};
+				}
+				var feedback = slide_data.feedback;
+				if(feedback && feedback.youtube && typeof feedback.youtube === 'string'){
+					slide_data.feedback.youtube = {id:feedback.youtube};
+				}
+				if(feedback && feedback.sound && typeof feedback.sound === 'string'){
+					slide_data.feedback.sound = {id:feedback.sound};
+				}
+				slide_data = $.extend(true, slide_data, self.QUIZ_DATA.question_template);
+			}
 			self.slides.push(new Slide(slide_data, slide_index+1, self));
 		});
 		return this;
@@ -283,14 +303,16 @@ SimpleQuiz.prototype = {
 				return string.replace('%s',self.user.score).replace('%l',self.slides.length);
 			}
 			var share_data = self.QUIZ_DATA.share;
-			if(share_strings.facebook){
-				share_strings.facebook = parseShareString(share_data.facebook);
-			}
-			if(share_strings.twitter){
-				share_strings.twitter = parseShareString(share_data.twitter);
-			}
-			if(share_strings.email){
-				share_strings.email = parseShareString(share_data.email);
+			if(share_data){
+				if(share_strings.facebook){
+					share_strings.facebook = parseShareString(share_data.facebook);
+				}
+				if(share_strings.twitter){
+					share_strings.twitter = parseShareString(share_data.twitter);
+				}
+				if(share_strings.email){
+					share_strings.email = parseShareString(share_data.email);
+				}
 			}
 			require(['IntSharing'],function(IntSharing){
 				var share_btns_wrapper = $('<div>')
@@ -380,17 +402,9 @@ SimpleQuiz.prototype = {
 			.addClass('btn_sound')
 			.prependTo(btn_wrapper);
 		(function addSoundListener(){
-			if(getIEversion()===8){
-				require(['SoundJS','SJS_FlashPlugin','SJS_SwfObject','IntSound'],function(SoundJS,FlashPlugin,SwfObject,IntSound){
-					IntSound.initialize(INT_PATH+'lib/soundjs');
-					go(IntSound);
-				});
-			}
-			else{
-				require(['SoundJS','IntSound'],function(SoundJS,IntSound){
-					go(IntSound);
-				});
-			}
+			require(['IntSound'],function(IntSound){
+				IntSound.initialize(INT_PATH+'lib/soundjs',go);
+			});
 		}());
 		function go(IntSound){
 			self.IntSound_used = true;
@@ -405,7 +419,7 @@ SimpleQuiz.prototype = {
 };
 
 function End(){
-	
+
 }
 
 function Nav(target_container,parent){
@@ -507,7 +521,9 @@ Slide.prototype = {
 					this.responder = new ChoiceGroup(this,this.data.choices);
 					break;
 				case 'fill_in_the_blank':
-					this.responder = new FillInTheBlank(this,this.data.correct);
+					require(['fill_in_the_blank'],function(FillInTheBlank){
+						self.responder = new FillInTheBlank(self,self.data.correct);
+					});
 					break;
 			}
 		}
@@ -637,7 +653,7 @@ Slide.prototype = {
 				this.par.advanceOne();
 			}
 			else{
-				printBottom();	
+				printBottom();
 			}
 		}
 		else{
@@ -974,248 +990,6 @@ Choice.prototype = {
 	}
 };
 
-
-function FillInTheBlank(par,correct){
-	this.correct = correct;
-	this.par_slide = par;
-	this.par_quiz = par.par;
-	this.reveals = 0;
-	this.mistakes = [];
-	this.entered_characters = [];
-	this.max_mistakes = 3;
-	this.build();
-}
-FillInTheBlank.prototype = {
-	build:function(){
-		var self = this;
-		if(self.par_slide.answered){
-			self.container.appendTo(self.par_slide.container);
-			self.par_slide.responseMade();
-			return;
-		}
-		(function printContainer(){
-			self.container = $('<div>')
-				.addClass('fill_in_the_blank')
-				.appendTo(self.par_slide.container);
-		})();
-		(function printText(){
-			var correct = self.correct;
-			var words = correct.split(' ');
-			self.text_wrapper = $('<div>')
-				.addClass('text_wrapper')
-				.appendTo(self.container);
-			self.characters = [];
-			words.forEach(function(word){
-				var word_wrapper = $('<div>')
-					.addClass('word')
-					.appendTo(self.text_wrapper);
-				for(var i=0;i<word.length;i++){
-					var character = word[i];
-					if(isLetterOrNumber(character)){
-						self.characters.push(new Character(character, word_wrapper));
-					}
-					else{
-						$('<div>')
-							.addClass('character')
-							.html(character)
-							.appendTo(word_wrapper);
-					}
-				}
-			});
-			function isLetterOrNumber(character){
-				var char_code = character.charCodeAt(0);
-				if(char_code>=65&&char_code<=90){
-					return true; //is uppercase character
-				}
-				if(char_code>=97&&char_code<=122){
-					return true; //is lowercase character
-				}
-				if(char_code>=48&&char_code<=57){
-					return true; 
-				}
-				return false;
-			}
-		})();
-		(function printMistakesWrapper(){
-			self.mistakes_wrapper = $('<div>')
-				.addClass('mistakes')
-				.appendTo(self.container);
-			self.printed_mistakes = [];
-			for(var i=0;i<self.max_mistakes;i++){
-				self.printed_mistakes.push(new Mistake(self.mistakes_wrapper));
-			}
-			$('<div>')
-				.addClass('mistakes_label')
-				.html("Wrong guesses: ")
-				.prependTo(self.mistakes_wrapper);
-		})();
-		(function printSkipBtn(){
-			$('<div>')
-				.addClass('btn_skip')
-				.html('Give Up')
-				.appendTo(self.mistakes_wrapper)
-				.click(function(){
-					self.giveUp();
-				});
-		}());
-		(function printGhostTextInput(){
-			//for mobile
-			self.ghost_text_input = $('<input type="text">')
-				.addClass('ghost_text_input')
-				.prependTo(self.text_wrapper);
-		})();
-		this.addKeyListener();
-	},
-	addKeyListener:function(){
-		var self = this;
-		var slug = this.par_quiz.slug;
-		$(window).bind('keyup.simple_quiz_'+slug,function(e){
-			self.ghost_text_input.val('');
-			var key = e.keyCode ? e.keyCode : e.which;
-			if((key>=65&&key<=90)||(key>=48&&key<=57)){
-				var character = String.fromCharCode(e.keyCode);
-				self.characterEntered(character.toUpperCase());
-			}
-		});
-	},
-	removeKeyListener:function(){
-		var slug = this.par_quiz.slug;
-		$(window).unbind('keyup.simple_quiz_'+slug);
-	},
-	characterEntered:function(char){
-		var self = this;
-		var character_found = false;
-		if(this.entered_characters.indexOf(char)>-1){
-			this.characters.forEach(function(character){
-				if(character.char===char){
-					character.bounce();
-				}
-			});
-		}
-		this.characters.forEach(function(character){
-			if(character.char === char){
-				if(!character.revealed){
-					character.reveal();
-					self.reveals++;
-				}
-				character_found = true;
-			}
-		});
-		if(!character_found){
-			this.mistake(char);
-		}
-		this.checkCorrect();
-		this.entered_characters.push(char);
-	},
-	checkCorrect:function(){
-		if(this.reveals === this.characters.length){
-			this.success();
-		}
-	},
-	mistake:function(char){
-		var self = this;
-		var already_made = this.mistakes.indexOf(char)>-1;
-		if(already_made){
-			(function bounceMistake(){
-				for(var i=self.printed_mistakes.length-1;i>=0;i--){
-					if(self.printed_mistakes[i].char===char){
-						self.printed_mistakes[i].bounce();
-					}
-				}
-			}());
-			return;
-		}
-		this.printMistake(char);
-		this.mistakes.push(char);
-		if(this.mistakes.length===this.max_mistakes){
-			this.failure();
-		}
-	},
-	printMistake:function(char){
-		var printed_mistakes = this.printed_mistakes;
-		for(var i=printed_mistakes.length-1;i>=0;i--){
-			if(!this.printed_mistakes[i].filled){
-				this.printed_mistakes[i].fill(char);
-				break;
-			}
-		}
-	},
-	complete:function(){
-		this.par_slide.responseMade();
-		this.removeKeyListener();
-		this.ghost_text_input.remove();
-		this.par_slide.answered = true;
-	},
-	success:function(){
-		this.par_slide.validity = true;
-		this.par_quiz.user.score++;
-		this.complete();
-	},
-	failure:function(){
-		this.par_slide.validity = false;
-		this.characters.forEach(function(character){
-			if(!character.revealed){
-				character.reveal(true);
-			}
-		});
-		this.complete();
-	},
-	collapse:function(){
-		this.container.slideUp();
-	},
-	giveUp:function(){
-		this.failure();
-	}
-};
-function Character(char,target){
-	this.char = char.toUpperCase();
-	this.container = $('<div>')
-		.addClass('character')
-		.appendTo(target);
-}
-Character.prototype = {
-	reveal:function(wrong){
-		this.container.html(this.char);
-		this.revealed = true;
-		if(wrong){
-			this.container.addClass('wrong');
-		}
-	},
-	bounce:function(){
-		var self = this;
-		this.container
-			.addClass('used');
-		setTimeout(function(){
-			self.container.removeClass('used');
-		},300);
-	}
-};
-function Mistake(target){
-	this.filled = false;
-	this.container = $('<div>')
-		.addClass('mistake unfilled')
-		.html('&#160;')
-		.prependTo(target);
-}
-Mistake.prototype = {
-	fill:function(char){
-		this.char = char;
-		this.container
-			.html(char);
-		this.filled = true;
-	},
-	bounce:function(){
-		var self = this;
-		this.container
-			.addClass('used');
-		setTimeout(function(){
-			self.container.removeClass('used');
-		},300);
-	}
-};
-
-
-
 function Feedback(target,data,parent,callback){
 	this.par = parent;
 	this.data = data;
@@ -1252,6 +1026,11 @@ Feedback.prototype = {
 		else{
 			s='<span class="incorrect">Incorrect.</span> '+s;
 		}
+		var wrapper = $('<div>')
+			.html(s);
+		wrapper.find('a')
+			.attr('target','_blank');
+		s = wrapper.html();
 		return s;
 	},
 	printFeedbackImage:function(callback){
@@ -1415,18 +1194,6 @@ IntLoader.prototype = {
 		}
 	}
 };
-
-function getIEversion(){
-	var undef,
-			v = 3,
-			div = document.createElement('div'),
-			all = div.getElementsByTagName('i');
-	while (
-			div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i>< ![endif]-->',
-			all[0]
-	);
-	return v > 4 ? v : undef;
-}
 
 }); //end jQuery
 

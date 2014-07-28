@@ -1,0 +1,69 @@
+{
+  title: "The Craziest Anti-Gay Laws in America"
+  description: "Although the United States has made huge progress on gay rights over the last few years, many individual states retain odd, antiquated, or downright vicious anti-gay laws."
+  collapse_responders:false
+  collapse_questions:false
+  blocked_choices:true
+  questions: [
+    {
+      content:"In what state must sex ed instructors teach that “homosexuality is not a lifestyle acceptable to the general public and that homosexual conduct is a criminal offense?”"
+      choices:[
+        "Louisiana"
+        "*Mississippi"
+        "North Carolina"
+        "Virginia"
+      ]
+      feedback:"Eight states <a href=\"http://glsen.org/learn/policy/issues/nopromohomo\">forbid educators</a> from discussing homosexuality in a positive light, but only Mississippi actually requires that they <a href=\"http://www.newrepublic.com/article/117290/mississippi-sex-ed-curriculum-homosexual-activity-illegal\">condemn</a> the gay “lifestyle.”"
+    }
+    {
+      content:"Which of these states’ largest metropolitan area forbids bartenders from serving drinks to gay people?"
+      choices:[
+        "*Florida"
+        "Kansas"
+        "South Carolina"
+        "Nevada"
+      ]
+      feedback:"A Miami ordinance states that liquor licensees may not “knowingly sell to, serve, or allow a homosexual person to consume alcoholic beverages, or to knowingly allow two or more homosexual persons to congregate or remain in his place of business.” The courts upheld the measure in 1967, saying that the law’s intent—driving away “persons likely to prey upon the public by attempting to recruit other persons for [homosexual] acts”—was perfectly rational. South Dakota also forbids liquor licensees from selling alcohol to gay people or “permitting their congregation at licensed premises.”"
+    }
+    {
+      content:"Which of these states does not consider extramarital gay sex to be true adultery?"
+      choices:[
+        "Maine"
+        "*New Hampshire"
+        "Maryland"
+        "Pennsylvania"
+      ]
+      feedback:"New Hampshire <a href=\"http://en.wikipedia.org/wiki/Blanchflower_v._Blanchflower\">does not consider</a> same-sex relationships outside of marriage to be true adultery, because they do not involve true sexual intercourse (which the state defines as penile-vaginal penetration). Accordingly, a same-sex affair cannot be cited as statutory grounds for divorce."
+    }
+    {
+      content:"Which of these states forbids local school districts from prohibiting bullying based on sexual orientation?"
+      choices:[
+        "Kentucky"
+        "Tennessee"
+        "*Missouri"
+        "Utah"
+      ]
+      feedback:"<a href=\"http://glsen.org/article/state-maps\">Plenty</a> of states have no laws that specifically prohibit bullying on the basis of sexual identity. But only Missouri and South Dakota proscribe school districts from creating their own bans on anti-gay bullying. "
+    }
+    {
+      content:"In which of these states can you be sent to prison for five years for attempting to seduce someone of the same sex? "
+      choices:[
+        "Texas"
+        "Kentucky"
+        "West Virginia"
+        "*Michigan"
+      ]
+      feedback:"<a href=\"http://www.legislature.mi.gov/(S(5ev32hzjoe4vph55kyo4qn45))/mileg.aspx?page=getObject&objectName=mcl-750-338\">Section 338 of the Michigan Penal Code</a> states that “any male person who, in public or in private, commits or is a party to the commission of or procures or attempts to procure the commission by any male person of any act of gross indecency” can be sent to prison. The state defines “gross indecency” as sodomy."
+    }
+    {
+      content:"Which of these states does <strong>not</strong> still formally ban sodomy between consenting adults?"
+      choices:[
+        "Idaho"
+        "*Montana"
+        "Utah"
+        "Kansas"
+      ]
+      feedback:"Over a dozen states still outlaw sodomy in their legal codes, and a few specifically outlaw gay sodomy—<a href=\"http://www.slate.com/blogs/xx_factor/2013/08/05/gay_people_are_still_being_arrested_for_having_consensual_sex_in_some_red.html\">all in direct conflict</a> with a 2003 Supreme Court ruling. Montana, however, <a href=\"http://thinkprogress.org/lgbt/2013/04/10/1849411/montana-house-votes-to-repeal-unconstitutional-sodomy-law/\">recently erased</a> its anti-gay sodomy law from the books."
+    }
+  ]
+}
