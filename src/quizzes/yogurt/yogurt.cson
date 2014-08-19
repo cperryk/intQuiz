@@ -1,0 +1,77 @@
+{
+  title: "Where's That Yogurt Really From?"
+  description: "Your Greek yogurt isn't as Greek as you think it is."
+  blocked_choices: true
+  questions:[
+    {
+      content:"Where is Noosa Australian yogurt from?"
+      choices:[
+        "Victoria, Australia"
+        "Queensland, Australia"
+        "Lincolnshire, U.K."
+        "* Colorado, USA"
+      ]
+      feedback:"According to <a href=\"http://www.noosayoghurt.com/our-story/our-ingredients/\">Noosa’s website</a>, “We make Noosa with milk from Morning Fresh Dairy, right on site at their farm in Bellvue, Colorado.”"
+    }
+    {
+      content:"Where is Smári Icelandic yogurt from?"
+      choices:[
+        "Vesturland, Iceland"
+        "*Wisconsin, USA"
+        "Austurland, Iceland"
+        "New Brunswick, Canada"
+      ]
+      feedback:"“Our cows don’t live in Iceland,” <a href=\"http://smariorganics.com/our-yogurt/\">explains the Smári website</a>. “They’re in Wisconsin. Which can feel a lot like Iceland, especially in January.”"
+    }
+    {
+      content:"Where is Siggi’s Icelandic yogurt from?"
+      choices:[
+        "Wisconsin, USA"
+        "*New York, USA"
+        "California, USA"
+        "Vesturland, Iceland"
+      ]
+      feedback:"Siggi Hilmarsson is an Icelandic-born man whose company is <a href=\"http://siggisdairy.com/about/\">based in Chenango County, New York.</a>"
+    }
+    {
+      content:"Where is Saint Benoît French yogurt from?"
+      choices:[
+        "*California, USA"
+        "Wisconsin, USA"
+        "Languedoc-Roussillon, France"
+        "Quebec, Canada"
+      ]
+      feedback:"The <a href=\"http://www.stbenoit.com/\">Saint Benoît Creamery website</a> notes that their product is “made in small batches in Sonoma County, California.”"
+    }
+    {
+      content:"Where is Trimona Bulgarian yogurt from?"
+      choices:[
+        "Burgas Province, Bulgaria"
+        "Lovech Province, Bulgaria"
+        "*New York, USA"
+        "All of the above"
+      ]
+      feedback:"Trimona Foods, Inc. was <a href=\"http://www.trimonayogurt.com/about/\">founded by a Bulgarian-born man living in Port Jefferson, New York</a>."
+    }
+    {
+      content:"Where is Tarté Asian yogurt from?"
+      choices:[
+        "*California, USA"
+        "Binh Dinh, Vietnam"
+        "Hawaii, USA"
+        "Oregon, USA"
+      ]
+      feedback:"Tarté is made from “<a href=\"http://tarteyogurt.com/our-story/\">the freshest milk from local California dairy farms</a>” at the Dairy Products Technology Center at Cal Poly San Luis Obispo."
+    }
+    {
+      content:"Where is Fage Greek yogurt from?"
+      choices:[
+        "Attica, Greece"
+        "New York, USA"
+        "California, USA"
+        "*Both Attica, Greece and New York, USA"
+      ]
+      feedback:"Fage’s largest production facility is in Johnstown, New York, but the company also “<a href=\"http://company.usa.fage.eu/fage-story\">owns and operates three production facilities in Greece</a>.” However, the Greek facilities now only distribute to “markets outside of the Americas.” If you bought your Fage in the U.S., it was made in New York."
+    }
+  ]
+}

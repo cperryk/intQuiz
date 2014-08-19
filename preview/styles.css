@@ -8,7 +8,7 @@
   margin: 20px auto 0px auto;
   text-align: center; }
   .simple_quiz .quiz_inner {
-    font-family: 'sl-ApresRegular',verdana; }
+    font-family: 'sl-Apres',verdana,sans-serif; }
   .simple_quiz .slide_wrapper {
     background: url("graphics/stripe.png"); }
     .simple_quiz .slide_wrapper:not(.answered) .choice:not(.excluded) {
@@ -36,7 +36,7 @@
     font-size: 0.8em;
     background-color: #57828d;
     color: white;
-    font-family: 'sl-ApresRegular';
+    font-family: 'sl-Apres';
     -moz-user-select: -moz-none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -69,12 +69,12 @@
     background-color: white;
     border-bottom: 1px solid #c7c7c7;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.05);
-    font-family: 'sl-ApresRegular'; }
+    font-family: 'sl-Apres'; }
     .simple_quiz .question em {
       font-family: 'sl-ApresIt';
       font-style: normal; }
     .simple_quiz .question strong {
-      font-family: 'sl-ApresBold'; }
+      font-family: 'sl-ApresBold',verdana,sans-serif; }
     .simple_quiz .question .main_text {
       margin: 0px;
       line-height: 1.4; }
@@ -92,7 +92,7 @@
       font-size: 0.7em;
       padding-right: 0px;
       margin-right: 0px;
-      font-family: 'sl-ApresRegular';
+      font-family: 'sl-Apres';
       vertical-align: middle;
       line-height: 100%; }
     .simple_quiz .question.big {
@@ -223,7 +223,7 @@
   .simple_quiz .feedback {
     margin-bottom: 1em; }
     .simple_quiz .feedback strong {
-      font-family: 'sl-ApresBold';
+      font-family: 'sl-ApresBold',verdana,sans-serif;
       font-weight: normal; }
     .simple_quiz .feedback .img_wrapper {
       display: inline-block;
@@ -243,7 +243,7 @@
         position: absolute;
         bottom: 0px;
         right: 0px;
-        font-family: 'sl-ApresRegular',verdana;
+        font-family: 'sl-Apres',verdana;
         background: rgba(255, 255, 255, 0.5); }
     .simple_quiz .feedback .feedback_content {
       text-align: left;
@@ -255,7 +255,7 @@
       .simple_quiz .feedback .feedback_content:first-child {
         margin-top: 0; }
       .simple_quiz .feedback .feedback_content .correct, .simple_quiz .feedback .feedback_content .incorrect {
-        font-family: 'sl-ApresBold'; }
+        font-family: 'sl-ApresBold',verdana,sans-serif; }
       .simple_quiz .feedback .feedback_content .correct {
         color: #39B54A; }
       .simple_quiz .feedback .feedback_content .incorrect {
@@ -292,7 +292,7 @@
       font-family: 'sl-ApresIt';
       font-style: normal; }
     .simple_quiz .end_wrapper strong {
-      font-family: 'sl-ApresBold',verdana; }
+      font-family: 'sl-ApresBold',verdana,sans-serif,verdana; }
     .simple_quiz .end_wrapper .completion_text {
       font-size: 4em;
       line-height: 100%;
@@ -318,7 +318,7 @@
         font-size: 1.7em;
         line-height: 1.4;
         margin: 0.2em 0;
-        font-family: 'sl-ApresBold',verdana; }
+        font-family: 'sl-ApresBold',verdana,sans-serif,verdana; }
       .simple_quiz .end_wrapper .quiz_result iframe {
         width: 100%; }
     .simple_quiz .end_wrapper .average_score {
@@ -391,37 +391,6 @@
       margin: 0px;
       float: none;
       position: static; } }
-.intSharing_btn_share {
-  padding: 5px;
-  border: 1px solid #c7c7c7;
-  display: inline-block;
-  margin-right: 10px;
-  height: 25px;
-  cursor: pointer;
-  line-height: 25px; }
-  .intSharing_btn_share:hover {
-    position: relative;
-    top: 1px; }
-  .intSharing_btn_share:active {
-    position: relative;
-    top: 2px; }
-  .intSharing_btn_share:last-child {
-    margin-right: 0px; }
-  .intSharing_btn_share .share_icon {
-    width: 25px;
-    height: 25px;
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 3px; }
-    .intSharing_btn_share .share_icon :hover {
-      position: relative;
-      top: 1px; }
-    .intSharing_btn_share .share_icon :active {
-      position: relative;
-      top: 2px; }
-  .intSharing_btn_share .share_label {
-    display: inline-block; }
-
 .fill_in_the_blank {
   padding: 4%; }
   .fill_in_the_blank .text_wrapper {
@@ -524,15 +493,6 @@
   -webkit-animation-name: usedLetter;
   -webkit-animation-timing-function: ease-in;
   -webkit-animation-duration: .15s; }
-
-.intSharing_fb_share .share_icon {
-  background: url(graphics/fb_icon.png); }
-
-.intSharing_tw_share .share_icon {
-  background: url(graphics/twitter_icon.png); }
-
-.intSharing_email_share .share_icon {
-  background: url(graphics/email.jpg); }
 
 .int_loader {
   width: 92%;

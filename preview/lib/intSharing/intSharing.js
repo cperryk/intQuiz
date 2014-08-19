@@ -69,33 +69,44 @@ define(function(){
   	 * @return {null}
   	 */
   	emailShare:function(conf){
-      console.log(conf);
       var href = "mailto:" +
         "?subject="+escape(conf.subject) +
         "&body="+escape(conf.body) +
         window.location;
-      console.log(href);
   		window.location.href = href;
   	},
     /**
       Prints sharing buttons to a container. Returns the jQuery elements in a dictionary.
     **/
     appendShareBtns:function(container,conf){
+      if(!conf.custom_template){
+        require(['css!lib/intSharing/intSharing.css']);
+      }
+      var labels = {};
+      if(conf.fb){
+        labels.fb = conf.fb.label || 'Share';
+      }
+      if(conf.tw){
+        labels.tw = conf.tw.label || 'Tweet';
+      }
+      if(conf.email){
+        labels.email = conf.email.label || 'Email';
+      }
       var btns = {
         fb:$('<div>')
           .addClass('intSharing_btn_share intSharing_fb_share')
           .append($('<div>').addClass('share_icon'))
-          .append($('<div>').addClass('share_label').html('Share'))
+          .append($('<div>').addClass('share_label').html(labels.fb))
           .appendTo(container),
         tw:$('<div>')
           .addClass('intSharing_btn_share intSharing_tw_share')
           .append($('<div>').addClass('share_icon'))
-          .append($('<div>').addClass('share_label').html('Tweet'))
+          .append($('<div>').addClass('share_label').html(labels.tw))
           .appendTo(container),
         email:$('<div>')
           .addClass('intSharing_btn_share intSharing_email_share')
           .append($('<div>').addClass('share_icon'))
-          .append($('<div>').addClass('share_label').html('Email'))
+          .append($('<div>').addClass('share_label').html(labels.email))
           .appendTo(container)
       };
       if(conf){

@@ -12,8 +12,13 @@ require.config({
 		SJS_FlashPlugin:INT_PATH+'lib/soundjs/FlashPlugin',
 		SJS_SwfObject:INT_PATH+'lib/soundjs/swfobject',
 		/* question types */
-		fill_in_the_blank:INT_PATH+'fill_in_the_blank'
-	}
+		fill_in_the_blank:INT_PATH+'question_types/fill_in_the_blank'
+	},
+  map: {
+    '*':{
+      'css':'lib/css.min'
+    }
+  }
 });
 
 require(['imagesLoaded'],function(imagesLoaded){
@@ -326,25 +331,19 @@ SimpleQuiz.prototype = {
 					.click(function(){
 						self.restart();
 					});
-				var btns = IntSharing.appendShareBtns(share_btns_wrapper);
-				btns.fb.click(function(){
-						IntSharing.facebookShare({
-							head:share_strings.facebook,
-							desc:self.QUIZ_DATA.fb_description || self.QUIZ_DATA.description,
-							img:self.QUIZ_DATA.thumbnail || $('link[rel="image_src"]').attr('href')
-						});
-					});
-				btns.tw.click(function(){
-					IntSharing.twitterShare({
+				var btns = IntSharing.appendShareBtns(share_btns_wrapper,{
+					fb:{
+						head:share_strings.facebook,
+						desc:self.QUIZ_DATA.fb_description || self.QUIZ_DATA.description,
+						img:self.QUIZ_DATA.thumbnail || $('link[rel="image_src"]').attr('href')
+					},
+					tw:{
 						share_text:share_strings.twitter,
-						via:false
-					});
-				});
-				btns.email.click(function(){
-					IntSharing.emailShare({
+					},
+					email:{
 						subject:strip('Slate\'s '+self.QUIZ_DATA.title),
 						body:strip(share_strings.email+': '+IntSharing.getURL())
-					});
+					}
 				});
 				function strip(html)
 				{
@@ -985,7 +984,6 @@ Choice.prototype = {
 			return this;
 		}
 		this.validity = false;
-
 		return this;
 	}
 };
