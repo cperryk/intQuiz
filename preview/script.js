@@ -21,7 +21,7 @@ require.config({
   }
 });
 
-require(['imagesLoaded'],function(imagesLoaded){
+require(['imagesLoaded','css!styles.css'],function(imagesLoaded){
 function SimpleQuiz(container, slug, QUIZ_DATA){
 	this.QUIZ_DATA = QUIZ_DATA;
 	this.slug = slug;
