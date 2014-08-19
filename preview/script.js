@@ -16,7 +16,7 @@ require.config({
 	},
   map: {
     '*':{
-      'css':'lib/css.min'
+      'css':INT_PATH+'lib/css.min.js'
     }
   }
 });
@@ -520,7 +520,7 @@ Slide.prototype = {
 					this.responder = new ChoiceGroup(this,this.data.choices);
 					break;
 				case 'fill_in_the_blank':
-					require(['fill_in_the_blank'],function(FillInTheBlank){
+					require(['fill_in_the_blank','css!'+INT_PATH+'question_types/fill_in_the_blank.css'],function(FillInTheBlank){
 						self.responder = new FillInTheBlank(self,self.data.correct);
 					});
 					break;
