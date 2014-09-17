@@ -1,0 +1,45 @@
+{
+  main:{
+    $title:{
+      type:'string',
+      char:50
+    }
+    $blocked_choices:{
+      type:'boolean'
+    }
+    $descriptor:{
+      type:'string'
+      char:50
+    }
+    $questions:{
+      type:'array'
+      contains:'$question'
+    }
+  }
+  question:{
+    $content:{
+      type:'string'
+    }
+    $sub:{
+      type:'string'
+    }
+    $choices:{
+      type:'array'
+      contains:'$choice'
+    }
+    $sound:{
+      type:'$sound'
+    }
+  }
+  $choice:{
+    $content:{
+      type:'string'
+    }
+    $feedback:{
+
+    }
+  }
+  $sound:{
+    
+  }
+}

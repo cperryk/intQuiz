@@ -1,0 +1,181 @@
+{
+  "title": "The TV Theme Song Game",
+  "slug": "first_second",
+  "collapse_responders": true,
+  "collapse_questions": true,
+  "share_text": {
+    "facebook": "I scored %s out of %l on NPR's TV Theme Song Quiz!",
+    "twitter": "I scored %s out of %l on @NPRAskMeAnother's TV Theme Song Quiz on @Slate! Can you beat me?",
+    "email": "I scored %s out of %l on NPR's Ask Me Another's TV Theme Song Quiz on Slate!"
+  },
+  "questions": [
+    {
+      "content": "What modern TV show does this song describe?",
+      "sub": "Click the play button to listen to it. Simply start typing to enter your answer.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "gilligan",
+        "autoplay": false
+      },
+      "correct": "Downton Abbey",
+      "feedback": {
+        "img": "downton_abbey.jpg",
+        "content": "That song described <em>Downton Abbey</em>."
+      }
+    },
+    {
+      "content": "On what <strong>old show</strong>’s theme song was that based?",
+      "sub": "Click the play button to listen to it again.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "gilligan",
+        "autoplay": false
+      },
+      "correct": "Gilligan’s Island",
+      "feedback": {
+        "content": "That song was based on the theme from <em>Gilligan’s Island</em>.",
+        "youtube": "Q8jhb5NnADM"
+      }
+    },
+    {
+      "content": "What modern TV show does this song describe?",
+      "sub": "Click the play button to listen to it.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "cheers",
+        "autoplay": true
+      },
+      "correct": "Scandal",
+      "feedback": {
+        "img": "scandal.jpg",
+        "content": "That song described <em>Scandal</em>."
+      }
+    },
+    {
+      "content": "On what <strong>old show</strong>’s theme song was that based?",
+      "sub": "Click the play button to listen to it again.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "cheers",
+        "autoplay": false
+      },
+      "correct": "Cheers",
+      "feedback": {
+        "youtube": "rS0VQOHX7lM",
+        "content": "That song was based on the theme from <em>Cheers</em>."
+      }
+    },
+    {
+      "content": "What modern TV show does this song describe?",
+      "sub": "Click the play button to listen to it.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "different_strokes",
+        "autoplay": true
+      },
+      "correct": "The Wire",
+      "feedback": {
+        "youtube": "kcB3yQTvJkk",
+        "content": "That song described <em>The Wire</em>."
+      }
+    },
+    {
+      "content": "On what <strong>old show</strong>’s theme song was that based?",
+      "sub": "Click the play button to listen to it again.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "different_strokes",
+        "autoplay": false
+      },
+      "correct": "Diff’rent Strokes",
+      "feedback": {
+        "youtube": "W0CYJNw9YJQ",
+        "content": "That song was based on the theme from <em>Diff’rent Strokes</em>."
+      }
+    },
+    {
+      "content": "What modern TV show does this song describe?",
+      "sub": "Click the play button to listen to it.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "patty_duke",
+        "autoplay": true
+      },
+      "correct": "The X-Files",
+      "feedback": {
+        "youtube": "MkMKzdTBEOc",
+        "content": "That song described <em>The X-Files</em>."
+      }
+    },
+    {
+      "content": "On what <strong>old show</strong>’s theme song was that based?",
+      "sub": "Click the play button to listen to it again.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "patty_duke",
+        "autoplay": false
+      },
+      "correct": "The Patty Duke Show",
+      "feedback": {
+        "youtube": "qQTqKcojrVY",
+        "content": "That song was based on the theme from <em>The Patty Duke Show</em>."
+      }
+    },
+    {
+      "content": "What modern TV show does this song describe?",
+      "sub": "Click the play button to listen to it.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "welcome_back",
+        "autoplay": true
+      },
+      "correct": "House",
+      "feedback": {
+        "youtube": "a6zJ9dEwNek",
+        "content": "That song described <em>House</em>."
+      }
+    },
+    {
+      "content": "On what <strong>old show</strong>’s theme song was that based?",
+      "sub": "Click the play button to listen to it again.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "welcome_back",
+        "autoplay": false
+      },
+      "correct": "Welcome Back Kotter",
+      "feedback": {
+        "youtube": "5VlGyMG0ksg",
+        "content": "That song was based on the theme from <em>Welcome Back Kotter</em>."
+      }
+    },
+    {
+      "content": "What modern TV show does this song describe?",
+      "sub": "Click the play button to listen to it.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "wkrp",
+        "autoplay": true
+      },
+      "correct": "Mad Men",
+      "feedback": {
+        "youtube": "WcRr-Fb5xQo",
+        "content": "That song described <em>Mad Men</em>."
+      }
+    },
+    {
+      "content": "On what <strong>old show</strong>’s theme song was that based?",
+      "sub": "Click the play button to listen to it again.",
+      "type": "fill_in_the_blank",
+      "sound": {
+        "id": "wkrp",
+        "autoplay": false
+      },
+      "correct": "WKRP in Cincinnati",
+      "feedback": {
+        "youtube": "poqvBlBXa4U",
+        "content": "That song was based on the theme from <em>WKRP in Cincinnati</em>."
+      }
+    }
+  ]
+}

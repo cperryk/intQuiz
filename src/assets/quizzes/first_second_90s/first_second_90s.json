@@ -1,0 +1,295 @@
+{
+  "title": "Name a Song by Its First Second: '90<small>s</small> Edition",
+  "description": "Let's go back to a time of compact discs and Seinfeld and grunge, when MTV still played music videos.",
+  "collapse_responders": true,
+  "collapse_questions": true,
+  "randomize_questions": false,
+  "teaser": "Now, can you do the same <a href=\"http://www.slate.com/blogs/browbeat/2014/07/02/pop_music_quiz_name_these_recent_billboard_hits_by_their_first_second.html\">with more recent hits</a>?",
+  "share": {
+    "facebook": "Can you identify a '90s song based only on its first second?",
+    "twitter": "Can you identify a '90s song based only on its first second? I scored %s out of %l.",
+    "email": "Can you identify a '90s song based only on its first second?"
+  },
+  "questions": [
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "Smells Like Teen Spirit",
+      "sound": {
+        "id": "short/smells",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Nirvana, “Smells Like Teen Spirit”</strong>",
+        "youtube": {
+          "id": "hTWKbfoikeg",
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "Macarena",
+      "sound": {
+        "id": "short/macarena",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Los Del Rio, “Macarena.”</strong>",
+        "youtube": {
+          "id": "XiBYM6g8Tck",
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "Gangsta’s Paradise",
+      "sound": {
+        "id": "short/gangsters",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Coolio featuring L.V., “Gangsta’s Paradise.”</strong>",
+        "youtube": {
+          "id": "YFK6H_CcuX8",
+          "autoplay": true,
+          "start": 14
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "You're Still the One",
+      "sound": {
+        "id": "short/youre_still",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Shania Twain, “You're Still the One.”</strong>",
+        "youtube": {
+          "id": "KNZH-emehxA",
+          "autoplay": true,
+          "start": 6
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "Baby One More Time",
+      "sound": {
+        "id": "short/baby",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Britney Spears, “Baby One More Time.”</strong>",
+        "youtube": {
+          "id": "C-u5WLJ9Yk4",
+          "start": 16,
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "I Will Always Love You",
+      "sound": {
+        "id": "short/i_will",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Whitney Houston, “I Will Always Love You.”</strong>",
+        "youtube": {
+          "id": "3JWTaaS7LdU",
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "The Sign",
+      "sound": {
+        "id": "short/the_sign",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Ace of Base, “The Sign.”</strong>",
+        "youtube": {
+          "id": "DNPjeIamsck",
+          "start": 8,
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "Jeremy",
+      "sound": {
+        "id": "short/jeremy",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Pearl Jam, “Jeremy.”</strong>",
+        "youtube": {
+          "id": "MS91knuzoOA",
+          "start": 16,
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "I Want It That Way",
+      "sound": {
+        "id": "short/that_way",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Backstreet Boys, “I Want It That Way.”</strong>",
+        "youtube": {
+          "id": "4fndeDfaWCg",
+          "start": 6,
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "My Heart Will Go On",
+      "sound": {
+        "id": "short/my_heart",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Céline Dion, “My Heart Will Go On.”</strong>",
+        "youtube": {
+          "id": "DNyKDI9pn0Q",
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "Only Wanna Be With You",
+      "sound": {
+        "id": "short/only_wanna",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Hootie & the Blowfish, “Only Wanna Be With You.”</strong>",
+        "youtube": {
+          "id": "Ln6WQqRDrCo",
+          "autoplay": true,
+          "start": 27
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "You Oughta Know",
+      "sound": {
+        "id": "short/you_oughta_know",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Alanis Morissette, “You Oughta Know.”</strong>",
+        "youtube": {
+          "id": "NPcyTyilmYY",
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "You Were Meant for Me",
+      "sound": {
+        "id": "short/you_were",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Jewel, “You Were Meant for Me.”</strong>",
+        "youtube": {
+          "id": "fGj77BrEgj4",
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "Juicy",
+      "sound": {
+        "id": "short/juicy",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>The Notorious B.I.G., “Juicy.”</strong>",
+        "youtube": {
+          "id": "_JZom_gVfuw",
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "No Scrubs",
+      "sound": {
+        "id": "short/no_scrubs",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>TLC, “No Scrubs.”</strong>",
+        "youtube": {
+          "id": "FrLequ6dUdM",
+          "autoplay": true,
+          "start": 8
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "type": "fill_in_the_blank",
+      "correct": "Nuthin’ But a G Thang",
+      "sound": {
+        "id": "short/nuthin",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Dr. Dre featuring Snoop Dogg, “Nuthin’ But a ‘G’ Thang.”</strong>",
+        "youtube": {
+          "id": "cp0ON1288zE",
+          "autoplay": true
+        }
+      }
+    }
+  ]
+}

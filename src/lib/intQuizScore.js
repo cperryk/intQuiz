@@ -1,1 +1,0 @@
-/Users/kirkcp/Documents/interactives/lib/js/intQuizScore/intQuizScore.js

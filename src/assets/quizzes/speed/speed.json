@@ -1,0 +1,113 @@
+{
+  "title": "Pop Quiz, Hot Shot!",
+  "description": "Pop Quiz, Hot Shot! On Its 20th Anniversary, Test Your\n  Knowledge of Speed.",
+  "share_name": "\"Speed\" Trivia Quiz",
+  "blocked_choices": false,
+  "questions": [
+    {
+      "content": "<em>Speed</em> has remarkably snappy dialogue for a\n      high-concept thriller. Which of the following screenwriters\n      did un-credited work on the film?",
+      "choices": [
+        "Tom Stoppard",
+        "Quentin Tarantino",
+        "*Joss Whedon",
+        "David Mamet"
+      ],
+      "feedback": ""
+    },
+    {
+      "content": "<em>Speed</em> has been called “<em>Die Hard</em> on a bus.”\n      What role did <em>Speed</em> director Jan de Bont serve on\n      <em>Die Hard</em>?",
+      "choices": [
+        "Co-writer",
+        "Director",
+        "*Cinematographer",
+        "Intern"
+      ]
+    },
+    {
+      "content": "Which of the following was different in an earlier version\n      of <em>Speed</em>’s script?",
+      "choices": [
+        "The bomb was on a boat",
+        "The bomb was on a train",
+        "The bomb was on a plane",
+        "*The trigger was set at only 20 mph"
+      ]
+    },
+    {
+      "content": "How did <em>Speed</em> film its iconic bus-jump scene?",
+      "choices": [
+        "*A ramp",
+        "A small-scale model",
+        "A CGI bus",
+        "Hidden thrusters"
+      ],
+      "feedback": "There was also a bridge that was digitally removed in\n      post-production."
+    },
+    {
+      "content": "Which of these songs featured on the <em>Speed</em>\n      movie soundtrack?",
+      "choices": [
+        "“Speed” by Billy Idol",
+        "“Cars” by Gary Numan",
+        "“Mr. Speed” by KISS",
+        "*All of the above"
+      ],
+      "feedback": "Other songs on the road-themed soundtrack included “Let’s Go\n      for a Ride” by Cracker, “Go Outside and Drive” by Blues Traveler,\n      “Hard Road” by Rod Stewart, and “Like a Motorway” by Saint Etienne."
+    },
+    {
+      "content": "<em>Speed</em> was a new career high for rising star Keanu\n      Reeves. “Keanu” is Hawaiian for what?",
+      "choices": [
+        "“Let’s head upriver”",
+        "*“Cool breeze over the mountain”",
+        "“The surf is up”",
+        "Nothing. His parents just thought it sounded cool."
+      ]
+    },
+    {
+      "content": "<em>Speed</em> was writer Graham Yost’s first movie.\n      Which of the following did Yost go on to pen as lead writer?",
+      "choices": [
+        "<em>The Walking Dead</em>",
+        "*<em>Justified</em>",
+        "<em>Dude, Where’s My Car?</em>",
+        "<em>Low Winter Sun</em>"
+      ]
+    },
+    {
+      "content": "Which of the following honors did <em>Speed</em> not earn?",
+      "choices": [
+        "A place on Quentin Tarantino’s list of 20 favorite films since 1992",
+        "Two Academy Awards",
+        "*Four Golden Raspberry Awards",
+        "A Rotten Tomatoes “certified fresh” rating"
+      ],
+      "feedback": "<em>Speed</em> won Best Sound Editing and Best Sound Mixing.\n      It didn’t win any Razzies."
+    },
+    {
+      "content": "What is the difference between the Rotten Tomatoes rating\n      for <em>Speed</em> and the Rotten Tomatoes rating for\n      <em>Speed 2: Cruise Control</em>?",
+      "choices": [
+        "40 percent",
+        "60 percent",
+        "80 percent",
+        "*90 percent"
+      ],
+      "feedback": "<em>Speed</em> was widely acclaimed and holds a rating of\n      93 percent. <em>Speed 2</em>, widely considered one of the worst sequels\n      ever, holds a rating of 3 percent."
+    },
+    {
+      "content": "Which of the following was <em>not</em> an idea conceived for\n      the <em>Speed</em> sequel?",
+      "choices": [
+        "A plane that would explode if it ascended above 10,000 feet",
+        "A boat loaded with munitions that would explode if they got wet",
+        "An explosive-laden boat with its course set on an oil tanker",
+        "*A parade float that would explode if its speed fell below 5 mph"
+      ]
+    },
+    {
+      "content": "When the script for <em>Speed</em> was initially pitched to\n      Paramount, what note did Paramount give?",
+      "choices": [
+        "*“Too much bus”",
+        "“Too much action”",
+        "“Too much speed”",
+        "“Shoot the hostage in the leg”"
+      ],
+      "feedback": "Yost apparently thought the studio was right, and added the\n      movie’s final action set piece, staged on a train."
+    }
+  ]
+}

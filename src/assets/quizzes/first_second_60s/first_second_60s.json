@@ -1,0 +1,197 @@
+{
+  "title": "Name a Song by Its First Second: '60<small>s</small> Edition",
+  "description": "Put on your luckiest pair of parachute pants and see if\n  you can name these '60s hits based on their first second.",
+  "collapse_responders": true,
+  "collapse_questions": true,
+  "teaser": "Now, can you do the same <a href=\"http://www.slate.com/blogs/browbeat/2014/07/17/_80s_music_quiz_name_these_1980s_hits_by_their_first_second_audio.html\">with the ’80s</a>?",
+  "share": {
+    "facebook": "Can you identify an '60s song based only on its first second?",
+    "twitter": "Can you identify an '60s song based only on its first second? I scored %s out of %l.",
+    "email": "Can you identify an '60s song based only on its first second?"
+  },
+  "question_template": {
+    "content": "What song is this?",
+    "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+    "type": "fill_in_the_blank",
+    "sound": {
+      "autoplay": true
+    },
+    "feedback": {
+      "youtube": {
+        "autoplay": true
+      }
+    }
+  },
+  "questions": [
+    {
+      "correct": "A Hard Day’s Night",
+      "sound": {
+        "id": "a_hard",
+        "autoplay": false
+      },
+      "feedback": {
+        "content": "That was the <strong>Beatles, “A Hard Day’s Night.”</strong>",
+        "youtube": "70QfHtKdh_0"
+      }
+    },
+    {
+      "correct": "Cathy’s Clown",
+      "sound": {
+        "id": "cathys_clown"
+      },
+      "feedback": {
+        "content": "That was the <strong>Everly Brothers, “Cathy’s Clown.”\n        </strong>",
+        "youtube": "hpgo3Lkns5s"
+      }
+    },
+    {
+      "correct": "Respect",
+      "sound": {
+        "id": "respect"
+      },
+      "feedback": {
+        "content": "That was <strong>Aretha Franklin, “Respect.”</strong>",
+        "youtube": "n0POmdK18WU"
+      }
+    },
+    {
+      "correct": "Walk Like a Man",
+      "sound": {
+        "id": "walk_like"
+      },
+      "feedback": {
+        "content": "That was the <strong>Four Seasons, “Walk Like a Man.”</strong>",
+        "youtube": "jpl_jPxSuFg"
+      }
+    },
+    {
+      "correct": "Downtown",
+      "sound": {
+        "id": "downtown"
+      },
+      "feedback": {
+        "content": "That was <strong>Petula Clark, “Downtown.”</strong>",
+        "youtube": "Zx06XNfDvk0"
+      }
+    },
+    {
+      "correct": "Like a Rolling Stone",
+      "sound": {
+        "id": "like_a"
+      },
+      "feedback": {
+        "content": "That was <strong>Bob Dylan, “Like a Rolling Stone.”</strong>",
+        "youtube": "jD7_FfGJI0E"
+      }
+    },
+    {
+      "correct": "Paint It Black",
+      "sound": {
+        "id": "paint_it"
+      },
+      "feedback": {
+        "content": "That was the <strong>Rolling Stones, “Paint It Black.”\n        </strong>",
+        "youtube": "u6d8eKvegLI"
+      }
+    },
+    {
+      "correct": "The Twist",
+      "sound": {
+        "id": "the_twist"
+      },
+      "feedback": {
+        "content": "That was <strong>Chubby Checker, “The Twist.”</strong>",
+        "youtube": "xbK0C9AYMd8"
+      }
+    },
+    {
+      "correct": "Georgia on My Mind",
+      "sound": {
+        "id": "georgia_on"
+      },
+      "feedback": {
+        "content": "That was <strong>Ray Charles, “Georgia On My Mind.”</strong>",
+        "youtube": {
+          "id": "Thls_tMuFkc",
+          "start": 2
+        }
+      }
+    },
+    {
+      "correct": "Da Doo Ron Ron",
+      "sound": {
+        "id": "da_doo"
+      },
+      "feedback": {
+        "content": "That was the <strong>Crystals, “Da Doo Ron Ron.”</strong>",
+        "youtube": "v-qqi7-Q19k"
+      }
+    },
+    {
+      "correct": "California Girls",
+      "sound": {
+        "id": "california_girls"
+      },
+      "feedback": {
+        "content": "That was the <strong>Beach Boys, “California Girls.”</strong>",
+        "youtube": "7oRb9-mypxg"
+      }
+    },
+    {
+      "correct": "Baby Love",
+      "sound": {
+        "id": "baby_love"
+      },
+      "feedback": {
+        "content": "That was the <strong>Supremes, “Baby Love.”</strong>",
+        "youtube": "23UkIkwy5ZM"
+      }
+    },
+    {
+      "correct": "I’m a Believer",
+      "sound": {
+        "id": "im_a"
+      },
+      "feedback": {
+        "content": "That was the <strong>Monkees, “I’m a Believer.”",
+        "youtube": "XfuBREMXxts"
+      }
+    },
+    {
+      "correct": "Try a Little Tenderness",
+      "sound": {
+        "id": "try_a"
+      },
+      "feedback": {
+        "content": "That was <strong>Otis Redding, “Try a Little Tenderness.”\n          </strong>",
+        "youtube": {
+          "id": "IQ9n2_5mbig",
+          "start": 4
+        }
+      }
+    },
+    {
+      "correct": "Sugar Sugar",
+      "sound": {
+        "id": "sugar_sugar"
+      },
+      "feedback": {
+        "content": "That was the <strong>Archies, “Sugar, Sugar.”</strong>",
+        "youtube": "0MiQzAo6Cp8"
+      }
+    },
+    {
+      "correct": "Papa’s Got a Brand New Bag",
+      "sound": {
+        "id": "papas_got"
+      },
+      "feedback": {
+        "content": "That was <strong>James Brown, “Papa’s Got a Brand New Bag.”\n        </strong>",
+        "youtube": {
+          "id": "dtqDB2spyG0",
+          "start": 14
+        }
+      }
+    }
+  ]
+}

@@ -374,13 +374,6 @@
     .simple_quiz .quiz_inner {
       padding-left: 0;
       padding-right: 0; }
-    .simple_quiz .fill_in_the_blank .character {
-      margin: 0 0.1em;
-      width: 0.8em;
-      height: 0.9em;
-      padding: 0.1em;
-      font-size: 0.9em;
-      line-height: 1em; }
     .simple_quiz .choice.blocked img {
       max-width: 100%; }
     .simple_quiz .top_bar .quiz_title {
@@ -391,81 +384,6 @@
       margin: 0px;
       float: none;
       position: static; } }
-.fill_in_the_blank {
-  padding: 4%; }
-  .fill_in_the_blank .text_wrapper {
-    font-size: 1.5em;
-    position: relative; }
-  .fill_in_the_blank .word {
-    display: inline-block;
-    padding: 0.5em 0.8em; }
-  .fill_in_the_blank .character {
-    background-color: white;
-    margin: 0 0.15em;
-    width: 1.2em;
-    height: 1.5em;
-    padding: 0.1em;
-    border: 1px solid #B8B8B8;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle; }
-    .fill_in_the_blank .character:last-child {
-      margin-right: 0; }
-    .fill_in_the_blank .character:first-child {
-      margin-left: 0; }
-    .fill_in_the_blank .character.wrong {
-      color: red; }
-  .fill_in_the_blank .mistakes {
-    text-align: left;
-    font-size: 1em;
-    margin: 1em 0 0 0;
-    padding: 1em 0 0 0;
-    border-top: 1px solid #B8B8B8; }
-  .fill_in_the_blank .mistake {
-    border-radius: 50%;
-    display: inline-block;
-    background: white;
-    border: 1px solid gray;
-    padding: 0.25em;
-    width: 1.5em;
-    height: 1.5em;
-    behavior: url(PIE.htc);
-    /* remove if you don't care about IE8 */
-    text-align: center;
-    margin-left: 0.5em; }
-  .fill_in_the_blank .mistakes_label {
-    display: inline-block;
-    margin-right: 0.5em; }
-  .fill_in_the_blank .ghost_text_input {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    cursor: default;
-    top: 0px;
-    left: 0px;
-    background: none;
-    padding: 0px;
-    border: 0px;
-    opacity: 0;
-    text-align: center; }
-  .fill_in_the_blank .btn_skip {
-    float: right;
-    margin-left: 1em;
-    margin-top: 0.2em;
-    color: gray;
-    display: inline-block;
-    background-color: white;
-    padding: 0.4em;
-    text-transform: uppercase;
-    font-size: 0.8em;
-    border: 1px solid #c7c7c7;
-    cursor: pointer; }
-    .fill_in_the_blank .btn_skip:hover {
-      color: black; }
-    .fill_in_the_blank .btn_skip:active {
-      position: relative;
-      top: 1px; }
-
 @-webkit-keyframes usedLetter {
   0% {
     opacity: 1;

@@ -80,7 +80,9 @@ define(function(){
     **/
     appendShareBtns:function(container,conf){
       if(!conf.custom_template){
-        require(['css!lib/intSharing/intSharing.css']);
+        if(require){
+          require(['css!http://localhost:9999/lib/js/intSharing/intSharing.css']);
+        }
       }
       var labels = {};
       if(conf.fb){

@@ -1,0 +1,288 @@
+{
+  "title": "What's That Invention?",
+  "description": "Guess what each invention is baesd on its patent model.",
+  "blocked_choices": true,
+  "attribution": "Images courtesy of Alan Rothschild, PatentModel.org, Wikimedia Commons.",
+  "questions": [
+    {
+      "img": "washing_machine.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        {
+          "content": "Washing machine",
+          "validity": true
+        },
+        "Ice cream maker",
+        "Keg",
+        "Olive press"
+      ],
+      "feedback": "This is a washing machine invented in 1870. It was intended to be much easier to use than a scrub board."
+    },
+    {
+      "img": "fence_machine.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Lie detector",
+        "Chipmunk jungle gym",
+        {
+          "content": "Fence fabricating machine",
+          "validity": true
+        },
+        "Electric chair"
+      ],
+      "feedback": "This is a fence fabricating machine invented in 1888. Remarkably, modern chain-link fence-making machines don’t look much different."
+    },
+    {
+      "img": "brick_press.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        {
+          "content": "Brick-pressing machine",
+          "validity": true
+        },
+        "Walnut engraver",
+        "Pasta press",
+        "Self-playing harmonica"
+      ],
+      "feedback": "This is a brick-pressing machine invented in 1855, the earliest of three brick machines in Rothchild’s collection. Insert clay, add some elbow grease, and you’ve got a brick."
+    },
+    {
+      "img": "tobacco_machine.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Coin sorter",
+        "Engine",
+        "Weaving machine",
+        {
+          "content": "Tobacco-cutting machine",
+          "validity": true
+        }
+      ],
+      "feedback": "This is a tobacco-cutting machine invented in 1878: a necessary step between tobacco fields and your cigarettes. "
+    },
+    {
+      "img": "brush_maker.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Slicer",
+        {
+          "content": "Brush maker",
+          "validity": true
+        },
+        "Vise grip",
+        "Wine opener"
+      ],
+      "feedback": "This is a brush maker invented in 1877. An Irishman submitted this patent for an easier way to manufacture brooms and brushes. During this time, the fee for a foreign patent application was three times higher than the fee for an application from a U.S. citizen, so patents from abroad tended to be serious inventions. (To this day, there are hefty fees for international applicants.)"
+    },
+    {
+      "img": "lathe.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Perfume sprayer",
+        "Ear Piercer",
+        "Meth Lab",
+        {
+          "content": "Lathe for dental surgery",
+          "validity": true
+        }
+      ],
+      "feedback": "This is a lathe for dental surgery invented in 1879. Luckily, dental technology has improved since then."
+    },
+    {
+      "img": "pigeon_starter.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        {
+          "content": "Pigeon startler",
+          "validity": true
+        },
+        "Toy cat",
+        "Jack-in-the-box",
+        "Burglar alarm"
+      ],
+      "feedback": "This is a pigeon startler invented in 1875. Back then, sport shooters kept pigeons in cages, then released them for shooting practice. However, the released pigeons preferred to peck around on the ground, which made it rather dangerous to shoot them. This invention was designed to startle pigeons so that they would fly into the air."
+    },
+    {
+      "img": "cotton_seed_planter.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Fire engine",
+        {
+          "content": "Cotton seed planter",
+          "validity": true
+        },
+        "Potato harvester",
+        "Castration station"
+      ],
+      "feedback": "This is a cotton seed planter invented in 1865. Interestingly, this planter was patented about a month after the last shot of the Civil War was fired. The patent application boasts the fact that it operates “without the aid of manual labor.”"
+    },
+    {
+      "img": "paper_bag_machine.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        {
+          "content": "Paper-bag-making machine",
+          "validity": true
+        },
+        "Pasta roller",
+        "Phonograph",
+        "Gold flattener"
+      ],
+      "feedback": "This is a paper-bag-making machine invented in 1881. Its full name is a bit of a mouthful: “Paper-Bag Machines Designed for the Manufacture of Seamless-Bottomed Square Bags.”"
+    },
+    {
+      "img": "windmill.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Solar panel",
+        "Water sprinkler",
+        {
+          "content": "Windmill",
+          "validity": true
+        },
+        "Mole whacker"
+      ],
+      "feedback": "This is a windmill invented in 1880. Lucky for us, it was never manufactured—the 20-foot-tall version of this invention would have been a terrifying sight."
+    },
+    {
+      "img": "horsehoe_machine.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Trebuchet",
+        "Typewriter",
+        "Hatpin maker",
+        {
+          "content": "Horseshoe-making machine",
+          "validity": true
+        }
+      ],
+      "feedback": "This is a horseshoe-making machine invented in 1880. When this patent was filed, horses were still a main means of transportation, and the Kentucky Derby was only in its 5<sup>th</sup> year."
+    },
+    {
+      "img": "oatmeal_machine.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Cheese grater",
+        "Lottery ball dispenser",
+        "Pencil sharpener",
+        {
+          "content": "Oatmeal machine",
+          "validity": true
+        }
+      ],
+      "feedback": "This is an oatmeal machine invented in 1878. It forced kernels of oatmeal kernels through its holes, effectively cutting the oatmeal into any desirable size."
+    },
+    {
+      "img": "rock_drill.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Compass",
+        {
+          "content": "Rock drill",
+          "validity": true
+        },
+        "Carpenter's level",
+        "Metronome"
+      ],
+      "feedback": "This is a rock drill invented in 1878: like a corkscrew, but for rock."
+    },
+    {
+      "img": "still_for_alcohol.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Night light",
+        "Battery",
+        {
+          "content": "Alcohol still",
+          "validity": true
+        },
+        "Water purifier"
+      ],
+      "feedback": "This is an alcohol still invented in 1875. The patent was submitted by the Beam family, the folks who bring you Jim Beam bourbon."
+    },
+    {
+      "img": "threading_wood_screws.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        {
+          "content": "Wood screw threader",
+          "validity": true
+        },
+        "Nut cracker",
+        "Film projector",
+        "Carnival coin engraver"
+      ],
+      "feedback": "This is a word screw threader invented in 1875. Do-it-yourself wood screws are in vogue again; this gorgeous machine could lend you the ultimate hipster street cred."
+    },
+    {
+      "img": "pressure_gauge.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Sextant",
+        "Scythe",
+        "Breathalyzer",
+        {
+          "content": "Pressure Gauge",
+          "validity": true
+        }
+      ],
+      "feedback": "This is a pressure gauge invented in 1877. In a pinch, this probably <em>could</em> double as a scythe."
+    },
+    {
+      "img": "peat_machine.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Gunpowder mixer",
+        "Spice grinder",
+        "Cement mixer",
+        {
+          "content": "Peat-drying machine",
+          "validity": true
+        }
+      ],
+      "feedback": "This is a peat-drying machine invented in 1874. Farmers wanted a way to dry peat so that it could be mixed more easily into soil."
+    },
+    {
+      "img": "making_bonnet_binding.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        {
+          "content": "Bonnet-binding machine",
+          "validity": true
+        },
+        "Harp",
+        "Music box",
+        "Bead threader"
+      ],
+      "feedback": "This is a bonnet-binding machine invented in 1865. When this patent was issued, bonnets made of horsehair were all the rage."
+    },
+    {
+      "img": "life_boat.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        "Barbecue smoker",
+        "Furnace",
+        "Mailbox",
+        {
+          "content": "Life boat",
+          "validity": true
+        }
+      ],
+      "feedback": "This is a life boat invented in 1858. Let’s hope no one’s life ever depended on staying afloat in this metal capsule."
+    },
+    {
+      "img": "lincoln.jpg",
+      "content": "What is this invention?",
+      "choices": [
+        {
+          "content": "A device for buoying vessels over shoals",
+          "validity": true
+        },
+        "Ship-in-a-bottle maker",
+        "Yarn spooler",
+        "Boat"
+      ],
+      "feedback": "This is a device for buoying vessels invented in 1849 by Abraham Lincoln. Yes, <em>that</em> Abraham Lincoln—he’s the only president who has been granted a patent. In fact, Lincoln was a patent lawyer for a while, although he hired another lawyer to file the patent on his behalf. His device was meant to lift up the bottom of a boat to avoid hitting rocks; however, his invention was never manufactured, and there are doubts as to whether it would have actually worked."
+    }
+  ]
+}

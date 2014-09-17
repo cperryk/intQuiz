@@ -1,0 +1,302 @@
+{
+  "title": "Can you identify each billboard hit by its first second?",
+  "collapse_responders": true,
+  "collapse_questions": true,
+  "randomize_questions": true,
+  "teaser": "Have a good ear? See if you can <a href=\"http://www.slate.com/blogs/browbeat/2014/06/20/hard_day_s_night_50th_anniversary_who_wrote_each_beatles_song_lennon_or.html\">tell whether John Lennon or Paul McCartney wrote each song on <em>A Hard Day's Night</em></a>.",
+  "share": {
+    "facebook": "Can you identify a hit song based only on its first second?",
+    "twitter": "Can you identify a hit song based only on its first second? I scored %s out of %l.",
+    "email": "Can you identify a song based only on its first second?"
+  },
+  "questions": [
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Let It Go",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "let_it_go",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Idina Menzel, “Let It Go.”</strong>",
+        "img": "let_it_go_full.jpg",
+        "sound": {
+          "id": "full_let_it_go",
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Blurred Lines",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "blurred_lines",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Robin Thicke, “Blurred Lines,” featuring T.I, Pharrell.</strong>",
+        "sound": {
+          "id": "full_blurred_lines",
+          "autoplay": true
+        },
+        "img": "blurred_lines_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Call Me Maybe",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "call_me_maybe",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Carly Rae Jepsen, “Call Me Maybe.”</strong>",
+        "sound": {
+          "id": "full_call_me_maybe",
+          "autoplay": true
+        },
+        "img": "carly_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Fancy",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "fancy",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Iggy Azalea, “Fancy,” featuring Charli XCX.</strong>",
+        "sound": {
+          "id": "full_fancy",
+          "autoplay": true
+        },
+        "img": "fancy_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Happy",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "happy",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Pharrell Williams, “Happy.”</strong>",
+        "sound": {
+          "id": "full_happy",
+          "autoplay": true
+        },
+        "img": "happy_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Rude",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "rude",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Magic, “Rude.”</strong>",
+        "sound": {
+          "id": "full_rude",
+          "autoplay": true
+        },
+        "img": "rude_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Radioactive",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "radioactive",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Imagine Dragons, “Radioactive.”</strong>",
+        "sound": {
+          "id": "full_radioactive",
+          "autoplay": true
+        },
+        "img": "radioactive_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Problem",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "problem",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Ariana Grande, “Problem.”</strong>",
+        "sound": {
+          "id": "full_problem",
+          "autoplay": true
+        },
+        "img": "problem_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Thrift Shop",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "thrift_shop",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Macklemore & Ryan Lewis, “Thrift Shop.”</strong>",
+        "sound": {
+          "id": "full_thrift_shop",
+          "autoplay": true
+        },
+        "img": "thrift_shop_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "We Are Young",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "we_are_young",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Fun, “We Are Young,” featuring Janelle Monáe.</strong>",
+        "sound": {
+          "id": "full_we_are_young",
+          "autoplay": true
+        },
+        "img": "fun_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Somebody That I Used To Know",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "somebody_that_i_used_to_know",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Gotye, “Somebody That I Used to Know.”</strong>",
+        "sound": {
+          "id": "full_somebody_that_i_used_to_know",
+          "autoplay": true
+        },
+        "img": "gotye_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "All Of Me",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "all_of_me",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>John Legend, “All of Me.”</strong>",
+        "img": "all_of_me_full.jpg",
+        "sound": {
+          "id": "full_all_of_me",
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Just Give Me A Reason",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "pink",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Pink, “Just Give Me a Reason.”</strong>",
+        "sound": {
+          "id": "full_pink",
+          "autoplay": true
+        },
+        "img": "pink_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Harlem Shake",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "harlem_shake",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Baauer, “Harlem Shake.”</strong>",
+        "sound": {
+          "id": "full_harlem_shake",
+          "autoplay": true
+        },
+        "img": "harlem_shake_full.jpg"
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Rolling in the Deep",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "rolling_in_the_deep",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Adele, “Rolling in the Deep.”</strong>",
+        "img": "adele_full.jpg",
+        "sound": {
+          "id": "full_rolling_in_the_deep",
+          "autoplay": true
+        }
+      }
+    },
+    {
+      "content": "What song is this?",
+      "type": "fill_in_the_blank",
+      "correct": "Mirrors",
+      "sub": "Click the play button to listen to the first second. Simply begin typing to guess letters.",
+      "sound": {
+        "id": "mirrors",
+        "autoplay": true
+      },
+      "feedback": {
+        "content": "That was <strong>Justin Timberlake, “Mirrors.”</strong>",
+        "sound": {
+          "id": "full_mirrors",
+          "autoplay": true
+        },
+        "img": "mirrors_full.jpg"
+      }
+    }
+  ]
+}

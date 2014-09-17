@@ -1,27 +1,29 @@
 $(function(){
-var INT_PATH = 'http://localhost:9999/2014/05/simple_quiz/preview/';
+var INT_PATH = '/features/2014/05/simple_quiz/';
+var LIB_PATH = '/features/lib/js/';
+
 require.config({
 	paths: {
 		/* essential */
-		IntQuizScore: INT_PATH+'lib/intQuizScore',
-		IntSharing: INT_PATH+'lib/intSharing/intSharing',
-		imagesLoaded: INT_PATH+'lib/imagesLoaded.min',
+		IntQuizScore: LIB_PATH+'intQuizScore/intQuizScore',
+		intSharing: LIB_PATH + 'intSharing/intSharing',
+		imagesLoaded: LIB_PATH+'imagesLoaded/imagesLoaded.min',
 		/* sound */
-		IntSound: INT_PATH+'lib/intSound',
-		SoundJS:INT_PATH+'lib/soundjs/soundjs-0.5.2.min',
-		SJS_FlashPlugin:INT_PATH+'lib/soundjs/FlashPlugin',
-		SJS_SwfObject:INT_PATH+'lib/soundjs/swfobject',
+		IntSound: LIB_PATH+'intSound/intSound',
+		SoundJS:LIB_PATH+'soundjs/soundjs-0.5.2.min',
+		SJS_FlashPlugin:LIB_PATH+'soundjs/FlashPlugin',
+		SJS_SwfObject:LIB_PATH+'soundjs/swfobject',
 		/* question types */
 		fill_in_the_blank:INT_PATH+'question_types/fill_in_the_blank'
 	},
   map: {
     '*':{
-      'css':INT_PATH+'lib/css.min.js'
+      'css':LIB_PATH+'/require-css/css.min.js'
     }
   }
 });
 
-require(['imagesLoaded','css!styles.css'],function(imagesLoaded){
+require(['imagesLoaded','css!'+INT_PATH+'styles.css'],function(imagesLoaded){
 function SimpleQuiz(container, slug, QUIZ_DATA){
 	this.QUIZ_DATA = QUIZ_DATA;
 	this.slug = slug;
@@ -180,7 +182,7 @@ SimpleQuiz.prototype = {
 					.appendTo(result_wrapper);
 				if(best_result.img){
 					var img = $('<img>')
-						.attr('src',INT_PATH+'quizzes/'+self.slug+'/img/'+best_result.img)
+						.attr('src',INT_PATH+'assets/quizzes/'+self.slug+'/img/'+best_result.img)
 						.prependTo(result_wrapper);
 				}
 				if(best_result.descriptor){
@@ -319,7 +321,7 @@ SimpleQuiz.prototype = {
 					share_strings.email = parseShareString(share_data.email);
 				}
 			}
-			require(['IntSharing'],function(IntSharing){
+			require(['intSharing'],function(IntSharing){
 				var share_btns_wrapper = $('<div>')
 					.addClass('share_btns')
 					.appendTo(score_wrapper);
@@ -408,7 +410,7 @@ SimpleQuiz.prototype = {
 		function go(IntSound){
 			self.IntSound_used = true;
 			var sound_id = (typeof sound_data === 'object' ? sound_data.id : sound_data);
-			IntSound.tieToButton(btn,INT_PATH+'quizzes/'+self.slug+'/sound/',sound_id);
+			IntSound.tieToButton(btn,INT_PATH+'assets/quizzes/'+self.slug+'/sound/',sound_id);
 			if(typeof sound_data === 'object' && sound_data.autoplay){
 				btn.trigger('click');
 			}
@@ -575,7 +577,7 @@ Slide.prototype = {
 					.addClass('img_wrapper')
 					.prependTo(question_wrapper);
 				$('<img>')
-					.attr('src',INT_PATH+'quizzes/'+self.par.slug+'/img/'+self.data.img)
+					.attr('src',INT_PATH+'assets/quizzes/'+self.par.slug+'/img/'+self.data.img)
 					.prependTo(img_wrapper);
 			}
 		})();
@@ -951,7 +953,7 @@ Choice.prototype = {
 		var src = this.data.img;
 		this.img = $('<img>')
 			.addClass('choice_img')
-			.attr('src',INT_PATH+'quizzes/'+this.par_quiz.slug+'/img/'+src)
+			.attr('src',INT_PATH+'assets/quizzes/'+this.par_quiz.slug+'/img/'+src)
 			.appendTo(this.content_wrapper);
 		this.container.addClass('with_img');
 	},
@@ -1078,7 +1080,7 @@ Feedback.prototype = {
 			}
 		}
 		function getImgURL(){
-			var url = INT_PATH+'quizzes/'+self.par.par.slug+'/img/';
+			var url = INT_PATH+'assets/quizzes/'+self.par.par.slug+'/img/';
 			if(typeof img_data === 'object'){
 				url += img_data.src;
 			}
@@ -1156,7 +1158,7 @@ function YouTube(video_data,target,parent_quiz){
 }
 
 function createQuiz(container,slug){
-	var url = INT_PATH+'quizzes/'+slug+'/'+slug+'.json';
+	var url = INT_PATH+'assets/quizzes/'+slug+'/'+slug+'.json';
 	var loader = new IntLoader(container,'Loading interactive',200);
 	$.getJSON(url,function(quiz_data){
 		loader.kill();
@@ -1176,7 +1178,7 @@ function IntLoader(target,text,delay){
 	function print(){
 		self.container = $('<div>')
 			.addClass('int_loader')
-			.append('<img src="'+INT_PATH+'graphics/ajax-loader.gif"/>')
+			.append('<img src="'+INT_PATH+'assets/graphics/ajax-loader.gif"/>')
 			.append(text)
 			.appendTo(target);
 	}

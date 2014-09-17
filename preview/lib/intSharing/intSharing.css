@@ -1,39 +1,39 @@
 .intSharing_btn_share {
-  padding: 5px;
-  border: 1px solid #c7c7c7;
+  padding: 3px;
+  border: 1px solid #e3e3e3;
   display: inline-block;
   margin-right: 10px;
-  height: 25px;
+  height: 32px;
   cursor: pointer;
-  line-height: 25px; }
+  line-height: 32px; }
   .intSharing_btn_share:hover {
     position: relative;
     top: 1px; }
   .intSharing_btn_share:active {
-    position: relative;
-    top: 2px; }
+    transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    /* IE 9 */
+    -webkit-transform: scale(0.9);
+    /* Opera, Chrome, and Safari */ }
   .intSharing_btn_share:last-child {
     margin-right: 0px; }
   .intSharing_btn_share .share_icon {
-    width: 25px;
-    height: 25px;
+    width: 32px;
+    height: 32px;
     display: inline-block;
     vertical-align: top;
     margin-right: 3px; }
     .intSharing_btn_share .share_icon :hover {
+      background-color: red;
       position: relative;
       top: 1px; }
     .intSharing_btn_share .share_icon :active {
-      position: relative;
-      top: 2px; }
+      position: relative; }
   .intSharing_btn_share .share_label {
     display: inline-block; }
-
-.intSharing_fb_share .share_icon {
-  background: url(graphics/fb_icon.png); }
-
-.intSharing_tw_share .share_icon {
-  background: url(graphics/twitter_icon.png); }
-
-.intSharing_email_share .share_icon {
-  background: url(graphics/email.jpg); }
+  .intSharing_btn_share.intSharing_fb_share .share_icon {
+    background: url(http://slate-static-prod.s3.amazonaws.com/etc/designs/slate/images/social/colored-social-s94cfbbefc0.6cc514e8.png) 0px -68px; }
+  .intSharing_btn_share.intSharing_tw_share .share_icon {
+    background: url(http://slate-static-prod.s3.amazonaws.com/etc/designs/slate/images/social/colored-social-s94cfbbefc0.6cc514e8.png); }
+  .intSharing_btn_share.intSharing_email_share .share_icon {
+    background: url(http://slate-static-prod.s3.amazonaws.com/etc/designs/slate/images/social/colored-social-s94cfbbefc0.6cc514e8.png) 0px -170px; }

@@ -19,7 +19,7 @@ $base_color: #57828D;
     font-family:'sl-Apres',verdana,sans-serif;
   }
   .slide_wrapper{
-    background:url('graphics/stripe.png');
+    background:url('assets/graphics/stripe.png');
     &:not(.answered){
       .choice:not(.excluded){
         cursor:pointer;
@@ -153,7 +153,7 @@ $base_color: #57828D;
   .btn_sound{
     width:50px;
     height:50px;
-    background:url('graphics/btn_playstopsound_small.png') no-repeat;
+    background:url('assets/graphics/btn_playstopsound_small.png') no-repeat;
     cursor:pointer;
     box-shadow:3px 3px 3px rgba(0,0,0,0.1);
     &:hover{
@@ -165,7 +165,7 @@ $base_color: #57828D;
       top:2px;
     }
     &.loading{
-      background:#55B5AE url('graphics/sound_loader.gif') center no-repeat;
+      background:#55B5AE url('assets/graphics/sound_loader.gif') center no-repeat;
     }
     &.playing_sound{
       background-position:-50px 0px;
@@ -259,12 +259,12 @@ $base_color: #57828D;
         margin-right:0.5em;
         width:50px;
         height:50px;
-        background:url('graphics/btn_playstopsound_small.png');
+        background:url('assets/graphics/btn_playstopsound_small.png');
         &.playing_sound{
           background-position:-50px 0px;
         }
         &.loading{
-          background:#55B5AE url('graphics/sound_loader.gif') center no-repeat;
+          background:#55B5AE url('assets/graphics/sound_loader.gif') center no-repeat;
         }
       }
     }
@@ -283,12 +283,12 @@ $base_color: #57828D;
       }
     }
     &.correct {
-      background: white url('graphics/check.png') no-repeat right 5px bottom 5px,
-      //url('graphics/stripe_green.png');
+      background: white url('assets/graphics/check.png') no-repeat right 5px bottom 5px,
+      //url('assets/graphics/stripe_green.png');
     }
     &.incorrect {
-      background: white url('graphics/ex.png') no-repeat right 5px bottom 5px,
-      //url('graphics/stripe_red.png'),
+      background: white url('assets/graphics/ex.png') no-repeat right 5px bottom 5px,
+      //url('assets/graphics/stripe_red.png'),
     }
     &:last-child {
       margin-bottom: 0;
@@ -375,7 +375,7 @@ $base_color: #57828D;
     width: 96px;
     height: 19px;
     cursor: pointer;
-    background: url('graphics/btn_next.png') center;
+    background: url('assets/graphics/btn_next.png') center;
     &:hover {
       position: relative;
       top: 1px;
@@ -464,7 +464,7 @@ $base_color: #57828D;
     .btn_go{
       width:200px;
       height:141px;
-      background:url('graphics/btn_go.png');
+      background:url('assets/graphics/btn_go.png');
       cursor:pointer;
       &:active{
         position:relative;
@@ -498,16 +498,6 @@ $base_color: #57828D;
       padding-left:0;
       padding-right:0;
     }
-    .fill_in_the_blank{
-      .character{
-        margin:0 0.1em;
-        width:0.8em;
-        height:0.9em;
-        padding:0.1em;
-        font-size:0.9em;
-        line-height:1em;
-      }
-    }
     .choice.blocked img{
       max-width:100%;
     }
@@ -522,95 +512,6 @@ $base_color: #57828D;
         float:none;
         position: static;
       }
-    }
-  }
-}
-
-
-.fill_in_the_blank{
-  padding:4%;
-  .text_wrapper{
-    font-size:1.5em;
-    position: relative;
-  }
-  .word{
-    display: inline-block;
-    padding:0.5em 0.8em;
-  }
-  .character{
-    background-color: white;
-    margin:0 0.15em;
-    width:1.2em;
-    height:1.5em;
-    padding:0.1em;
-    border:1px solid #B8B8B8;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
-    &:last-child{
-      margin-right:0;
-    }
-    &:first-child{
-      margin-left:0;
-    }
-    &.wrong{
-      color:red;
-    }
-  }
-  .mistakes{
-    text-align:left;
-    font-size:1em;
-    margin:1em 0 0 0;
-    padding:1em 0 0 0;
-    border-top:1px solid #B8B8B8;
-  }
-  .mistake{
-    border-radius: 50%;
-    display:inline-block;
-    background:white;
-    border:1px solid gray;
-    padding:0.25em;
-    width:1.5em;
-    height:1.5em;
-    behavior: url(PIE.htc); /* remove if you don't care about IE8 */
-    text-align:center;
-    margin-left:0.5em;
-  }
-  .mistakes_label{
-    display:inline-block;
-    margin-right:0.5em;
-  }
-  .ghost_text_input{
-    width:100%;
-    height:100%;
-    position: absolute;
-    cursor:default;
-    top:0px;
-    left:0px;
-    background:none;
-    padding:0px;
-    border:0px;
-    opacity:0;
-    text-align: center;
-  }
-  .btn_skip{
-    float:right;
-    margin-left:1em;
-    margin-top:0.2em;
-    color:gray;
-    display:inline-block;
-    background-color:white;
-    padding:0.4em;
-    text-transform: uppercase;
-    font-size:0.8em;
-    border:1px solid #c7c7c7;
-    cursor:pointer;
-    &:hover{
-      color:black;
-    }
-    &:active{
-      position:relative;
-      top:1px;
     }
   }
 }
@@ -662,6 +563,6 @@ $base_color: #57828D;
 }
 .btn_restart{
   .share_icon{
-    background:url(graphics/restart.png);
+    background:url(assets/graphics/restart.png);
   }
 }

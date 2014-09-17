@@ -1,10 +1,12 @@
 $(function(){
 var INT_PATH = 'http://localhost:9999/2014/05/simple_quiz/preview/';
+var LIB_PATH = 'http://localhost:9999/lib/js/';
+
 require.config({
 	paths: {
 		/* essential */
 		IntQuizScore: INT_PATH+'lib/intQuizScore',
-		IntSharing: INT_PATH+'lib/intSharing/intSharing',
+		intSharing: LIB_PATH + 'intSharing/intSharing',
 		imagesLoaded: INT_PATH+'lib/imagesLoaded.min',
 		/* sound */
 		IntSound: INT_PATH+'lib/intSound',
@@ -21,7 +23,7 @@ require.config({
   }
 });
 
-require(['imagesLoaded','css!styles.css'],function(imagesLoaded){
+require(['imagesLoaded','css!'+INT_PATH+'styles.css'],function(imagesLoaded){
 function SimpleQuiz(container, slug, QUIZ_DATA){
 	this.QUIZ_DATA = QUIZ_DATA;
 	this.slug = slug;
@@ -319,7 +321,7 @@ SimpleQuiz.prototype = {
 					share_strings.email = parseShareString(share_data.email);
 				}
 			}
-			require(['IntSharing'],function(IntSharing){
+			require(['intSharing'],function(IntSharing){
 				var share_btns_wrapper = $('<div>')
 					.addClass('share_btns')
 					.appendTo(score_wrapper);

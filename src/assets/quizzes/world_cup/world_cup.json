@@ -1,0 +1,361 @@
+{
+  "title": "Name These World Cup Countries From Space",
+  "description": "Guess what each World Cup country is\n  based on aerial shots.",
+  "blocked_choices": true,
+  "attribution": "Images courtesy of NASA.",
+  "randomize_choices": true,
+  "questions": [
+    {
+      "content": "What country is this?",
+      "img": "algeria.jpg",
+      "choices": [
+        "*Algeria",
+        "Cameroon",
+        "Iran",
+        "Nigeria"
+      ],
+      "feedback": "That's Algeria. Compared with crescent-shaped dunes\n      (the most common type of dune on Earth), these\n      star dunes in North Africa grow upward, not laterally.\n      According to NASA: “As is common with star dunes,\n      some of the dunes have long interlacing arms\n      connecting to nearby dunes.”"
+    },
+    {
+      "content": "What country is this?",
+      "img": "argentina.jpg",
+      "choices": [
+        "*Argentina",
+        "Chile",
+        "Costa Rica",
+        "Ecuador"
+      ],
+      "feedback": "That's Argentina.\n      The Paraná River is South America’s\n      second-longest river. It’s famous for its carnivorous fish."
+    },
+    {
+      "content": "What country is this?",
+      "img": "australia.jpg",
+      "choices": [
+        "*Australia",
+        "Brazil",
+        "Chile",
+        "Mexico"
+      ],
+      "feedback": "That's Australia.\n      As seen from the International Space Station, oxygen molecules\n       in the Earth’s upper atmosphere exhibit a phenomenon called airglow, the\n       greenish tint commonly seen in high-latitude auroras, also known as the\n       Northern or Southern Lights."
+    },
+    {
+      "content": "What country is this?",
+      "img": "belgium.jpg",
+      "choices": [
+        "*Belgium",
+        "Netherlands",
+        "France",
+        "Germany"
+      ],
+      "feedback": "That's Belgium.\n      From space, cities such as Liege in northern Europe appear like\n      glowing spider webs. The image was made possible by the European Space\n      Agency’s Nodding mechanism, or NightPod, which compensates for the motion\n      of the ISS relative to Earth."
+    },
+    {
+      "content": "What country is this?",
+      "img": "bosnia.jpg",
+      "choices": [
+        "*Bosnia",
+        "Croatia",
+        "Greece",
+        "Portugal"
+      ],
+      "feedback": "That's Bosnia. Seen from the space shuttle, this almost entirely\n      landlocked country is cold and snowy in the winter. According to NASA:\n      “The Dinaric Alps that extend 400 miles (645 km) along the coast of the\n      Adriatic Sea are composed of limestone and dolomite and are a barrier to\n      travel from the coast to the interior; there are no natural passes.”"
+    },
+    {
+      "content": "What country is this?",
+      "img": "brazil.jpg",
+      "choices": [
+        "*Brazil",
+        "Mexico",
+        "Russia",
+        "United States"
+      ],
+      "feedback": "That's Brazil. This country’s dense and complex network of\n      rivers has helped turn it into an agricultural powerhouse."
+    },
+    {
+      "content": "What country is this?",
+      "img": "cameroon.jpg",
+      "choices": [
+        "*Cameroon",
+        "Ivory Coast",
+        "Ghana",
+        "Algeria"
+      ],
+      "feedback": "That's Cameroon. Lac de Mbakaou is one of the largest man-made\n      reservoirs in west-central Africa. Water draining from the highlands\n      visible at the top of the image powers a hydroelectric dam at the\n      base of the lake."
+    },
+    {
+      "content": "What country is this?",
+      "img": "chile.jpg",
+      "choices": [
+        "*Chile",
+        "Argentina",
+        "Mexico",
+        "Nigeria"
+      ],
+      "feedback": "That's Chile. Much of the Atacama Desert receives less than a\n      millimeter of rain per year. It’s the driest place on Earth. "
+    },
+    {
+      "content": "What country is this?",
+      "img": "colombia.jpg",
+      "choices": [
+        "*Colombia",
+        "Costa Rica",
+        "Ecuador",
+        "Mexico"
+      ],
+      "feedback": "This is the Nevado del Ruiz Volcano, which NASA writes is\n      “infamous for its deadly lahars.&#8221;"
+    },
+    {
+      "content": "What country is this?",
+      "img": "costa_rica.jpg",
+      "choices": [
+        "*Costa Rica",
+        "Colombia",
+        "Iran",
+        "Chile"
+      ],
+      "feedback": "That's Costa Rica. According to NASA: “Since 2007, frequent\n      acid rain showers caused by activity at the [Turrialba] volcano killed\n      or damaged much of the vegetation to the southwest of the summit,\n      leaving the area brown and orange.&#8221;"
+    },
+    {
+      "content": "What country is this?",
+      "img": "croatia.jpg",
+      "choices": [
+        "*Croatia",
+        "France",
+        "Portugal",
+        "Russia"
+      ],
+      "feedback": "That's Croatia.\n      This image was taken after a major winter storm crossed the\n      Mediterranean in 2004. At the top center, this country’s mountains are\n      blanketed in snow. Writes NASA: “Thick clouds of sediment hang in the\n      shallow waters of the Gulf of Venice, but are dissipated in the deeper\n      waters of the Adriatic.”"
+    },
+    {
+      "content": "What country is this?",
+      "img": "ivory_coast.jpg",
+      "choices": [
+        "*Ivory Coast",
+        "Algeria",
+        "Camerooon",
+        "Nigeria"
+      ],
+      "feedback": "That's Ivory Coast. The evidence of fires is seen in this\n      image of coastal West Africa, often the most efficient way to\n      clear land for farmers."
+    },
+    {
+      "content": "What country is this?",
+      "img": "ecuador.jpg",
+      "choices": [
+        "*Ecuador",
+        "Argentina",
+        "Brazil",
+        "Chile"
+      ],
+      "feedback": "That's Ecuador. This false-color image of the South American\n      rainforest shows forested wetlands around the Napo River."
+    },
+    {
+      "content": "What country is this?",
+      "img": "england.jpg",
+      "choices": [
+        "*England",
+        "France",
+        "Germany",
+        "United States"
+      ],
+      "feedback": "That's England. A mature cyclone appears as a comma-shaped\n      cloud formation from space. The heaviest snow and rain are usually\n      found in the “head” of the comma."
+    },
+    {
+      "content": "What country is this?",
+      "img": "france.jpg",
+      "choices": [
+        "*France",
+        "Italy",
+        "Greece",
+        "Portugal"
+      ],
+      "feedback": "That's France. A phytoplankton bloom is seen via satellite off\n      the European coastline. Writes NASA: “Swirls of green, turquoise, and\n      cyan on the water surface show the location of these microscopic,\n      plant-like organisms, while also tracing the currents and eddies\n      that mix them.”"
+    },
+    {
+      "content": "What country is this?",
+      "img": "germany.jpg",
+      "choices": [
+        "*Germany",
+        "Switzerland",
+        "Italy",
+        "France"
+      ],
+      "feedback": "That's Germany. The Rhine River is visible even at nighttime\n      via the lights of the cities that surround it."
+    },
+    {
+      "content": "What country is this?",
+      "img": "ghana.jpg",
+      "choices": [
+        "*Ghana",
+        "Ecuador",
+        "Japan",
+        "Spain"
+      ],
+      "feedback": "That's Ghana. This country’s Songor Lagoon is a UNESCO-protected\n       biosphere reserve. According to NASA, it has “diverse landforms and\n       ecological niches, including mudflats, islands, open water, small\n       streams, sandy beaches, and salt pans. The lagoon is an important\n       stopping-over point for migratory and other birds. It is also home to\n       several species of endangered or threatened sea turtles.”"
+    },
+    {
+      "content": "What country is this?",
+      "img": "greece.jpg",
+      "choices": [
+        "*Greece",
+        "Italy",
+        "Netherlands",
+        "Portugal"
+      ],
+      "feedback": "That's Greece.\n      One of the world’s most famous archipelagos, this image was\n      captured as the Space Shuttle Atlantis was flying over Europe."
+    },
+    {
+      "content": "What country is this?",
+      "img": "honduras.jpg",
+      "choices": [
+        "*Honduras",
+        "Ecuador",
+        "Uruguay",
+        "Brazil"
+      ],
+      "feedback": "That's Honduras. This false-color image highlights tropical\n      forests and the gently winding Coco River. Writes NASA: “This low-lying,\n        wet area is called the Mosquito Coast, a corruption of the tribal name\n        of some of the area’s native people, the Miskito.”"
+    },
+    {
+      "content": "What country is this?",
+      "img": "iran.jpg",
+      "choices": [
+        "*Iran",
+        "Mexico",
+        "Australia",
+        "Algeria"
+      ],
+      "feedback": "That's Iran.\n      This dramatic image shows the varied topography of this\n      country’s largest desert. Writes NASA: “The Dasht-e Kevir is primarily\n      uninhabited wasteland, composed of mud and salt marshes covered with\n      crusts of salt that protect the meager moisture from completely\n      evaporating.”"
+    },
+    {
+      "content": "What country is this?",
+      "img": "italy.jpg",
+      "choices": [
+        "*Italy",
+        "Japan",
+        "England",
+        "Netherlands"
+      ],
+      "feedback": "That's Italy. Venice, one of the most famous island cities in\n      the world, is seen here from the International Space Station, the red\n      roof tiles contrasting sharply with the surrounding blue-green water."
+    },
+    {
+      "content": "What country is this?",
+      "img": "japan.jpg",
+      "choices": [
+        "*Japan",
+        "South Korea",
+        "Ecuador",
+        "Chile"
+      ],
+      "feedback": "That's Tokyo. A large black spot near the city center marks\n      the Imperial palace and garden."
+    },
+    {
+      "content": "What country is this?",
+      "img": "mexico.jpg",
+      "choices": [
+        "*Mexico",
+        "Honduras",
+        "Argentina",
+        "Chile"
+      ],
+      "feedback": "That's Mexico. Here, writes NASA, “the Sierra Madre Oriental\n      (Eastern Sierra Madres) cluster in densely packed rows of arcing\n      ridgelines.”"
+    },
+    {
+      "content": "What country is this?",
+      "img": "netherlands.jpg",
+      "choices": [
+        "*Netherlands",
+        "Belgium",
+        "France",
+        "Ghana"
+      ],
+      "feedback": "That's the Netherlands. These fields south of Den Helder are\n      bright red because they’re growing tulips."
+    },
+    {
+      "content": "What country is this?",
+      "img": "nigeria.jpg",
+      "choices": [
+        "*Nigeria",
+        "Ghana",
+        "Algeria",
+        "Ivory Coast"
+      ],
+      "feedback": "That's Nigeria. Writes NASA: “Once serving as part of the\n      floor for a much larger Lake Chad, the area now known as the Bodele\n      Depression, located at the southern edge of the Sahara Desert in north\n      central Africa, is slowly being transformed into a desert landscape.”"
+    },
+    {
+      "content": "What country is this?",
+      "img": "portugal.jpg",
+      "choices": [
+        "*Portugal",
+        "France",
+        "England",
+        "Greece"
+      ],
+      "feedback": "That's Portugal. Here, Europe’s “Bay Area” is seen from the\n      International Space Station."
+    },
+    {
+      "content": "What country is this?",
+      "img": "russia.jpg",
+      "choices": [
+        "*Russia",
+        "Bosnia",
+        "Iran",
+        "Spain"
+      ],
+      "feedback": "That's Russia.\n      NASA writes: “This is neither an impact crater nor a volcano.\n      It is a rare form of igneous intrusion called alkaline-ultrabasic massif\n      and it is full of rare minerals.”"
+    },
+    {
+      "content": "What country is this?",
+      "img": "south_korea.jpg",
+      "choices": [
+        "*South Korea",
+        "Portugal",
+        "Spain",
+        "Iran"
+      ],
+      "feedback": "This dramatic nighttime image shows a stark contrast in city\n      lights, a proxy for the polar-opposite economies of these neighboring\n      countries."
+    },
+    {
+      "content": "What country is this?",
+      "img": "spain.jpg",
+      "choices": [
+        "*Spain",
+        "United States",
+        "Mexico",
+        "Germany"
+      ],
+      "feedback": "That's Spain. Two of the world’s largest solar plants,\n      affectionately named PS10 and PS20, can be seen at the center-top\n      of this false-color image. According to NASA: “Red indicates\n      vegetation, shades of brown indicate bare ground and/or fallow fields,\n      and blue indicates water. Human-made structures appear in shades of\n      blue-gray. PS10 and PS20 appear as approximate circles punctuated by\n      towers on their southern ends. Although less conspicuous than the\n      circular arrays, rectangular arrays of mirrors operate south of the\n      towers.”"
+    },
+    {
+      "content": "What country is this?",
+      "img": "switzerland.jpg",
+      "choices": [
+        "*Switzerland",
+        "United States",
+        "Russia",
+        "Argentina"
+      ],
+      "feedback": "That's Switzerland. Mountain glaciers are seen in\n      this rare angle from the International Space Station."
+    },
+    {
+      "content": "What country is this?",
+      "img": "united_states.jpg",
+      "choices": [
+        "*United States",
+        "Netherlands",
+        "Algeria",
+        "Mexico"
+      ],
+      "feedback": "That's the United States. Offshore oil platforms are visible\n      in this nighttime image that highlights human activity."
+    },
+    {
+      "content": "What country is this?",
+      "img": "uruguay.jpg",
+      "choices": [
+        "*Uruguay",
+        "Chile",
+        "Ecuador",
+        "Brazil"
+      ],
+      "feedback": "The capital city of this country is visible as a small gray\n      patch on the northern coast of one of South America’s largest\n      estuaries."
+    }
+  ]
+}

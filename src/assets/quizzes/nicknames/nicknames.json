@@ -1,0 +1,129 @@
+{
+  "title": "The Craziest Anti-Gay Laws in America",
+  "description": "Although the United States has made huge progress on gay\n  rights over the last few years, many individual states retain odd,\n  antiquated, or downright vicious anti-gay laws.",
+  "collapse_responders": false,
+  "collapse_questions": false,
+  "blocked_choices": true,
+  "questions": [
+    {
+      "content": "John and Abigail Adams",
+      "choices": [
+        "Johnny and Abby",
+        "*Lysander and Diana",
+        "Jack and Abi",
+        "Ares and Aphrodite"
+      ],
+      "feedback": "John and Abigail Adams had a prolific correspondence and\n      next-level pen names. He called her Diana after the Roman goddess of\n      the moon and adopted the name Lysander after the hero of Sparta.\n      When not playing their classical counterparts, Abigail often called\n      John “My Dearest Friend.”"
+    },
+    {
+      "content": "Abraham and Mary Todd Lincoln",
+      "choices": [
+        "Abie and Mary",
+        "Abe and Merry",
+        "Mr. and Mrs.",
+        "*Father and Mother"
+      ],
+      "feedback": "Abraham and Mary Todd Lincoln were quite formal with each\n      other, and started calling each other Father and Mother after their\n      children were born."
+    },
+    {
+      "content": "Franklin and Jane Pierce",
+      "choices": [
+        "*Franky and Janie",
+        "Hubby and Missy",
+        "Frankenfurter and Jan",
+        "Frank and Jo"
+      ],
+      "explainer": "The correct answer is Franky and Janie. All of the Pierce\n      children died young, and poor Jane Pierce spent much of her term as\n      first lady mourning in solitude."
+    },
+    {
+      "content": "Rutherford and Lucy Hayes",
+      "choices": [
+        "Ruther and Lulu",
+        "Ruthy and Luce",
+        "Birch and Loopy",
+        "*Ruddy and Lu"
+      ],
+      "feedback": "Rutherford and Lucy Hayes were Ruddy and Lu. Can you imagine\n      being called Rutherford all the time?"
+    },
+    {
+      "content": "James and Lucretia Garfield",
+      "choices": [
+        "Jamie and Lu",
+        "*Jim and Crete",
+        "Jimmy and Pumpkin",
+        "Garf and Luly"
+      ],
+      "feedback": "James and Lucretia Garfield went by Jim and Crete. How we wish\n      President Garfield answered to “Garf.”"
+    },
+    {
+      "content": "Chester and Ellen Arthur",
+      "choices": [
+        "*Chet and Nell",
+        "Chessie and Queenie",
+        "Chess and Ellie",
+        "Alan and Nellie"
+      ],
+      "feedback": "The correct answer is Chet and Nell. President Arthur’s middle\n      name was Alan."
+    },
+    {
+      "content": "Grover and Frances Cleveland",
+      "choices": [
+        "Grov and Francie",
+        "Cleve and Fran",
+        "Gro and Frannie",
+        "*Uncle Steve and Frank"
+      ],
+      "feedback": "The correct answer is Uncle Steve and Frank. Frank Cleveland\n      married then-President Grover Cleveland in 1886, when she was 21 and he\n      was 49. He had known her since she was a little girl and eventually\n      started called him Grover (once the Uncle thing got too weird)."
+    },
+    {
+      "content": "Warren and Florence Harding",
+      "choices": [
+        "War and Flo",
+        "*Sonny and Flossie",
+        "Jerry and Florrie",
+        "My Prince and Princess"
+      ],
+      "feedback": "Sonny and Flossie is the correct answer, although President\n      Harding often called Florence “Duchess.” And Jerry? Well, that’s his\n      penis’ name, of course!"
+    },
+    {
+      "content": "Theodore Roosevelt and Alice Lee",
+      "choices": [
+        "Theo and Sweetie",
+        "Teddy and Ally",
+        "*Thee and Wifie",
+        "Roo and Al"
+      ],
+      "feedback": "The correct answer is Thee and Wifie. Alice, Roosevelt’s first\n      wife, was never first lady, but Roosevelt was fully devoted to her. He\n      actually never liked “Teddy” although his family called him “Teedie”\n      for quite some time."
+    },
+    {
+      "content": "William and Helen Taft",
+      "choices": [
+        "*Will and Nellie",
+        "Howie and Nel",
+        "Bill and Bunny",
+        "Willy and Angel"
+      ],
+      "feedback": "Unfortunately, the correct Taft nicknames are the most boring\n      option. William and Helen called each other Will and Nellie."
+    },
+    {
+      "content": "Ronald and Nancy Reagan",
+      "choices": [
+        "Roo and Nance",
+        "Ronnie and Nan",
+        "Ron and Nibbles",
+        "*Poppa and Mommie"
+      ],
+      "feedback": "Nancy did often call Reagan “Ronnie”, but the mutual\n      pairing here is Poppa and Mommie, used frequently within their\n      correspondence. In one Valentine’s Day missive from 1960, Mommie even\n      became “Mommie-Poo.”"
+    },
+    {
+      "content": "George and Barbara Bush",
+      "choices": [
+        "Poppy and Barbi",
+        "*Pop and Babs",
+        "Bert and Munchkin",
+        "Georgie and Bobby"
+      ],
+      "feedback": "George H.W. Bush and Barbara Pierce met in high school,\n      when they were known as Poppy and Barbi. Incidentally, Babs is a nickname\n      that FDR often used for Eleanor."
+    }
+  ]
+}
